@@ -19,11 +19,8 @@ public class Jour
         set { idJour = value; }
     }
 
-	public virtual string compteRendu
-	{
-		get;
-		set;
-	}
+	private string compteRendu
+
 
 	public virtual string etatActivite
 	{
