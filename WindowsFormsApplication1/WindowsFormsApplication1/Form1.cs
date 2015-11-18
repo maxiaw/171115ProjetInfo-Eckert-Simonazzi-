@@ -99,14 +99,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-           
-
-        }
-
+ 
         public void affichageNiveau2(int tmpIdJour)
         {
             Form2 Niveau2=new Form2 ();
