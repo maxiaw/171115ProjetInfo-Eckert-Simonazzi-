@@ -1,0 +1,24 @@
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+H:\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+\\psf\NICO USB\ENSC\Programmation\ProjetInfo\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\INFO_PROJETS_DOSSIER_PERE\ProjetInfo Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
