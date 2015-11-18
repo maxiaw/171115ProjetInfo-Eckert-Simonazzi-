@@ -11,25 +11,42 @@ using System.Text;
 
 public class Activités
 {
-	public virtual string nomActivite
+
+    private int idActivité;
+    private DateTime heureDebut;
+
+	public Activités(string nom, DateTime hDebut, DateTime hFin)
+    {
+        nbActivité++;
+        nomActivité = nom;
+        idActivité = nbActivité;
+        heureDebut = hDebut;
+        heureFin = hFin;
+    }
+
+    public Activités()
+    {
+        nbActivité++;
+    }
+
+    private static int nbActivité = 0;
+    protected string nomActivité;
+    public string GetNomActivité
+    {
+        get { return nomActivité; }
+        set { nomActivité = value; }
+    }
+
+    
+
+
+	public DateTime getHeureDebut
 	{
-		get;
-		set;
+		get { return heureDebut; }
+		set { heureDebut = value; }
 	}
 
-	public static int idActivite
-	{
-		get;
-		set;
-	}
-
-	public virtual object heureDebut
-	{
-		get;
-		set;
-	}
-
-	public virtual object heureFin
+	private DateTime heureFin
 	{
 		get;
 		set;

@@ -23,7 +23,12 @@ public class Jour
 
 
     private string etatActivite;
-
+    private List<Activités> listeActivite=new List<Activités>();
+    public List<Activités> getlisteActivite
+    {
+        get{return listeActivite;}
+        set{listeActivite=value ;}
+    }
 
 	public virtual Planning Planning
 	{
@@ -31,14 +36,11 @@ public class Jour
 		set;
 	}
 
-	public virtual IEnumerable<Activités> listeActivite
-	{
-		get;
-		set;
-	}
-    public Jour() 
+	
+    public Jour(List<Activités> tempListeActivite) 
     {
         nbJour++;
+        listeActivite = tempListeActivite;
         idJour=nbJour;
     }
     

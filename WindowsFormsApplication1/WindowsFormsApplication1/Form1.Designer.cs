@@ -357,7 +357,7 @@
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(1276, 533);
+            this.ClientSize = new System.Drawing.Size(1284, 532);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.affichage7Jours);
             this.Controls.Add(this.affichage21Jours);

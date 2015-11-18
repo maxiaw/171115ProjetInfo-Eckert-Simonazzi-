@@ -30,10 +30,34 @@ namespace WindowsFormsApplication1
         //Au chargement de la page, on initialise le planning qui contient la liste de jour et propose un premier affichage par défaut.
         private void Form1_Load_1(object sender, EventArgs e)
         {
+             // Activité 1
+             List<Activités> listeActivitéParDefaut=new List<Activités>();
+             DateTime horaireDebut = new DateTime(2015,11,19,08,00,00);
+             DateTime horaireFin = new DateTime (2015,11,19,09,00,00);
+             Activités activité1=new Activités("Sleeping",horaireDebut,horaireFin);
+             listeActivitéParDefaut.Add(activité1);
+             // Activité 2 
+             DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
+             DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
+             Activités activité2 = new Activités("Eating", horaireDebut, horaireFin);
+             listeActivitéParDefaut.Add(activité2);
+             // Activité 3
+             DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
+             DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
+             Activités activité3 = new Activités("Private", horaireDebut, horaireFin);
+             listeActivitéParDefaut.Add(activité3);
+             // Activité 4
+             DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
+             DateTime horaireFin4 = new DateTime(2015, 11, 19, 16, 00, 00);
+             Activités activité4 = new Activités("Cleaning", horaireDebut, horaireFin);
+             listeActivitéParDefaut.Add(activité4);
+
+
+
             //Cette boucle implémente 500 jours pour la liste de jour
             for (int i = 0; i <= 499; i++)
             {
-                Jour j = new Jour();
+                Jour j = new Jour(listeActivitéParDefaut);
                 listeJour.Add(j);
             }
 
@@ -102,13 +126,13 @@ namespace WindowsFormsApplication1
  
         public void affichageNiveau2(int tmpIdJour)
         {
-            Form2 Niveau2=new Form2 ();
-            Niveau2.Show();
+            //Form2 Niveau2=new Form2 ();
+            //Niveau2.Show();
 
         }
 
         /* Récupère le numéros des jours à partir du paramètre numJour et les affiche dans les boutons. 
-        Elle prend en deuxième paramètre le nombre de jour à afficher par page.*/
+        Elle prend en compte le nombre de jour à afficher par page.*/
         public void afficherJour(int  numJour)
         {
             
@@ -145,6 +169,31 @@ namespace WindowsFormsApplication1
             }
 
             coloriseBouton();
+
+            if (jourPivot >(499 - 21))
+            {
+
+                affichage21Jours.Enabled = false;
+
+            }
+            else
+            {
+                affichage21Jours.Enabled = true; 
+            }
+            
+            
+            if (jourPivot > (499 - 14))
+            {
+
+                affichage14Jours.Enabled = false;
+
+            }
+            else
+            {
+                affichage14Jours.Enabled = true;
+
+
+            }
 
         }
 
@@ -465,12 +514,14 @@ namespace WindowsFormsApplication1
 
         private void boutonJour3_Click(object sender, EventArgs e)
         {
-
+            Form2 fenetre = new Form2(listeJour, jourPivot +3);
+            fenetre.Show();
         }
 
         private void boutonJour4_Click(object sender, EventArgs e)
         {
-
+            Form2 fenetre = new Form2(listeJour, jourPivot + 4);
+            fenetre.Show();
         }
 
 
