@@ -171,24 +171,24 @@ namespace WindowsFormsApplication1
                     jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot != 476 && nbJourAffichage == 14)
+                else if (jourPivot < 475 && nbJourAffichage == 14)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot == 476 && nbJourAffichage == 14)
+                else if (jourPivot >= 475 && nbJourAffichage == 14)
                 {
-                    jourPivot = jourPivot + 10;
+                    jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot != 483 && nbJourAffichage == 21)
+                else if (jourPivot < 462 && nbJourAffichage == 21)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if (jourPivot == 483 && nbJourAffichage == 21)
+                else if (jourPivot >= 462 && nbJourAffichage == 21)
                 {
-                    jourPivot = jourPivot + 17;
+                    jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
                 }
             }
