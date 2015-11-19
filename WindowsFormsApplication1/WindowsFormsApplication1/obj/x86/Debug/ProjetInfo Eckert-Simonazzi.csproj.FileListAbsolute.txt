@@ -31,3 +31,5 @@ D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFor
 D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
 D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\Nicolas\Mes documents\ENSC\Prog\171115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\181115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+\\psf\Home\Desktop\181115ProjetInfo-Eckert-Simonazzi-\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
