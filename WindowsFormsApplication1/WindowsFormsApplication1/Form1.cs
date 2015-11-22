@@ -201,10 +201,7 @@ namespace WindowsFormsApplication1
 
      
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            affichageNiveau2(jourPivot);
-        }
+      
 
         private void suivant_Click(object sender, EventArgs e)
         {
@@ -507,9 +504,16 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 1);
+            fenetre.Show();
+        }
+
         private void boutonJour2_Click(object sender, EventArgs e)
         {
-
+            Form2 fenetre = new Form2(listeJour, jourPivot + 2);
+            fenetre.Show();
         }
 
         private void boutonJour3_Click(object sender, EventArgs e)
@@ -523,6 +527,26 @@ namespace WindowsFormsApplication1
             Form2 fenetre = new Form2(listeJour, jourPivot + 4);
             fenetre.Show();
         }
+
+        private void boutonJour5_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 5);
+            fenetre.Show();
+        }
+
+        private void boutonJour6_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 5);
+            fenetre.Show();
+        }
+
+
+        private void boutonJour7_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 5);
+            fenetre.Show();
+        }
+
 
 
 

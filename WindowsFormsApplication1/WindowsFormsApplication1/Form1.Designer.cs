@@ -184,6 +184,7 @@
             this.boutonJour5.TabIndex = 4;
             this.boutonJour5.Text = "0";
             this.boutonJour5.UseVisualStyleBackColor = true;
+            this.boutonJour5.Click += new System.EventHandler(this.boutonJour5_Click);
             // 
             // boutonJour4
             // 
