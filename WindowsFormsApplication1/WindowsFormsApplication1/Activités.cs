@@ -14,7 +14,10 @@ public class Activités
 
     private int idActivité;
     private DateTime heureDebut;
-
+    private string texteDescriptif;
+    private string typeActivite;
+    private DateTime heureFin;
+    private string statutActivite;
 	public Activités(string nom, DateTime hDebut, DateTime hFin)
     {
         nbActivité++;
@@ -46,28 +49,28 @@ public class Activités
 		set { heureDebut = value; }
 	}
 
-	private DateTime heureFin
+	public DateTime GetheureFin
 	{
-		get;
-		set;
+		get{return heureFin;}
+		set{heureFin=value;}
 	}
 
-	public virtual object texteDescriptif
+	public string GettexteDescriptif
 	{
-		get;
-		set;
+		get{return texteDescriptif;}
+		set{texteDescriptif=value;}
 	}
 
-	public virtual string typeActivite
+	public string GettypeActivite
 	{
-		get;
-		set;
+		get{return typeActivite;}
+		set{typeActivite=value;}
 	}
 
-	public virtual string statutActivite
+	public string GetstatutActivite
 	{
-		get;
-		set;
+		get{return statutActivite; }
+		set{statutActivite =value;}
 	}
 
 	public virtual IEnumerable<Astronautes> listeAstronautes
@@ -81,7 +84,7 @@ public class Activités
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void ajouterLieu()
+	public virtual void ajouterLieu()Carte
 	{
 		throw new System.NotImplementedException();
 	}
@@ -110,6 +113,40 @@ public class Activités
 	{
 		throw new System.NotImplementedException();
 	}
+/*
+public void enregistrerActivites() // Permet d'enregistrer tous les attributs de toutes les classes de tout le projet
+{   
+     XmlDocument xmlDoc = new XmlDocument ();
+	 XmlNode rootNode = xmlDoc.CreateElement("Activités");
+	 xmlDoc.AppendChild (rootNode);
 
+
+	 ////////////Activités//////////// Serialise les attributs de la classe Activités
+	 XmlNode Activites=xmlDoc.CreateElement("Activites");
+	 rootNode.AppendChild (Activites);
+
+	 XmlNode hDebut= xmlDoc.CreateElement ("heureDebut");
+	 hDebut.InnerText = getHeureDebut.ToString();
+	 Activites.AppendChild(hDebut);
+
+	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
+	 hfin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(GetheureFin);
+
+	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
+	 txtDescriptif.InnerText = GettexteDescriptif;
+     Activites.AppendChild(txtDescriptif);
+
+	 XmlNode typeActivity = xmlDoc.CreateElement("typeActivite"); 
+	 typeActivity.InnerText = GettypeActivite;
+	 Activites.AppendChild(typeActivity);
+
+	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
+	 statutDeActivite.InnerText = getstatutActivite;
+	 Activites.AppendChild(statutDeActivite);
+	 ////////////\Activites////////////
+     
+    ////////////
+ }*/
 }
 
