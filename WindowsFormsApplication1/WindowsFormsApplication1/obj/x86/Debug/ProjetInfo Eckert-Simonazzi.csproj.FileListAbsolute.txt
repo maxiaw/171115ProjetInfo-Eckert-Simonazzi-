@@ -56,3 +56,10 @@ D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsAppli
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 >>>>>>> Stashed changes
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csprojResolveAssemblyReference.cache
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb

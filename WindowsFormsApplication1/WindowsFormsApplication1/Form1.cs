@@ -536,18 +536,101 @@ namespace WindowsFormsApplication1
 
         private void boutonJour6_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJour, jourPivot + 5);
+            Form2 fenetre = new Form2(listeJour, jourPivot + 6);
             fenetre.Show();
         }
 
 
         private void boutonJour7_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJour, jourPivot + 5);
+            Form2 fenetre = new Form2(listeJour, jourPivot + 7);
+            fenetre.Show();
+        }
+
+        private void boutonJour8_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 8);
+            fenetre.Show();
+        }
+
+        private void boutonJour9_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 9);
+            fenetre.Show();
+        }
+
+        private void boutonJour10_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 10);
+            fenetre.Show();
+        }
+        private void boutonJour11_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 11);
+            fenetre.Show();
+        }
+
+        private void boutonJour12_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 12);
             fenetre.Show();
         }
 
 
+        private void boutonJour13_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 13);
+            fenetre.Show();
+        }
+
+
+        private void boutonJour14_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 14);
+            fenetre.Show();
+        }
+
+        private void boutonJour15_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 15);
+            fenetre.Show();
+        }
+
+        private void boutonJour16_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 16);
+            fenetre.Show();
+        }
+
+        private void boutonJour17_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 17);
+            fenetre.Show();
+        }
+
+        private void boutonJour18_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 18);
+            fenetre.Show();
+        }
+
+        private void boutonJour19_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 19);
+            fenetre.Show();
+        }
+
+        private void boutonJour20_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 20);
+            fenetre.Show();
+        }
+
+        private void boutonJour21_Click(object sender, EventArgs e)
+        {
+            Form2 fenetre = new Form2(listeJour, jourPivot + 21);
+            fenetre.Show();
+        }
 
 
     }

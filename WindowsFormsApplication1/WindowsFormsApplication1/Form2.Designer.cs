@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panelInteractionActivité = new System.Windows.Forms.Panel();
-            this.panelListeActivité = new System.Windows.Forms.Panel();
-            this.texteDescriptifActivité = new System.Windows.Forms.RichTextBox();
-            this.labelTypeActivité = new System.Windows.Forms.Label();
-            this.labelJourActivité = new System.Windows.Forms.Label();
-            this.labelPlageHoraireActivité = new System.Windows.Forms.Label();
-            this.buttonAfficherLieuActivité = new System.Windows.Forms.Button();
-            this.buttonModifierActivité = new System.Windows.Forms.Button();
-            this.buttonSupprimerActivité = new System.Windows.Forms.Button();
             this.buttonAjouterActivité = new System.Windows.Forms.Button();
+            this.buttonSupprimerActivité = new System.Windows.Forms.Button();
+            this.buttonModifierActivité = new System.Windows.Forms.Button();
+            this.buttonAfficherLieuActivité = new System.Windows.Forms.Button();
+            this.labelPlageHoraireActivité = new System.Windows.Forms.Label();
+            this.labelJourActivité = new System.Windows.Forms.Label();
+            this.labelTypeActivité = new System.Windows.Forms.Label();
+            this.texteDescriptifActivité = new System.Windows.Forms.RichTextBox();
+            this.panelListeActivité = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
@@ -58,67 +58,14 @@
             this.panelInteractionActivité.Size = new System.Drawing.Size(706, 416);
             this.panelInteractionActivité.TabIndex = 0;
             // 
-            // panelListeActivité
+            // buttonAjouterActivité
             // 
-            this.panelListeActivité.Controls.Add(this.listBox1);
-            this.panelListeActivité.Location = new System.Drawing.Point(13, 90);
-            this.panelListeActivité.Name = "panelListeActivité";
-            this.panelListeActivité.Size = new System.Drawing.Size(547, 416);
-            this.panelListeActivité.TabIndex = 1;
-            // 
-            // texteDescriptifActivité
-            // 
-            this.texteDescriptifActivité.Location = new System.Drawing.Point(245, 215);
-            this.texteDescriptifActivité.Name = "texteDescriptifActivité";
-            this.texteDescriptifActivité.Size = new System.Drawing.Size(363, 168);
-            this.texteDescriptifActivité.TabIndex = 0;
-            this.texteDescriptifActivité.Text = "";
-            this.texteDescriptifActivité.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // labelTypeActivité
-            // 
-            this.labelTypeActivité.AutoSize = true;
-            this.labelTypeActivité.Location = new System.Drawing.Point(17, 245);
-            this.labelTypeActivité.Name = "labelTypeActivité";
-            this.labelTypeActivité.Size = new System.Drawing.Size(35, 13);
-            this.labelTypeActivité.TabIndex = 1;
-            this.labelTypeActivité.Text = "label1";
-            // 
-            // labelJourActivité
-            // 
-            this.labelJourActivité.AutoSize = true;
-            this.labelJourActivité.Location = new System.Drawing.Point(17, 289);
-            this.labelJourActivité.Name = "labelJourActivité";
-            this.labelJourActivité.Size = new System.Drawing.Size(35, 13);
-            this.labelJourActivité.TabIndex = 2;
-            this.labelJourActivité.Text = "label1";
-            // 
-            // labelPlageHoraireActivité
-            // 
-            this.labelPlageHoraireActivité.AutoSize = true;
-            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(17, 337);
-            this.labelPlageHoraireActivité.Name = "labelPlageHoraireActivité";
-            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(35, 13);
-            this.labelPlageHoraireActivité.TabIndex = 3;
-            this.labelPlageHoraireActivité.Text = "label1";
-            // 
-            // buttonAfficherLieuActivité
-            // 
-            this.buttonAfficherLieuActivité.Location = new System.Drawing.Point(28, 15);
-            this.buttonAfficherLieuActivité.Name = "buttonAfficherLieuActivité";
-            this.buttonAfficherLieuActivité.Size = new System.Drawing.Size(107, 30);
-            this.buttonAfficherLieuActivité.TabIndex = 4;
-            this.buttonAfficherLieuActivité.Text = "Afficher le lieu";
-            this.buttonAfficherLieuActivité.UseVisualStyleBackColor = true;
-            // 
-            // buttonModifierActivité
-            // 
-            this.buttonModifierActivité.Location = new System.Drawing.Point(205, 15);
-            this.buttonModifierActivité.Name = "buttonModifierActivité";
-            this.buttonModifierActivité.Size = new System.Drawing.Size(107, 30);
-            this.buttonModifierActivité.TabIndex = 5;
-            this.buttonModifierActivité.Text = "Modifier Activité";
-            this.buttonModifierActivité.UseVisualStyleBackColor = true;
+            this.buttonAjouterActivité.Location = new System.Drawing.Point(558, 15);
+            this.buttonAjouterActivité.Name = "buttonAjouterActivité";
+            this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
+            this.buttonAjouterActivité.TabIndex = 7;
+            this.buttonAjouterActivité.Text = "Ajouter activité";
+            this.buttonAjouterActivité.UseVisualStyleBackColor = true;
             // 
             // buttonSupprimerActivité
             // 
@@ -129,21 +76,74 @@
             this.buttonSupprimerActivité.Text = "Supprimer activité";
             this.buttonSupprimerActivité.UseVisualStyleBackColor = true;
             // 
-            // buttonAjouterActivité
+            // buttonModifierActivité
             // 
-            this.buttonAjouterActivité.Location = new System.Drawing.Point(558, 15);
-            this.buttonAjouterActivité.Name = "buttonAjouterActivité";
-            this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
-            this.buttonAjouterActivité.TabIndex = 7;
-            this.buttonAjouterActivité.Text = "Ajouter activité";
-            this.buttonAjouterActivité.UseVisualStyleBackColor = true;
+            this.buttonModifierActivité.Location = new System.Drawing.Point(205, 15);
+            this.buttonModifierActivité.Name = "buttonModifierActivité";
+            this.buttonModifierActivité.Size = new System.Drawing.Size(107, 30);
+            this.buttonModifierActivité.TabIndex = 5;
+            this.buttonModifierActivité.Text = "Modifier Activité";
+            this.buttonModifierActivité.UseVisualStyleBackColor = true;
+            // 
+            // buttonAfficherLieuActivité
+            // 
+            this.buttonAfficherLieuActivité.Location = new System.Drawing.Point(28, 15);
+            this.buttonAfficherLieuActivité.Name = "buttonAfficherLieuActivité";
+            this.buttonAfficherLieuActivité.Size = new System.Drawing.Size(107, 30);
+            this.buttonAfficherLieuActivité.TabIndex = 4;
+            this.buttonAfficherLieuActivité.Text = "Afficher le lieu";
+            this.buttonAfficherLieuActivité.UseVisualStyleBackColor = true;
+            // 
+            // labelPlageHoraireActivité
+            // 
+            this.labelPlageHoraireActivité.AutoSize = true;
+            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(17, 337);
+            this.labelPlageHoraireActivité.Name = "labelPlageHoraireActivité";
+            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelPlageHoraireActivité.TabIndex = 3;
+            this.labelPlageHoraireActivité.Text = "label1";
+            // 
+            // labelJourActivité
+            // 
+            this.labelJourActivité.AutoSize = true;
+            this.labelJourActivité.Location = new System.Drawing.Point(17, 289);
+            this.labelJourActivité.Name = "labelJourActivité";
+            this.labelJourActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelJourActivité.TabIndex = 2;
+            this.labelJourActivité.Text = "label1";
+            // 
+            // labelTypeActivité
+            // 
+            this.labelTypeActivité.AutoSize = true;
+            this.labelTypeActivité.Location = new System.Drawing.Point(17, 245);
+            this.labelTypeActivité.Name = "labelTypeActivité";
+            this.labelTypeActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelTypeActivité.TabIndex = 1;
+            this.labelTypeActivité.Text = "label1";
+            // 
+            // texteDescriptifActivité
+            // 
+            this.texteDescriptifActivité.Location = new System.Drawing.Point(245, 215);
+            this.texteDescriptifActivité.Name = "texteDescriptifActivité";
+            this.texteDescriptifActivité.Size = new System.Drawing.Size(363, 168);
+            this.texteDescriptifActivité.TabIndex = 0;
+            this.texteDescriptifActivité.Text = "";
+            this.texteDescriptifActivité.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // panelListeActivité
+            // 
+            this.panelListeActivité.Controls.Add(this.listBox1);
+            this.panelListeActivité.Location = new System.Drawing.Point(13, 90);
+            this.panelListeActivité.Name = "panelListeActivité";
+            this.panelListeActivité.Size = new System.Drawing.Size(547, 416);
+            this.panelListeActivité.TabIndex = 1;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(29, 15);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(190, 290);
+            this.listBox1.Size = new System.Drawing.Size(367, 303);
             this.listBox1.TabIndex = 0;
             // 
             // Form2

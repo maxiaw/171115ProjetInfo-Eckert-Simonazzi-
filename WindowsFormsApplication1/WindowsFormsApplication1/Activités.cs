@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
 
 public class Activités
 {
@@ -84,7 +85,7 @@ public class Activités
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void ajouterLieu()Carte
+	public virtual void ajouterLieu()
 	{
 		throw new System.NotImplementedException();
 	}
@@ -113,7 +114,9 @@ public class Activités
 	{
 		throw new System.NotImplementedException();
 	}
-/*
+
+
+    /*
 public void enregistrerActivites() // Permet d'enregistrer tous les attributs de toutes les classes de tout le projet
 {   
      XmlDocument xmlDoc = new XmlDocument ();
