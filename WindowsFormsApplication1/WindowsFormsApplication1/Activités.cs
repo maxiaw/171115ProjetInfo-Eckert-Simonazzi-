@@ -40,7 +40,21 @@ public class Activités
         set { nomActivité = value; }
     }
 
-    
+    public string conversionDateMars(DateTime tempDateDebutPlanning)
+    {
+        DateTime dateDebutPlanning = tempDateDebutPlanning;
+
+        int tempsMinuteDebutPlanning = dateDebutPlanning.Day * 60 * 24 + dateDebutPlanning.Hour * 60 + dateDebutPlanning.Minute;
+        int tempsMinuteDebutActivite = heureDebut.Day * 60 * 24 + heureDebut.Hour * 60 + heureDebut.Minute + heureDebut.Day * 40;
+
+        int intervalleTempsDebutActivite = tempsMinuteDebutActivite - tempsMinuteDebutPlanning;
+
+        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - heureDebut.Day * 60 * 24;
+
+        int horaireDebutHeure = (int)Math.Truncate(doubleIntervalleTempsDebutActivite / 60);
+        int horaireDebutMinute = doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
+
+    }
 
 
 	public DateTime getHeureDebut
@@ -132,13 +146,13 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(hDebut);
 
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
-<<<<<<< HEAD
-	 hfin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(GetheureFin);
-=======
+
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
->>>>>>> origin/master
+
+	 hFin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(hFin);
+
 
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
@@ -149,11 +163,11 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(typeActivity);
 
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
-<<<<<<< HEAD
-	 statutDeActivite.InnerText = getstatutActivite;
-=======
+
 	 statutDeActivite.InnerText = GetstatutActivite;
->>>>>>> origin/master
+
+	 statutDeActivite.InnerText = GetstatutActivite;
+
 	 Activites.AppendChild(statutDeActivite);
 	 ////////////\Activites////////////
    

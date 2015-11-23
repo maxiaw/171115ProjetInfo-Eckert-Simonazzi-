@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
             //Cette boucle implémente 500 jours pour la liste de jour
             for (int i = 0; i <= 499; i++)
             {
-                Jour j = new Jour(listeActivitéParDefaut);
+                Jour j = new Jour(listeActivitéParDefaut, planning);
                 listeJour.Add(j);
             }
 

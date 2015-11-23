@@ -53,7 +53,13 @@ public class Planning
 		get;
 		set;
 	}
-   
+
+    public DateTime GetDateDebut
+    {
+        get { return dateDebut; }
+        set { dateDebut = value; }
+    }
+
 
 	public virtual int getJourActuel()
 	{
