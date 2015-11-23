@@ -13,7 +13,8 @@ public class Planning
 {
     private List<Jour> listeDeJours;
     private DateTime dateDebut;
-
+    private string nomPlanning;
+    private static int idPlanning;
     //constructeur par défaut
     public Planning(string tempNomPlanning, List<Jour> tempListeDeJour, DateTime tempDateDebut)
     {
@@ -21,11 +22,24 @@ public class Planning
         listeDeJours = tempListeDeJour;
         dateDebut = tempDateDebut;
     }
+    //Accesseurs//
     public List<Jour> GetListeJour
     {
         get { return listeDeJours;}
         set { listeDeJours = value; }
     }
+
+    public string GetnomPlanning
+    {
+        get { return nomPlanning; }
+        set { nomPlanning = value; }
+    }
+    public int GetidPlanning
+    {
+        get { return idPlanning; }
+        set { idPlanning = value; }
+    }
+    //FinAccesseurs//
 
     // Renvoi le jour de la liste de jour en fonction de l'id.
     public Jour getJourParId (int tempId)
@@ -34,6 +48,7 @@ public class Planning
         return listeDeJours[tempId];
 
     }  
+<<<<<<< HEAD
     
 
 	public virtual string nomPlanning
@@ -61,6 +76,9 @@ public class Planning
     }
 
 
+=======
+  
+>>>>>>> origin/master
 	public virtual int getJourActuel()
 	{
         DateTime dateActuelle = new DateTime();

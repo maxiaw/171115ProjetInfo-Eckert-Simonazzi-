@@ -13,17 +13,19 @@ public class Exploration : Activités
 {
     private string typeExploration;
 
+    //Constructeur par défaut
     public Exploration(string tempTypeExploration, string nom, DateTime hDebut, DateTime hFin)
         : base(nom, hDebut, hFin)
     {
         typeExploration = tempTypeExploration;
     }
 
+    //Accesseurs//
 	public string GettypeExploration
 	{
         get { return typeExploration; }
         set { typeExploration = value; }
 	}
-
+    //FinAccesseurs//
 }
 

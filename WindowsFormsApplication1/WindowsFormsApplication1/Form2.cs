@@ -15,7 +15,13 @@ namespace WindowsFormsApplication1
         private int jourSelection;
         private Jour objetJourSelection;
         private List<Activités> listeActivitéTableau;
+<<<<<<< HEAD
         private int activiteSelectionne;
+=======
+
+        private int activiteSelectionne;
+
+>>>>>>> origin/master
 
         //Constructeur par défaut
         public Form2(List<Jour> tempListeJour, int tempJourSelection)
@@ -25,6 +31,8 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             
         }
+        //Accesseurs//
+
         public List<Jour> GetlisteJour
         {
             get { return listeJour; }
@@ -40,7 +48,7 @@ namespace WindowsFormsApplication1
             get { return listeActivitéTableau; }
             set { listeActivitéTableau = value; }
         }
-
+        //FinAccesseurs//
       
 
         private void Form2_Load(object sender, EventArgs e)

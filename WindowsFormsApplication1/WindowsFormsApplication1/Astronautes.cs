@@ -11,35 +11,45 @@ using System.Text;
 
 public class Astronautes
 {
-
+    private int idAstronaute;
+    private string nomAstronaute;
+    private string prenomAstronaute;
+    private int ageAstronautes;
+    private static int nbAstronautes;
     //Constructeur par défaut
-    public Astronautes()
+    public Astronautes(string nom, string prenom, int age)
     {
-
+        nomAstronaute = nom;
+        prenomAstronaute = prenom;
+        ageAstronautes = age;
+        nbAstronautes++;
+        idAstronaute = nbAstronautes;
     }
-	public static int idAstronaute
+
+
+	public string GetnomAstronaute
 	{
-		get;
-		set;
+        get { return nomAstronaute; }
+        set { nomAstronaute = value; }
 	}
 
-	public virtual string nomAstronaute
+    //Accesseurs//
+	public string GetprenomAstronaute
 	{
-		get;
-		set;
+        get { return prenomAstronaute; }
+        set { prenomAstronaute = value; }
 	}
-
-	public virtual string prenom
-	{
-		get;
-		set;
-	}
-
-	public virtual object dateNaissance
-	{
-		get;
-		set;
-	}
+    public int GetageAstronaute
+    {
+        get { return ageAstronautes; }
+        set { ageAstronautes = value; }
+    }
+    public int GetnbAstronaute
+    {
+        get {return nbAstronautes;}
+        set { nbAstronautes = value; }
+    }
+	//FinAccesseurs
 
 }
 

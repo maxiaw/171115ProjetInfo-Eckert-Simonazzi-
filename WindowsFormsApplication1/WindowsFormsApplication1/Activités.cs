@@ -19,7 +19,7 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
-
+    private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
 	public Activités(string nom, DateTime hDebut, DateTime hFin)
     {
@@ -34,11 +34,14 @@ public class Activités
 
     private static int nbActivité = 0;
     protected string nomActivité;
+
+    //Accesseurs//
     public string GetNomActivité
     {
         get { return nomActivité; }
         set { nomActivité = value; }
     }
+<<<<<<< HEAD
 
     public string conversionDateMars(DateTime tempDateDebutPlanning)
     {
@@ -57,6 +60,8 @@ public class Activités
     }
 
 
+=======
+>>>>>>> origin/master
 	public DateTime getHeureDebut
 	{
 		get { return heureDebut; }
@@ -87,11 +92,13 @@ public class Activités
 		set{statutActivite =value;}
 	}
 
-	public virtual IEnumerable<Astronautes> listeAstronautes
+	public virtual List<Astronautes> GetlisteAstronautes
 	{
-		get;
-		set;
+        get { return listeAstronautes; }
+        set { listeAstronautes = value; }
 	}
+
+    //FinAccesseurs
 
 	public virtual void RenvoieActiviteParMotCle()
 	{
@@ -146,6 +153,7 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(hDebut);
 
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
+<<<<<<< HEAD
 
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
@@ -153,6 +161,12 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 
+=======
+	 hFin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(hFin);
+	 hFin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(hFin);
+>>>>>>> origin/master
 
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
@@ -165,13 +179,20 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
 
 	 statutDeActivite.InnerText = GetstatutActivite;
+<<<<<<< HEAD
 
 	 statutDeActivite.InnerText = GetstatutActivite;
 
+=======
+	 statutDeActivite.InnerText = GetstatutActivite;
+>>>>>>> origin/master
 	 Activites.AppendChild(statutDeActivite);
-	 ////////////\Activites////////////
-   
-    ////////////
+	////////////\Activites///////////
+
+    ////////////Planning////////////
+
+    ////////////\Planning///////////
+
  }
 }
 
