@@ -13,6 +13,14 @@ public class Carte
 {
     private List<Lieu> listeLieu;
     private List<Exploration> listeExploration;
+
+
+    //contructeur par défaut
+    public Carte()
+    {
+
+    }
+    //Accesseurs//
 	public List<Lieu> GetlisteLieu
 	{
         get { return listeLieu; }
@@ -24,7 +32,7 @@ public class Carte
 		get{return listeExploration;}
 		set{listeExploration=value;}
 	}
-
+    ///FinAccesseurs//
 
 }
 

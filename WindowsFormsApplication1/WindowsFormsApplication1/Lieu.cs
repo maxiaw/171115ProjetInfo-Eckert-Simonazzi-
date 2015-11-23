@@ -11,33 +11,44 @@ using System.Text;
 
 public class Lieu
 {
+    private string nomLieu;
+    private double[] tabCoordonnees = new double[2];
+    private int idLieu;
+    private static int nbLieu;
+    private List<Activités> listeActivites = new List<Activités>();
     //Constructeur par défaut
     public Lieu()
     {
-
+        nbLieu++;
+        idLieu = nbLieu;
     }
-	public virtual string nomLieu
+	public string GetnomLieu
 	{
-		get;
-		set;
+        get { return nomLieu; }
+        set { nomLieu = value; }
+	}
+    public int GetidLieu
+    {
+        get { return idLieu; }
+        set { idLieu = value; }
+    }
+    public double GettabCoordonnees
+	{
+        get{return tabCoordonnees[];}
+        set
+        {
+            for(int j=0;j<2;j++)
+            {
+                tabCoordonnees[j] = value;
+            }
+        }
+		
 	}
 
-	public virtual object coordonnées
+	public List<Activités> GetlisteActivites
 	{
-		get;
-		set;
-	}
-
-	public static int idLieu
-	{
-		get;
-		set;
-	}
-
-	public virtual IEnumerable<Activités> listeActivite
-	{
-		get;
-		set;
+        get { return listeActivites; }
+        set { listeActivites = value; }
 	}
 
 }

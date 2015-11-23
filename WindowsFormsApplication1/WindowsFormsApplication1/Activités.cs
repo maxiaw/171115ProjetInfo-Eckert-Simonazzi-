@@ -19,7 +19,7 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
-
+    private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
 	public Activités(string nom, DateTime hDebut, DateTime hFin)
     {
@@ -34,15 +34,13 @@ public class Activités
 
     private static int nbActivité = 0;
     protected string nomActivité;
+
+    //Accesseurs//
     public string GetNomActivité
     {
         get { return nomActivité; }
         set { nomActivité = value; }
     }
-
-    
-
-
 	public DateTime getHeureDebut
 	{
 		get { return heureDebut; }
@@ -73,11 +71,13 @@ public class Activités
 		set{statutActivite =value;}
 	}
 
-	public virtual IEnumerable<Astronautes> listeAstronautes
+	public virtual List<Astronautes> GetlisteAstronautes
 	{
-		get;
-		set;
+        get { return listeAstronautes; }
+        set { listeAstronautes = value; }
 	}
+
+    //FinAccesseurs
 
 	public virtual void RenvoieActiviteParMotCle()
 	{
@@ -132,13 +132,10 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(hDebut);
 
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
-<<<<<<< HEAD
-	 hfin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(GetheureFin);
-=======
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
->>>>>>> origin/master
+	 hFin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(hFin);
 
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
@@ -149,15 +146,16 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(typeActivity);
 
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
-<<<<<<< HEAD
-	 statutDeActivite.InnerText = getstatutActivite;
-=======
+
 	 statutDeActivite.InnerText = GetstatutActivite;
->>>>>>> origin/master
+	 statutDeActivite.InnerText = GetstatutActivite;
 	 Activites.AppendChild(statutDeActivite);
-	 ////////////\Activites////////////
-   
-    ////////////
+	////////////\Activites///////////
+
+    ////////////Planning////////////
+
+    ////////////\Planning///////////
+
  }
 }
 

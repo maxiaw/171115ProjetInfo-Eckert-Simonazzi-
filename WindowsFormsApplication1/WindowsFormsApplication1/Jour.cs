@@ -18,6 +18,14 @@ public class Jour
     private string compteRendu;
     private List<Activités> listeActivite = new List<Activités>(); 
 
+
+    //Constructeur par défaut
+    public Jour ()
+    {
+
+    }
+    
+    //Accesseurs//
     public string GetetatActivite
     {
         get { return etatActivite; }
@@ -37,13 +45,6 @@ public class Jour
         set { PlanningJour = value; }
 	}
 
-	
-    public Jour(List<Activités> tempListeActivite) 
-    {
-        nbJour++;
-        listeActivite = tempListeActivite;
-        idJour=nbJour;
-    }
 
     public int GetidJour
     {
@@ -56,6 +57,16 @@ public class Jour
         get { return compteRendu; }
         set { compteRendu = value; }
     }
+    //FinAccesseurs//
+
+	
+    public Jour(List<Activités> tempListeActivite) 
+    {
+        nbJour++;
+        listeActivite = tempListeActivite;
+        idJour=nbJour;
+    }
+
 
 
 	public virtual void ajouterActivite()
