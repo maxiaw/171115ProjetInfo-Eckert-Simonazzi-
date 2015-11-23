@@ -32,7 +32,7 @@ public class Lieu
         get { return idLieu; }
         set { idLieu = value; }
     }
-    public double GettabCoordonnees
+   /* public double GettabCoordonnees
 	{
         get{return tabCoordonnees[];}
         set
@@ -43,7 +43,7 @@ public class Lieu
             }
         }
 		
-	}
+	}*/
 
 	public List<Activités> GetlisteActivites
 	{

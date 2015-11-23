@@ -45,7 +45,7 @@ public class Jour
         set { PlanningJour = value; }
 	}
 
-<<<<<<< HEAD
+
 	
     public Jour(List<Activités> tempListeActivite, Planning tempPlanningJour) 
     {
@@ -54,8 +54,6 @@ public class Jour
         PlanningJour = tempPlanningJour;
         idJour=nbJour;
     }
-=======
->>>>>>> origin/master
 
     public int GetidJour
     {

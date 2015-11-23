@@ -41,27 +41,30 @@ public class Activités
         get { return nomActivité; }
         set { nomActivité = value; }
     }
-<<<<<<< HEAD
 
     public string conversionDateMars(DateTime tempDateDebutPlanning)
     {
         DateTime dateDebutPlanning = tempDateDebutPlanning;
 
-        int tempsMinuteDebutPlanning = dateDebutPlanning.Day * 60 * 24 + dateDebutPlanning.Hour * 60 + dateDebutPlanning.Minute;
-        int tempsMinuteDebutActivite = heureDebut.Day * 60 * 24 + heureDebut.Hour * 60 + heureDebut.Minute + heureDebut.Day * 40;
 
-        int intervalleTempsDebutActivite = tempsMinuteDebutActivite - tempsMinuteDebutPlanning;
+        TimeSpan ecart = heureDebut - dateDebutPlanning;
 
-        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - heureDebut.Day * 60 * 24;
+
+        int intervalleTempsDebutActivite = ecart.Days * 60 * 24 + ecart.Hours * 60 + ecart.Minutes + ecart.Days * 40;
+
+        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - (ecart.Days * 60 * 24);
 
         int horaireDebutHeure = (int)Math.Truncate(doubleIntervalleTempsDebutActivite / 60);
-        int horaireDebutMinute = doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
+        int horaireDebutMinute = (int)doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
+
+        string conversionDebut = horaireDebutHeure.ToString() + "h"+ horaireDebutMinute.ToString();
+
+        return conversionDebut;
 
     }
 
 
-=======
->>>>>>> origin/master
+
 	public DateTime getHeureDebut
 	{
 		get { return heureDebut; }
@@ -153,7 +156,7 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(hDebut);
 
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
-<<<<<<< HEAD
+
 
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
@@ -161,12 +164,12 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 
-=======
+
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
->>>>>>> origin/master
+
 
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
@@ -179,13 +182,12 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
 
 	 statutDeActivite.InnerText = GetstatutActivite;
-<<<<<<< HEAD
 
 	 statutDeActivite.InnerText = GetstatutActivite;
 
-=======
+
 	 statutDeActivite.InnerText = GetstatutActivite;
->>>>>>> origin/master
+
 	 Activites.AppendChild(statutDeActivite);
 	////////////\Activites///////////
 

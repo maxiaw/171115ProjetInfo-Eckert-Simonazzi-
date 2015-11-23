@@ -15,13 +15,9 @@ namespace WindowsFormsApplication1
         private int jourSelection;
         private Jour objetJourSelection;
         private List<Activités> listeActivitéTableau;
-<<<<<<< HEAD
-        private int activiteSelectionne;
-=======
-
         private int activiteSelectionne;
 
->>>>>>> origin/master
+
 
         //Constructeur par défaut
         public Form2(List<Jour> tempListeJour, int tempJourSelection)
@@ -57,10 +53,11 @@ namespace WindowsFormsApplication1
             listeActivitéTableau = objetJourSelection.getlisteActivite;
             
             string contenuListBox;
+            DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
            foreach(Activités A in listeActivitéTableau)
            {
 
-               contenuListBox = A.getHeureDebut.Hour + " " + A.GetNomActivité;
+               contenuListBox = A.conversionDateMars(dateDebutPlanning) + " " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
 
            }
@@ -92,24 +89,16 @@ namespace WindowsFormsApplication1
         //Méthode qui affiche les caractéristiques d'une activité selectionnée
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             activiteSelectionne = listBox1.SelectedIndex;
             labelTypeActivité.Text = listeActivitéTableau[activiteSelectionne].GetNomActivité;
             labelJourActivité.Text = "Jour : " + jourSelection.ToString();
 
-            DateTime horaireDebut = listeActivitéTableau[activiteSelectionne].getHeureDebut;
+            //DateTime dateDebutPlanning = objetJourSelection.GetPlanningJour.GetDateDebut;
+            DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
+            labelPlageHoraireActivité.Text = listeActivitéTableau[activiteSelectionne].conversionDateMars(dateDebutPlanning);
 
-            DateTime dateDebutPlanning = objetJourSelection.GetPlanningJour.GetDateDebut;
-
-
-            int tpsDebut = dateDebutPlanning.Day * 60 * 24 + dateDebutPlanning.Hour * 60 + dateDebutPlanning.Minute;
-            int tps = horaireDebut.Day * 60 * 24 + horaireDebut.Hour * 60 + horaireDebut.Minute + horaireDebut.Day * 40 - tpsDebut;
-            double doubleTps = tps - horaireDebut.Day * 60 * 24;
-
-            int horaireDebutHeure = (int)Math.Truncate(doubleTps / 60);
-            int horaireDebutMinute = tps - horaireDebutHeure*60;
-
-
-            labelPlageHoraireActivité.Text = "Debut : " + horaireDebutHeure.ToString() + "h" + horaireDebutMinute.ToString() + "Fin : ";
+            
         }
     }
 }

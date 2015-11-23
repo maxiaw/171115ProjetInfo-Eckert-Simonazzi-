@@ -48,20 +48,10 @@ public class Planning
         return listeDeJours[tempId];
 
     }  
-<<<<<<< HEAD
+
     
 
-	public virtual string nomPlanning
-	{
-		get;
-		set;
-	}
 
-	public static object idPlanning
-	{
-		get;
-		set;
-	}
 
 	public virtual object tempActuel
 	{
@@ -76,9 +66,7 @@ public class Planning
     }
 
 
-=======
-  
->>>>>>> origin/master
+
 	public virtual int getJourActuel()
 	{
         DateTime dateActuelle = new DateTime();
