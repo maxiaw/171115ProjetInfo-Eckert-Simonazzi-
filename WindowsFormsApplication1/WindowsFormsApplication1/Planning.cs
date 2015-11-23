@@ -14,6 +14,13 @@ public class Planning
     private List<Jour> listeDeJours;
     private DateTime dateDebut;
 
+    //constructeur par défaut
+    public Planning(string tempNomPlanning, List<Jour> tempListeDeJour, DateTime tempDateDebut)
+    {
+        nomPlanning = tempNomPlanning;
+        listeDeJours = tempListeDeJour;
+        dateDebut = tempDateDebut;
+    }
     public List<Jour> GetListeJour
     {
         get { return listeDeJours;}
@@ -46,12 +53,7 @@ public class Planning
 		get;
 		set;
 	}
-    public Planning(string tempNomPlanning, List<Jour> tempListeDeJour, DateTime tempDateDebut)
-    {
-        nomPlanning = tempNomPlanning;
-        listeDeJours= tempListeDeJour;
-        dateDebut = tempDateDebut;
-    }
+   
 
 	public virtual int getJourActuel()
 	{

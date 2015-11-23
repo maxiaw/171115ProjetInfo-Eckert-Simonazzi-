@@ -11,6 +11,12 @@ using System.Text;
 
 public class Astronautes
 {
+
+    //Constructeur par défaut
+    public Astronautes()
+    {
+
+    }
 	public static int idAstronaute
 	{
 		get;

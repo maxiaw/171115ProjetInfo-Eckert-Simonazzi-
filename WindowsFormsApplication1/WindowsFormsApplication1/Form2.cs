@@ -14,7 +14,12 @@ namespace WindowsFormsApplication1
         private List<Jour> listeJour;
         private int jourSelection;
         private List<Activités> listeActivitéTableau;
+<<<<<<< HEAD
         private int activiteSelectionne;
+=======
+
+        //Constructeur par défaut
+>>>>>>> origin/master
         public Form2(List<Jour> tempListeJour, int tempJourSelection)
         {
             listeJour = tempListeJour;
@@ -22,6 +27,23 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             
         }
+        public List<Jour> GetlisteJour
+        {
+            get { return listeJour; }
+            set { listeJour = value; }
+        }
+        public int GetjourSelection
+        {
+            get { return jourSelection; }
+            set { jourSelection = value; }
+        }
+        public List<Activités> GetlisteActivitésTableau
+        {
+            get { return listeActivitéTableau; }
+            set { listeActivitéTableau = value; }
+        }
+
+      
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -34,6 +56,10 @@ namespace WindowsFormsApplication1
                contenuListBox = A.getHeureDebut.Hour + " " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
 
+<<<<<<< HEAD
+=======
+               
+>>>>>>> origin/master
            }
 
             labelNumeroJour.Text = jourSelection.ToString();
