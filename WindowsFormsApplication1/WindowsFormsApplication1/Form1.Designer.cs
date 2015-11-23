@@ -97,6 +97,7 @@
             this.boutonJour14.Text = "0";
             this.boutonJour14.UseVisualStyleBackColor = true;
             this.boutonJour14.Visible = false;
+            this.boutonJour14.Click += new System.EventHandler(this.boutonJour14_Click);
             // 
             // boutonJour13
             // 
@@ -107,6 +108,7 @@
             this.boutonJour13.Text = "0";
             this.boutonJour13.UseVisualStyleBackColor = true;
             this.boutonJour13.Visible = false;
+            this.boutonJour13.Click += new System.EventHandler(this.boutonJour13_Click);
             // 
             // boutonJour12
             // 
@@ -117,6 +119,7 @@
             this.boutonJour12.Text = "0";
             this.boutonJour12.UseVisualStyleBackColor = true;
             this.boutonJour12.Visible = false;
+            this.boutonJour12.Click += new System.EventHandler(this.boutonJour12_Click);
             // 
             // boutonJour11
             // 
@@ -127,6 +130,7 @@
             this.boutonJour11.Text = "0";
             this.boutonJour11.UseVisualStyleBackColor = true;
             this.boutonJour11.Visible = false;
+            this.boutonJour11.Click += new System.EventHandler(this.boutonJour11_Click);
             // 
             // boutonJour10
             // 
@@ -137,6 +141,7 @@
             this.boutonJour10.Text = "0";
             this.boutonJour10.UseVisualStyleBackColor = true;
             this.boutonJour10.Visible = false;
+            this.boutonJour10.Click += new System.EventHandler(this.boutonJour10_Click);
             // 
             // boutonJour9
             // 
@@ -147,6 +152,7 @@
             this.boutonJour9.Text = "0";
             this.boutonJour9.UseVisualStyleBackColor = true;
             this.boutonJour9.Visible = false;
+            this.boutonJour9.Click += new System.EventHandler(this.boutonJour9_Click);
             // 
             // boutonJour8
             // 
@@ -157,6 +163,7 @@
             this.boutonJour8.Text = "0";
             this.boutonJour8.UseVisualStyleBackColor = true;
             this.boutonJour8.Visible = false;
+            this.boutonJour8.Click += new System.EventHandler(this.boutonJour8_Click);
             // 
             // boutonJour7
             // 
@@ -166,6 +173,7 @@
             this.boutonJour7.TabIndex = 6;
             this.boutonJour7.Text = "0";
             this.boutonJour7.UseVisualStyleBackColor = true;
+            this.boutonJour7.Click += new System.EventHandler(this.boutonJour7_Click);
             // 
             // boutonJour6
             // 
@@ -175,6 +183,7 @@
             this.boutonJour6.TabIndex = 5;
             this.boutonJour6.Text = "0";
             this.boutonJour6.UseVisualStyleBackColor = true;
+            this.boutonJour6.Click += new System.EventHandler(this.boutonJour6_Click_1);
             // 
             // boutonJour5
             // 
@@ -235,6 +244,7 @@
             this.boutonJour21.Text = "0";
             this.boutonJour21.UseVisualStyleBackColor = true;
             this.boutonJour21.Visible = false;
+            this.boutonJour21.Click += new System.EventHandler(this.boutonJour21_Click);
             // 
             // boutonJour20
             // 
@@ -245,6 +255,7 @@
             this.boutonJour20.Text = "0";
             this.boutonJour20.UseVisualStyleBackColor = true;
             this.boutonJour20.Visible = false;
+            this.boutonJour20.Click += new System.EventHandler(this.boutonJour20_Click);
             // 
             // boutonJour19
             // 
@@ -255,6 +266,7 @@
             this.boutonJour19.Text = "0";
             this.boutonJour19.UseVisualStyleBackColor = true;
             this.boutonJour19.Visible = false;
+            this.boutonJour19.Click += new System.EventHandler(this.boutonJour19_Click);
             // 
             // boutonJour18
             // 
@@ -265,6 +277,7 @@
             this.boutonJour18.Text = "0";
             this.boutonJour18.UseVisualStyleBackColor = true;
             this.boutonJour18.Visible = false;
+            this.boutonJour18.Click += new System.EventHandler(this.boutonJour18_Click);
             // 
             // boutonJour17
             // 
@@ -275,6 +288,7 @@
             this.boutonJour17.Text = "0";
             this.boutonJour17.UseVisualStyleBackColor = true;
             this.boutonJour17.Visible = false;
+            this.boutonJour17.Click += new System.EventHandler(this.boutonJour17_Click);
             // 
             // boutonJour16
             // 
@@ -285,6 +299,7 @@
             this.boutonJour16.Text = "0";
             this.boutonJour16.UseVisualStyleBackColor = true;
             this.boutonJour16.Visible = false;
+            this.boutonJour16.Click += new System.EventHandler(this.boutonJour16_Click);
             // 
             // boutonJour15
             // 

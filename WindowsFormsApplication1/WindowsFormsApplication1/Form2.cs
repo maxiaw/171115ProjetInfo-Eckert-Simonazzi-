@@ -14,11 +14,13 @@ namespace WindowsFormsApplication1
         private List<Jour> listeJour;
         private int jourSelection;
         private List<Activités> listeActivitéTableau;
+        private int activiteSelectionne;
         public Form2(List<Jour> tempListeJour, int tempJourSelection)
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -32,12 +34,10 @@ namespace WindowsFormsApplication1
                contenuListBox = A.getHeureDebut.Hour + " " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
 
-               
-
-               
            }
 
-
+            labelNumeroJour.Text = jourSelection.ToString();
+     
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -52,6 +52,19 @@ namespace WindowsFormsApplication1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Méthode qui affiche les caractéristiques d'une activité selectionnée
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            activiteSelectionne = listBox1.SelectedIndex;
+            labelTypeActivité.Text = listeActivitéTableau[activiteSelectionne].GettypeActivite;
 
         }
     }

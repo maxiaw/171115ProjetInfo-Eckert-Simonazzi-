@@ -39,6 +39,8 @@
             this.texteDescriptifActivité = new System.Windows.Forms.RichTextBox();
             this.panelListeActivité = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.labelNumeroJour = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
             this.SuspendLayout();
@@ -145,12 +147,36 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(367, 303);
             this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // labelNumeroJour
+            // 
+            this.labelNumeroJour.AutoSize = true;
+            this.labelNumeroJour.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumeroJour.Location = new System.Drawing.Point(474, 20);
+            this.labelNumeroJour.Name = "labelNumeroJour";
+            this.labelNumeroJour.Size = new System.Drawing.Size(86, 31);
+            this.labelNumeroJour.TabIndex = 2;
+            this.labelNumeroJour.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(372, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 31);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Jour n°";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNumeroJour);
             this.Controls.Add(this.panelListeActivité);
             this.Controls.Add(this.panelInteractionActivité);
             this.Name = "Form2";
@@ -160,6 +186,7 @@
             this.panelInteractionActivité.PerformLayout();
             this.panelListeActivité.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +203,7 @@
         private System.Windows.Forms.Label labelJourActivité;
         private System.Windows.Forms.Label labelTypeActivité;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label labelNumeroJour;
+        private System.Windows.Forms.Label label1;
     }
 }
