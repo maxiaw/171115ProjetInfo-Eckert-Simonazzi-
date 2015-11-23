@@ -11,6 +11,7 @@ using System.Text;
 
 public class Exploration : Activités
 {
+    private string typeExploration;
 
     public Exploration(string tempTypeExploration, string nom, DateTime hDebut, DateTime hFin)
         : base(nom, hDebut, hFin)
@@ -18,10 +19,10 @@ public class Exploration : Activités
         typeExploration = tempTypeExploration;
     }
 
-	public virtual string typeExploration
+	public string GettypeExploration
 	{
-		get;
-		set;
+        get { return typeExploration; }
+        set { typeExploration = value; }
 	}
 
 }

@@ -11,22 +11,20 @@ using System.Text;
 
 public class Carte
 {
-	public virtual IEnumerable<Lieu> listeLieu
+    private List<Lieu> listeLieu;
+    private List<Exploration> listeExploration;
+	public List<Lieu> GetlisteLieu
 	{
-		get;
-		set;
+        get { return listeLieu; }
+        set { listeLieu = value; }
 	}
 
-	public virtual IEnumerable<Exploration> listeExploration
+	public List<Exploration> GetlisteExploration
 	{
-		get;
-		set;
+		get{return listeExploration;}
+		set{listeExploration=value;}
 	}
 
-	public virtual void getListeLieuExplorer()
-	{
-		throw new System.NotImplementedException();
-	}
 
 }
 

@@ -13,27 +13,28 @@ public class Jour
 {
     private int idJour;
     private static int nbJour = 0;
-	public int GetidJour
-    {
-        get { return idJour; }
-        set { idJour = value; }
-    }
-
-    private string compteRendu;
-
-
     private string etatActivite;
-    private List<Activités> listeActivite=new List<Activités>();
+    private Planning PlanningJour;
+    private string compteRendu;
+    private List<Activités> listeActivite = new List<Activités>(); 
+
+    public string GetetatActivite
+    {
+        get { return etatActivite; }
+        set { etatActivite = value; }
+    }
+    
+
     public List<Activités> getlisteActivite
     {
         get{return listeActivite;}
         set{listeActivite=value ;}
     }
 
-	public virtual Planning Planning
+	public  Planning GetPlanningJour
 	{
-		get;
-		set;
+        get { return PlanningJour; }
+        set { PlanningJour = value; }
 	}
 
 	
@@ -43,8 +44,18 @@ public class Jour
         listeActivite = tempListeActivite;
         idJour=nbJour;
     }
-    
 
+    public int GetidJour
+    {
+        get { return idJour; }
+        set { idJour = value; }
+    }
+
+    public string GetcompteRendu
+    {
+        get { return compteRendu; }
+        set { compteRendu = value; }
+    }
 
 
 	public virtual void ajouterActivite()

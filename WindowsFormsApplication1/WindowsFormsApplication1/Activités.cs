@@ -19,6 +19,8 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
+
+    //Constructeur par défaut
 	public Activités(string nom, DateTime hDebut, DateTime hFin)
     {
         nbActivité++;
@@ -28,10 +30,7 @@ public class Activités
         heureFin = hFin;
     }
 
-    public Activités()
-    {
-        nbActivité++;
-    }
+
 
     private static int nbActivité = 0;
     protected string nomActivité;
@@ -116,7 +115,7 @@ public class Activités
 	}
 
 
-    /*
+    
 public void enregistrerActivites() // Permet d'enregistrer tous les attributs de toutes les classes de tout le projet
 {   
      XmlDocument xmlDoc = new XmlDocument ();
@@ -133,8 +132,8 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(hDebut);
 
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
-	 hfin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(GetheureFin);
+	 hFin.InnerText = GetheureFin.ToString();
+	 Activites.AppendChild(hFin);
 
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
@@ -145,11 +144,11 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(typeActivity);
 
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
-	 statutDeActivite.InnerText = getstatutActivite;
+	 statutDeActivite.InnerText = GetstatutActivite;
 	 Activites.AppendChild(statutDeActivite);
 	 ////////////\Activites////////////
-     
+   
     ////////////
- }*/
+ }
 }
 

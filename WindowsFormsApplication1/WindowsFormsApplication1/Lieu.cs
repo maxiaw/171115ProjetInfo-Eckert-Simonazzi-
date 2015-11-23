@@ -11,6 +11,11 @@ using System.Text;
 
 public class Lieu
 {
+    //Constructeur par défaut
+    public Lieu()
+    {
+
+    }
 	public virtual string nomLieu
 	{
 		get;

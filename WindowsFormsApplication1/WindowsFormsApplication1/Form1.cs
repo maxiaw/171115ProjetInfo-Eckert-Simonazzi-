@@ -21,6 +21,8 @@ namespace WindowsFormsApplication1
         private int nbJourAffichage;
         private int jourActuel;
         private List<Button> ListeBoutons = new List<Button>();
+
+        //Constructeur par défaut
         public Form1()
         {
             InitializeComponent();
