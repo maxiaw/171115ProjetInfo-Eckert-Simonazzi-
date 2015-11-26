@@ -19,12 +19,9 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
-<<<<<<< HEAD
     Lieu lieuActivite;
-=======
     private static int nbActivité = 0;
     private string nomActivité;
->>>>>>> origin/master
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
     public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite)
@@ -38,9 +35,19 @@ public class Activités
         lieuActivite = tempLieuActivite;
     }
 
+        public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite, List<Astronautes> tempListeAtronautes)
+    {
+        nbActivité++;
+        nomActivité = nom;
+        idActivité = nbActivité;
+        heureDebut = hDebut;
+        heureFin = hFin;
+        typeActivite = type;
+        lieuActivite = tempLieuActivite;
+        listeAstronautes = tempListeAtronautes;
+    }
 
-
-  
+ 
 
     //Accesseurs//
     public string GetNomActivité
@@ -206,12 +213,11 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 XmlNode hFin = xmlDoc.CreateElement("heureFin"); 
 
 
-<<<<<<< HEAD
+
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 
-=======
->>>>>>> origin/master
+
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
      Activites.AppendChild(txtDescriptif);
@@ -228,11 +234,11 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
      NomActivite.InnerText = GetnomActivite;
      Activites.AppendChild(NomActivite);
 
-<<<<<<< HEAD
+
 
 
 	 Activites.AppendChild(statutDeActivite);
-=======
+
      XmlNode NombreActivite = xmlDoc.CreateElement("NombreActivites");
      NombreActivite.InnerText = GetnbActivité.ToString();
      Activites.AppendChild(NombreActivite);
@@ -266,7 +272,7 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
          NombreCosmonautes.InnerText = A.GetnbAstronaute.ToString();
          cosmonautes.AppendChild(NombreCosmonautes);
      }
->>>>>>> origin/master
+
 	////////////\Activites///////////
 
     ////////////Planning////////////

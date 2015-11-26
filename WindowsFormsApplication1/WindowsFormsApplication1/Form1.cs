@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
         private int nbJourAffichage;
         private int jourActuel;
         private List<Button> ListeBoutons = new List<Button>();
+        
 
         public List<Jour> GetlisteJourForm1
         {
@@ -107,35 +108,50 @@ namespace WindowsFormsApplication1
         //Au chargement de la page, on initialise le planning qui contient la liste de jour et propose un premier affichage par défaut.
         private void Form1_Load_1(object sender, EventArgs e)
         {
-
+            //Creation de lieu
             Lieu stationMars = new Lieu("base principale", 0, 0);
             Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
+
+
+            //Creation astronautes
+            Astronautes astro1 = new Astronautes("Bobson", "Bobby", 30);
+            Astronautes astro2 = new Astronautes("Johnson", "Johnny", 30);
+            Astronautes astro3 = new Astronautes("Paulson", "Paulette", 30);
+            Astronautes astro4 = new Astronautes("Veroson", "Vero", 30);
+
+            List<Astronautes> listeAstronautesParDefaut1 = new List<Astronautes>();
+            List<Astronautes> listeAstronautesParDefaut2 = new List<Astronautes>();
+
+            listeAstronautesParDefaut1.Add(astro1);
+            listeAstronautesParDefaut2.Add(astro2);
+            listeAstronautesParDefaut1.Add(astro3);
+            listeAstronautesParDefaut2.Add(astro4);
 
              // Activité 1
              List<Activités> listeActivitéParDefaut=new List<Activités>();
              DateTime horaireDebut = new DateTime(2015,11,19,08,00,00);
              DateTime horaireFin = new DateTime (2015,11,19,09,00,00);
-             Activités activité1 = new Activités("Dormir", "Sleeping", horaireDebut, horaireFin, stationMars);
+             Activités activité1 = new Activités("Dormir", "Sleeping", horaireDebut, horaireFin, stationMars, listeAstronautesParDefaut1);
              listeActivitéParDefaut.Add(activité1);
              // Activité 2 
              DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
              DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
-             Activités activité2 = new Activités("Repas midi", "Eating", horaireDebut2, horaireFin2, stationMars);
+             Activités activité2 = new Activités("Repas midi", "Eating", horaireDebut2, horaireFin2, stationMars, listeAstronautesParDefaut2);
              listeActivitéParDefaut.Add(activité2);
              // Activité 3
              DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
              DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
-             Activités activité3 = new Activités("Travail privé", "Private", horaireDebut3, horaireFin3, stationMars);
+             Activités activité3 = new Activités("Travail privé", "Private", horaireDebut3, horaireFin3, stationMars, listeAstronautesParDefaut1);
              listeActivitéParDefaut.Add(activité3);
              // Activité 4
              DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
              DateTime horaireFin4 = new DateTime(2015, 11, 19, 14, 00, 00);
-             Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", horaireDebut4, horaireFin4, stationMars);
+             Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", horaireDebut4, horaireFin4, stationMars, listeAstronautesParDefaut1);
              listeActivitéParDefaut.Add(activité4);
              // Exploration
              DateTime horaireDebut5 = new DateTime(2015, 11, 19, 14, 00, 00);
              DateTime horaireFin5 = new DateTime(2015, 11, 19, 18, 00, 00);
-             Activités exploration = new Exploration("Exploration du cratere 0","Vehicle" , horaireDebut5, horaireFin5, lieuExploration1);
+             Activités exploration = new Exploration("Exploration du cratere 0", "Vehicle", horaireDebut5, horaireFin5, lieuExploration1, listeAstronautesParDefaut2);
              listeActivitéParDefaut.Add(exploration);
 
 

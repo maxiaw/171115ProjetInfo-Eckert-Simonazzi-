@@ -55,16 +55,6 @@ public class Jour
 
 
 
-	
-    public Jour(List<Activités> tempListeActivite, Planning tempPlanningJour) 
-    {
-        nbJour++;
-        listeActivite = tempListeActivite;
-        PlanningJour = tempPlanningJour;
-        idJour=nbJour;
-    }
-
-
     public int GetidJour
     {
         get { return idJour; }

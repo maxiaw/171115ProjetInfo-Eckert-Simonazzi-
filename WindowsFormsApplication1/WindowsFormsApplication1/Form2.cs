@@ -52,17 +52,39 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            
+            
+     
             objetJourSelection = listeJour[jourSelection];
             listeActivitéTableau = objetJourSelection.getlisteActivite;
             
             //Remplissage de la listbox
             string contenuListBox;
             DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
+            int i = 0;
            foreach(Activités A in listeActivitéTableau)
            {
 
                contenuListBox = A.getDateDebutMars(dateDebutPlanning) + "  : " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
+
+               listView1.Items.Add("     ");
+               if(A.GettypeActivite == "Sleeping")
+               {
+
+                   listView1.Items[i].BackColor = Color.DarkSeaGreen;
+
+               }
+               else if (A.GettypeActivite == "Exploration")
+               {
+
+                       listView1.Items[i].BackColor = Color.CadetBlue;
+
+               }
+
+               
+
+               i++;
 
            }
 
@@ -108,9 +130,26 @@ namespace WindowsFormsApplication1
 
             // Recuperation du lieu
             Lieu lieuActivite = listeActivitéTableau[activiteSelectionne].GetLieuActivite;
+            labelLieuActivite.Text = "Lieu : " + lieuActivite.GetnomLieu;
+
+            listBoxAstronautes.Items.Clear();
+
+            List<Astronautes> listeAstronautesActivite = listeActivitéTableau[activiteSelectionne].GetlisteAstronautes;
+            string contenuListBoxAstronautes;
+            foreach (Astronautes A in listeAstronautesActivite)
+            {
+
+                contenuListBoxAstronautes = A.GetprenomAstronaute + "  " + A.GetnomAstronaute + " Age :" + A.GetageAstronaute.ToString();
+                listBoxAstronautes.Items.Add(contenuListBoxAstronautes);
+
+            }
 
 
-            
+        }
+
+        private void listBox2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+
         }
     }
 }
