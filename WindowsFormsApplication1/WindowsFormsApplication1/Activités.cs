@@ -18,10 +18,17 @@ public class Activités
     private string texteDescriptif;
     private string typeActivite;
     private DateTime heureFin;
+<<<<<<< HEAD
     private string statutActivite;
     Lieu lieuActivite;
     private static int nbActivité = 0;
     private string nomActivité;
+=======
+    private string statutActivite;
+    Lieu lieuActivite;
+    private static int nbActivité = 0;
+    private string nomActivité;
+>>>>>>> origin/master
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
     public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite)
@@ -193,6 +200,7 @@ public class Activités
 		throw new System.NotImplementedException();
 	}
 
+<<<<<<< HEAD
 
     
 public void enregistrerActivites() // Permet d'enregistrer tous les attributs de toutes les classes de tout le projet
@@ -281,5 +289,7 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
     ////////////\Planning///////////
 
  }
+=======
+>>>>>>> origin/master
 }
 

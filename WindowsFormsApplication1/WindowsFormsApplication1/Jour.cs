@@ -31,7 +31,14 @@ public class Jour
         PlanningJour = tempPlanningJour;
         idJour = nbJour;
     }
-    
+    public Jour(List<Activités> tempListeActivite)
+    {
+        nbJour++;
+        listeActivite = tempListeActivite;
+        idJour = nbJour;
+    }
+
+  
     //Accesseurs//
     public string GetetatActivite
     {
@@ -54,6 +61,11 @@ public class Jour
 	}
 
 
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> origin/master
 
     public int GetidJour
     {
@@ -75,12 +87,6 @@ public class Jour
     //FinAccesseurs//
 
 	
-    public Jour(List<Activités> tempListeActivite) 
-    {
-        nbJour++;
-        listeActivite = tempListeActivite;
-        idJour=nbJour;
-    }
 
 
 
