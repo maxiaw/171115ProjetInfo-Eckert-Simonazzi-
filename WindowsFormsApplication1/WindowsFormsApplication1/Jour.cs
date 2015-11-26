@@ -24,6 +24,13 @@ public class Jour
     {
 
     }
+    public Jour(List<Activités> tempListeActivite, Planning tempPlanningJour)
+    {
+        nbJour++;
+        listeActivite = tempListeActivite;
+        PlanningJour = tempPlanningJour;
+        idJour = nbJour;
+    }
     
     //Accesseurs//
     public string GetetatActivite
@@ -43,7 +50,9 @@ public class Jour
 	{
         get { return PlanningJour; }
         set { PlanningJour = value; }
+
 	}
+
 
 
 	
@@ -55,6 +64,7 @@ public class Jour
         idJour=nbJour;
     }
 
+
     public int GetidJour
     {
         get { return idJour; }
@@ -65,6 +75,12 @@ public class Jour
     {
         get { return compteRendu; }
         set { compteRendu = value; }
+    }
+
+    public int GetnbJour
+    {
+        get { return nbJour; }
+        set { nbJour = value; }
     }
     //FinAccesseurs//
 
