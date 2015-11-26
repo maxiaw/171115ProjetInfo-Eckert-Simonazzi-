@@ -41,12 +41,16 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelNumeroJour = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelNomActivite = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInteractionActivité
             // 
+            this.panelInteractionActivité.Controls.Add(this.label2);
+            this.panelInteractionActivité.Controls.Add(this.labelNomActivite);
             this.panelInteractionActivité.Controls.Add(this.buttonAjouterActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonSupprimerActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonModifierActivité);
@@ -55,14 +59,14 @@
             this.panelInteractionActivité.Controls.Add(this.labelJourActivité);
             this.panelInteractionActivité.Controls.Add(this.labelTypeActivité);
             this.panelInteractionActivité.Controls.Add(this.texteDescriptifActivité);
-            this.panelInteractionActivité.Location = new System.Drawing.Point(566, 90);
+            this.panelInteractionActivité.Location = new System.Drawing.Point(466, 90);
             this.panelInteractionActivité.Name = "panelInteractionActivité";
-            this.panelInteractionActivité.Size = new System.Drawing.Size(706, 416);
+            this.panelInteractionActivité.Size = new System.Drawing.Size(795, 416);
             this.panelInteractionActivité.TabIndex = 0;
             // 
             // buttonAjouterActivité
             // 
-            this.buttonAjouterActivité.Location = new System.Drawing.Point(558, 15);
+            this.buttonAjouterActivité.Location = new System.Drawing.Point(666, 21);
             this.buttonAjouterActivité.Name = "buttonAjouterActivité";
             this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonAjouterActivité.TabIndex = 7;
@@ -71,7 +75,7 @@
             // 
             // buttonSupprimerActivité
             // 
-            this.buttonSupprimerActivité.Location = new System.Drawing.Point(376, 15);
+            this.buttonSupprimerActivité.Location = new System.Drawing.Point(666, 113);
             this.buttonSupprimerActivité.Name = "buttonSupprimerActivité";
             this.buttonSupprimerActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonSupprimerActivité.TabIndex = 6;
@@ -80,7 +84,7 @@
             // 
             // buttonModifierActivité
             // 
-            this.buttonModifierActivité.Location = new System.Drawing.Point(205, 15);
+            this.buttonModifierActivité.Location = new System.Drawing.Point(666, 68);
             this.buttonModifierActivité.Name = "buttonModifierActivité";
             this.buttonModifierActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonModifierActivité.TabIndex = 5;
@@ -89,7 +93,7 @@
             // 
             // buttonAfficherLieuActivité
             // 
-            this.buttonAfficherLieuActivité.Location = new System.Drawing.Point(28, 15);
+            this.buttonAfficherLieuActivité.Location = new System.Drawing.Point(666, 157);
             this.buttonAfficherLieuActivité.Name = "buttonAfficherLieuActivité";
             this.buttonAfficherLieuActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonAfficherLieuActivité.TabIndex = 4;
@@ -99,35 +103,38 @@
             // labelPlageHoraireActivité
             // 
             this.labelPlageHoraireActivité.AutoSize = true;
-            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(17, 337);
+            this.labelPlageHoraireActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(22, 161);
             this.labelPlageHoraireActivité.Name = "labelPlageHoraireActivité";
-            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(84, 20);
             this.labelPlageHoraireActivité.TabIndex = 3;
-            this.labelPlageHoraireActivité.Text = "label1";
+            this.labelPlageHoraireActivité.Text = "Horaires :";
             // 
             // labelJourActivité
             // 
             this.labelJourActivité.AutoSize = true;
-            this.labelJourActivité.Location = new System.Drawing.Point(17, 289);
+            this.labelJourActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJourActivité.Location = new System.Drawing.Point(22, 123);
             this.labelJourActivité.Name = "labelJourActivité";
-            this.labelJourActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelJourActivité.Size = new System.Drawing.Size(52, 20);
             this.labelJourActivité.TabIndex = 2;
-            this.labelJourActivité.Text = "label1";
+            this.labelJourActivité.Text = "Jour :";
             // 
             // labelTypeActivité
             // 
             this.labelTypeActivité.AutoSize = true;
-            this.labelTypeActivité.Location = new System.Drawing.Point(17, 245);
+            this.labelTypeActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTypeActivité.Location = new System.Drawing.Point(22, 78);
             this.labelTypeActivité.Name = "labelTypeActivité";
-            this.labelTypeActivité.Size = new System.Drawing.Size(35, 13);
+            this.labelTypeActivité.Size = new System.Drawing.Size(55, 20);
             this.labelTypeActivité.TabIndex = 1;
-            this.labelTypeActivité.Text = "label1";
+            this.labelTypeActivité.Text = "Type :";
             // 
             // texteDescriptifActivité
             // 
-            this.texteDescriptifActivité.Location = new System.Drawing.Point(245, 215);
+            this.texteDescriptifActivité.Location = new System.Drawing.Point(28, 259);
             this.texteDescriptifActivité.Name = "texteDescriptifActivité";
-            this.texteDescriptifActivité.Size = new System.Drawing.Size(363, 168);
+            this.texteDescriptifActivité.Size = new System.Drawing.Size(745, 132);
             this.texteDescriptifActivité.TabIndex = 0;
             this.texteDescriptifActivité.Text = "";
             this.texteDescriptifActivité.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -137,15 +144,17 @@
             this.panelListeActivité.Controls.Add(this.listBox1);
             this.panelListeActivité.Location = new System.Drawing.Point(13, 90);
             this.panelListeActivité.Name = "panelListeActivité";
-            this.panelListeActivité.Size = new System.Drawing.Size(547, 416);
+            this.panelListeActivité.Size = new System.Drawing.Size(428, 416);
             this.panelListeActivité.TabIndex = 1;
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(29, 15);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(367, 303);
+            this.listBox1.Size = new System.Drawing.Size(371, 324);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -169,6 +178,26 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Jour n°";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // labelNomActivite
+            // 
+            this.labelNomActivite.AutoSize = true;
+            this.labelNomActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomActivite.Location = new System.Drawing.Point(20, 15);
+            this.labelNomActivite.Name = "labelNomActivite";
+            this.labelNomActivite.Size = new System.Drawing.Size(86, 31);
+            this.labelNomActivite.TabIndex = 8;
+            this.labelNomActivite.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Horaires :";
             // 
             // Form2
             // 
@@ -205,5 +234,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label labelNumeroJour;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNomActivite;
+        private System.Windows.Forms.Label label2;
     }
 }

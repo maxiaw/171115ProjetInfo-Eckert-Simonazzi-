@@ -103,27 +103,36 @@ namespace WindowsFormsApplication1
         //Au chargement de la page, on initialise le planning qui contient la liste de jour et propose un premier affichage par défaut.
         private void Form1_Load_1(object sender, EventArgs e)
         {
+
+            Lieu stationMars = new Lieu("base principale", 0, 0);
+            Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
+
              // Activité 1
              List<Activités> listeActivitéParDefaut=new List<Activités>();
              DateTime horaireDebut = new DateTime(2015,11,19,08,00,00);
              DateTime horaireFin = new DateTime (2015,11,19,09,00,00);
-             Activités activité1=new Activités("Sleeping",horaireDebut,horaireFin);
+             Activités activité1 = new Activités("Dormir", "Sleeping", horaireDebut, horaireFin, stationMars);
              listeActivitéParDefaut.Add(activité1);
              // Activité 2 
              DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
              DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
-             Activités activité2 = new Activités("Eating", horaireDebut2, horaireFin2);
+             Activités activité2 = new Activités("Repas midi", "Eating", horaireDebut2, horaireFin2, stationMars);
              listeActivitéParDefaut.Add(activité2);
              // Activité 3
              DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
              DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
-             Activités activité3 = new Activités("Private", horaireDebut3, horaireFin3);
+             Activités activité3 = new Activités("Travail privé", "Private", horaireDebut3, horaireFin3, stationMars);
              listeActivitéParDefaut.Add(activité3);
              // Activité 4
              DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
-             DateTime horaireFin4 = new DateTime(2015, 11, 19, 16, 00, 00);
-             Activités activité4 = new Activités("Cleaning", horaireDebut4, horaireFin4);
+             DateTime horaireFin4 = new DateTime(2015, 11, 19, 14, 00, 00);
+             Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", horaireDebut4, horaireFin4, stationMars);
              listeActivitéParDefaut.Add(activité4);
+             // Exploration
+             DateTime horaireDebut5 = new DateTime(2015, 11, 19, 14, 00, 00);
+             DateTime horaireFin5 = new DateTime(2015, 11, 19, 18, 00, 00);
+             Activités exploration = new Exploration("Exploration du cratere 0","Vehicle" , horaireDebut5, horaireFin5, lieuExploration1);
+             listeActivitéParDefaut.Add(exploration);
 
 
 
@@ -131,7 +140,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i <= 499; i++)
             {
 
-                Jour j = new Jour(listeActivitéParDefaut, planning);
+                Jour j = new Jour(listeActivitéParDefaut);
                 listeJourForm1.Add(j);
 
             }
@@ -578,128 +587,128 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 1);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 1, planning);
             fenetre.Show();
         }
 
         private void boutonJour2_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 2);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 2, planning);
             fenetre.Show();
         }
 
         private void boutonJour3_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot +3);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 3, planning);
             fenetre.Show();
         }
 
         private void boutonJour4_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 4);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 4, planning);
             fenetre.Show();
         }
 
         private void boutonJour5_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 5);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 5, planning);
             fenetre.Show();
         }
 
         private void boutonJour6_Click_1(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 6);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 6, planning);
             fenetre.Show();
         }
 
         private void boutonJour7_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 7);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 7, planning);
             fenetre.Show();
         }
 
         private void boutonJour8_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 8);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 8, planning);
             fenetre.Show();
         }
 
         private void boutonJour9_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 9);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 9, planning);
             fenetre.Show();
         }
 
         private void boutonJour10_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 10);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 10, planning);
             fenetre.Show();
         }
 
         private void boutonJour11_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 11);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 11, planning);
             fenetre.Show();
         }
 
         private void boutonJour12_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 12);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 12, planning);
             fenetre.Show();
         }
 
         private void boutonJour13_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 13);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 13, planning);
             fenetre.Show();
         }
 
         private void boutonJour14_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 14);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 14, planning);
             fenetre.Show();
         }
 
         //Il s'agit bien de boutonJour15, mais la référence sur le nom ne s'est pas faite
         private void button7_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 15);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 15, planning);
             fenetre.Show();
         }
 
         private void boutonJour16_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 16);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 16, planning);
             fenetre.Show();
         }
 
         private void boutonJour17_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 17);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 17, planning);
             fenetre.Show();
         }
 
         private void boutonJour18_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 18);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 18, planning);
             fenetre.Show();
         }
 
         private void boutonJour19_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 19);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 19, planning);
             fenetre.Show();
         }
 
         private void boutonJour20_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 20);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 20, planning);
             fenetre.Show();
         }
 
         private void boutonJour21_Click(object sender, EventArgs e)
         {
-            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 21);
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 21, planning);
             fenetre.Show();
         }
 

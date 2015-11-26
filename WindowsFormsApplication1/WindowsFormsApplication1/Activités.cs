@@ -19,15 +19,18 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
+    Lieu lieuActivite;
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
-	public Activités(string nom, DateTime hDebut, DateTime hFin)
+    public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite)
     {
         nbActivité++;
         nomActivité = nom;
         idActivité = nbActivité;
         heureDebut = hDebut;
         heureFin = hFin;
+        typeActivite = type;
+        lieuActivite = tempLieuActivite;
     }
 
 
@@ -42,7 +45,7 @@ public class Activités
         set { nomActivité = value; }
     }
 
-    public string conversionDateMars(DateTime tempDateDebutPlanning)
+    public string getDateDebutMars(DateTime tempDateDebutPlanning)
     {
         DateTime dateDebutPlanning = tempDateDebutPlanning;
 
@@ -58,6 +61,27 @@ public class Activités
         int horaireDebutMinute = (int)doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
 
         string conversionDebut = horaireDebutHeure.ToString() + "h"+ horaireDebutMinute.ToString();
+
+        return conversionDebut;
+
+    }
+
+    public string getDateFinMars(DateTime tempDateDebutPlanning)
+    {
+        DateTime dateDebutPlanning = tempDateDebutPlanning;
+
+
+        TimeSpan ecart = heureFin - dateDebutPlanning;
+
+
+        int intervalleTempsDebutActivite = ecart.Days * 60 * 24 + ecart.Hours * 60 + ecart.Minutes + ecart.Days * 40;
+
+        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - (ecart.Days * 60 * 24);
+
+        int horaireDebutHeure = (int)Math.Truncate(doubleIntervalleTempsDebutActivite / 60);
+        int horaireDebutMinute = (int)doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
+
+        string conversionDebut = horaireDebutHeure.ToString() + "h" + horaireDebutMinute.ToString();
 
         return conversionDebut;
 
@@ -94,6 +118,13 @@ public class Activités
 		get{return statutActivite; }
 		set{statutActivite =value;}
 	}
+
+    public Lieu GetLieuActivite
+    {
+        get { return lieuActivite; }
+        set { lieuActivite = value; }
+    }
+
 
 	public virtual List<Astronautes> GetlisteAstronautes
 	{
@@ -161,16 +192,6 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-
-
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-
-
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
      Activites.AppendChild(txtDescriptif);
@@ -183,10 +204,7 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 
 	 statutDeActivite.InnerText = GetstatutActivite;
 
-	 statutDeActivite.InnerText = GetstatutActivite;
 
-
-	 statutDeActivite.InnerText = GetstatutActivite;
 
 	 Activites.AppendChild(statutDeActivite);
 	////////////\Activites///////////

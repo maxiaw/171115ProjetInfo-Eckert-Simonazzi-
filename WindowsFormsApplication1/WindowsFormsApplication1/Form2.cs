@@ -16,15 +16,18 @@ namespace WindowsFormsApplication1
         private Jour objetJourSelection;
         private List<Activités> listeActivitéTableau;
         private int activiteSelectionne;
+        private Planning planning;
 
 
 
         //Constructeur par défaut
-        public Form2(List<Jour> tempListeJour, int tempJourSelection)
+        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning)
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
+            planning = tempPlanning;
+            
             
         }
         //Accesseurs//
@@ -52,17 +55,20 @@ namespace WindowsFormsApplication1
             objetJourSelection = listeJour[jourSelection];
             listeActivitéTableau = objetJourSelection.getlisteActivite;
             
+            //Remplissage de la listbox
             string contenuListBox;
             DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
            foreach(Activités A in listeActivitéTableau)
            {
 
-               contenuListBox = A.conversionDateMars(dateDebutPlanning) + " " + A.GetNomActivité;
+               contenuListBox = A.getDateDebutMars(dateDebutPlanning) + "  : " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
 
            }
 
             labelNumeroJour.Text = jourSelection.ToString();
+
+            listBox1.SelectedIndex = 0;
      
         }
 
@@ -91,12 +97,18 @@ namespace WindowsFormsApplication1
         {
             
             activiteSelectionne = listBox1.SelectedIndex;
-            labelTypeActivité.Text = listeActivitéTableau[activiteSelectionne].GetNomActivité;
-            labelJourActivité.Text = "Jour : " + jourSelection.ToString();
+            labelNomActivite.Text = listeActivitéTableau[activiteSelectionne].GetNomActivité;
+            labelTypeActivité.Text = "Type : " + listeActivitéTableau[activiteSelectionne].GettypeActivite;
+            labelJourActivité.Text = "Jour : "  + jourSelection.ToString();
 
-            //DateTime dateDebutPlanning = objetJourSelection.GetPlanningJour.GetDateDebut;
-            DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
-            labelPlageHoraireActivité.Text = listeActivitéTableau[activiteSelectionne].conversionDateMars(dateDebutPlanning);
+            DateTime dateDebutPlanning = planning.GetDateDebut;
+            string texteHoraire = listeActivitéTableau[activiteSelectionne].getDateDebutMars(dateDebutPlanning);
+            texteHoraire = texteHoraire + " à "+ listeActivitéTableau[activiteSelectionne].getDateFinMars(dateDebutPlanning);
+            labelPlageHoraireActivité.Text = "Plage horaire : " + texteHoraire;
+
+            // Recuperation du lieu
+            Lieu lieuActivite = listeActivitéTableau[activiteSelectionne].GetLieuActivite;
+
 
             
         }

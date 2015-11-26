@@ -12,13 +12,16 @@ using System.Text;
 public class Lieu
 {
     private string nomLieu;
-    private double[] tabCoordonnees = new double[2];
+    private double coordonneX, coordonneY;
     private int idLieu;
     private static int nbLieu;
     private List<Activités> listeActivites = new List<Activités>();
     //Constructeur par défaut
-    public Lieu()
+    public Lieu(string tempNomLieu, double tempCoordonneX, double tempCoordonneY)
     {
+        nomLieu = tempNomLieu;
+        coordonneX = tempCoordonneX;
+        coordonneY = tempCoordonneY;
         nbLieu++;
         idLieu = nbLieu;
     }
@@ -32,19 +35,17 @@ public class Lieu
         get { return idLieu; }
         set { idLieu = value; }
     }
-   /* public double GettabCoordonnees
-	{
-        get{return tabCoordonnees[];}
-        set
-        {
-            for(int j=0;j<2;j++)
-            {
-                tabCoordonnees[j] = value;
-            }
-        }
-		
-	}*/
+   public double GetCoordonneeX
+    {
+        get { return coordonneX; }
+        set { coordonneX = value; }
+    }
 
+   public double GetCoordonneeY
+   {
+       get { return coordonneY; }
+       set { coordonneY = value; }
+   }
 	public List<Activités> GetlisteActivites
 	{
         get { return listeActivites; }
