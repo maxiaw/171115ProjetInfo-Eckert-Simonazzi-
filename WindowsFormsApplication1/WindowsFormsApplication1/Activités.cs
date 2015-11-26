@@ -19,6 +19,8 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
+    private static int nbActivité = 0;
+    private string nomActivité;
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
     //Constructeur par défaut
 	public Activités(string nom, DateTime hDebut, DateTime hFin)
@@ -32,8 +34,7 @@ public class Activités
 
 
 
-    private static int nbActivité = 0;
-    protected string nomActivité;
+  
 
     //Accesseurs//
     public string GetNomActivité
@@ -101,6 +102,19 @@ public class Activités
         set { listeAstronautes = value; }
 	}
 
+    public string GetnomActivite
+    {
+        get{return nomActivité;}
+        set { nomActivité = value; }
+    }
+    public int GetnbActivité
+    {
+        get { return nbActivité; }
+        set { nbActivité = value; }
+    }
+
+
+
     //FinAccesseurs
 
 	public virtual void RenvoieActiviteParMotCle()
@@ -161,16 +175,6 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 hFin.InnerText = GetheureFin.ToString();
 	 Activites.AppendChild(hFin);
 
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-
-
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-	 hFin.InnerText = GetheureFin.ToString();
-	 Activites.AppendChild(hFin);
-
-
 	 XmlNode txtDescriptif = xmlDoc.CreateElement("texteDescriptif"); 
 	 txtDescriptif.InnerText = GettexteDescriptif;
      Activites.AppendChild(txtDescriptif);
@@ -180,18 +184,50 @@ public void enregistrerActivites() // Permet d'enregistrer tous les attributs de
 	 Activites.AppendChild(typeActivity);
 
 	 XmlNode statutDeActivite = xmlDoc.CreateElement("statutActivite"); 
-
 	 statutDeActivite.InnerText = GetstatutActivite;
-
-	 statutDeActivite.InnerText = GetstatutActivite;
-
-
-	 statutDeActivite.InnerText = GetstatutActivite;
-
 	 Activites.AppendChild(statutDeActivite);
+
+     XmlNode NomActivite = xmlDoc.CreateElement("nomActivité");
+     NomActivite.InnerText = GetnomActivite;
+     Activites.AppendChild(NomActivite);
+
+     XmlNode NombreActivite = xmlDoc.CreateElement("NombreActivites");
+     NombreActivite.InnerText = GetnbActivité.ToString();
+     Activites.AppendChild(NombreActivite);
+
+     XmlNode listeDesAstronauteDansActivite = xmlDoc.CreateElement("Astronautes"); 
+     Activites.AppendChild(listeDesAstronauteDansActivite);
+
+   
+     foreach (Astronautes A in listeAstronautes)
+     {
+         XmlNode cosmonautes = xmlDoc.CreateElement("Astronaute");
+         Activites.AppendChild(cosmonautes);
+
+         XmlNode idCosmonaute = xmlDoc.CreateElement("ID");
+         idCosmonaute.InnerText = A.GetidAstronaute.ToString();
+         cosmonautes.AppendChild(idCosmonaute);
+
+         XmlNode nomCosmonaute = xmlDoc.CreateElement("Nom");
+         nomCosmonaute.InnerText = A.GetnomAstronaute;
+         cosmonautes.AppendChild(nomCosmonaute);
+
+         XmlNode prenomCosmonaute = xmlDoc.CreateElement("Prenom");
+         prenomCosmonaute.InnerText = A.GetprenomAstronaute;
+         cosmonautes.AppendChild(prenomCosmonaute);
+
+         XmlNode ageCosmonaute = xmlDoc.CreateElement("Age");
+         ageCosmonaute.InnerText = A.GetageAstronaute.ToString();
+         cosmonautes.AppendChild(ageCosmonaute);
+
+         XmlNode NombreCosmonautes = xmlDoc.CreateElement("Nombre des astronautes");
+         NombreCosmonautes.InnerText = A.GetnbAstronaute.ToString();
+         cosmonautes.AppendChild(NombreCosmonautes);
+     }
 	////////////\Activites///////////
 
     ////////////Planning////////////
+
 
     ////////////\Planning///////////
 
