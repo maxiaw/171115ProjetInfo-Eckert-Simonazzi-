@@ -61,11 +61,10 @@ public class Jour
 	}
 
 
-<<<<<<< HEAD
-=======
+
 	
 
->>>>>>> origin/master
+
 
     public int GetidJour
     {

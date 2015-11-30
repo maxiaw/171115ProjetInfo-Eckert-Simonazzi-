@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panelInteractionActivité = new System.Windows.Forms.Panel();
-            this.labelListeAstronautes = new System.Windows.Forms.Label();
-            this.listBoxAstronautes = new System.Windows.Forms.ListBox();
             this.labelLieuActivite = new System.Windows.Forms.Label();
             this.labelNomActivite = new System.Windows.Forms.Label();
             this.buttonAjouterActivité = new System.Windows.Forms.Button();
@@ -40,62 +38,50 @@
             this.labelPlageHoraireActivité = new System.Windows.Forms.Label();
             this.labelJourActivité = new System.Windows.Forms.Label();
             this.labelTypeActivité = new System.Windows.Forms.Label();
-            this.texteDescriptifActivité = new System.Windows.Forms.RichTextBox();
+            this.texteDescriptifActivite = new System.Windows.Forms.RichTextBox();
             this.panelListeActivité = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelNumeroJour = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.labelDescriptifActivite = new System.Windows.Forms.Label();
+            this.listBoxAstronautes = new System.Windows.Forms.ListBox();
+            this.labelAstronautesActivite = new System.Windows.Forms.Label();
+            this.boutonJourSuivant = new System.Windows.Forms.Button();
+            this.boutonJourPrecedent = new System.Windows.Forms.Button();
+            this.boutonEffacerActivite = new System.Windows.Forms.Button();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInteractionActivité
             // 
-            this.panelInteractionActivité.Controls.Add(this.labelListeAstronautes);
+            this.panelInteractionActivité.Controls.Add(this.labelAstronautesActivite);
             this.panelInteractionActivité.Controls.Add(this.listBoxAstronautes);
+            this.panelInteractionActivité.Controls.Add(this.labelDescriptifActivite);
             this.panelInteractionActivité.Controls.Add(this.labelLieuActivite);
             this.panelInteractionActivité.Controls.Add(this.labelNomActivite);
-            this.panelInteractionActivité.Controls.Add(this.buttonAjouterActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonSupprimerActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonModifierActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonAfficherLieuActivité);
             this.panelInteractionActivité.Controls.Add(this.labelPlageHoraireActivité);
             this.panelInteractionActivité.Controls.Add(this.labelJourActivité);
             this.panelInteractionActivité.Controls.Add(this.labelTypeActivité);
-            this.panelInteractionActivité.Controls.Add(this.texteDescriptifActivité);
+            this.panelInteractionActivité.Controls.Add(this.texteDescriptifActivite);
+            this.panelInteractionActivité.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.panelInteractionActivité.Location = new System.Drawing.Point(466, 90);
             this.panelInteractionActivité.Name = "panelInteractionActivité";
             this.panelInteractionActivité.Size = new System.Drawing.Size(795, 416);
             this.panelInteractionActivité.TabIndex = 0;
             // 
-            // labelListeAstronautes
-            // 
-            this.labelListeAstronautes.AutoSize = true;
-            this.labelListeAstronautes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelListeAstronautes.Location = new System.Drawing.Point(432, 224);
-            this.labelListeAstronautes.Name = "labelListeAstronautes";
-            this.labelListeAstronautes.Size = new System.Drawing.Size(162, 20);
-            this.labelListeAstronautes.TabIndex = 11;
-            this.labelListeAstronautes.Text = "Liste d\'astronautes :";
-            // 
-            // listBoxAstronautes
-            // 
-            this.listBoxAstronautes.FormattingEnabled = true;
-            this.listBoxAstronautes.Location = new System.Drawing.Point(436, 259);
-            this.listBoxAstronautes.Name = "listBoxAstronautes";
-            this.listBoxAstronautes.Size = new System.Drawing.Size(337, 134);
-            this.listBoxAstronautes.TabIndex = 10;
-            // 
             // labelLieuActivite
             // 
             this.labelLieuActivite.AutoSize = true;
             this.labelLieuActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLieuActivite.Location = new System.Drawing.Point(22, 197);
+            this.labelLieuActivite.Location = new System.Drawing.Point(22, 198);
             this.labelLieuActivite.Name = "labelLieuActivite";
-            this.labelLieuActivite.Size = new System.Drawing.Size(56, 20);
+            this.labelLieuActivite.Size = new System.Drawing.Size(51, 20);
             this.labelLieuActivite.TabIndex = 9;
-            this.labelLieuActivite.Text = "Lieu : ";
+            this.labelLieuActivite.Text = "Lieu :";
             // 
             // labelNomActivite
             // 
@@ -109,12 +95,13 @@
             // 
             // buttonAjouterActivité
             // 
-            this.buttonAjouterActivité.Location = new System.Drawing.Point(666, 21);
+            this.buttonAjouterActivité.Location = new System.Drawing.Point(293, 361);
             this.buttonAjouterActivité.Name = "buttonAjouterActivité";
             this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonAjouterActivité.TabIndex = 7;
-            this.buttonAjouterActivité.Text = "Ajouter activité";
+            this.buttonAjouterActivité.Text = "Ajouter une activité";
             this.buttonAjouterActivité.UseVisualStyleBackColor = true;
+            this.buttonAjouterActivité.Click += new System.EventHandler(this.buttonAjouterActivité_Click);
             // 
             // buttonSupprimerActivité
             // 
@@ -147,7 +134,7 @@
             // 
             this.labelPlageHoraireActivité.AutoSize = true;
             this.labelPlageHoraireActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(22, 157);
+            this.labelPlageHoraireActivité.Location = new System.Drawing.Point(22, 161);
             this.labelPlageHoraireActivité.Name = "labelPlageHoraireActivité";
             this.labelPlageHoraireActivité.Size = new System.Drawing.Size(84, 20);
             this.labelPlageHoraireActivité.TabIndex = 3;
@@ -157,7 +144,7 @@
             // 
             this.labelJourActivité.AutoSize = true;
             this.labelJourActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJourActivité.Location = new System.Drawing.Point(22, 117);
+            this.labelJourActivité.Location = new System.Drawing.Point(22, 123);
             this.labelJourActivité.Name = "labelJourActivité";
             this.labelJourActivité.Size = new System.Drawing.Size(52, 20);
             this.labelJourActivité.TabIndex = 2;
@@ -173,19 +160,20 @@
             this.labelTypeActivité.TabIndex = 1;
             this.labelTypeActivité.Text = "Type :";
             // 
-            // texteDescriptifActivité
+            // texteDescriptifActivite
             // 
-            this.texteDescriptifActivité.Location = new System.Drawing.Point(28, 259);
-            this.texteDescriptifActivité.Name = "texteDescriptifActivité";
-            this.texteDescriptifActivité.Size = new System.Drawing.Size(367, 132);
-            this.texteDescriptifActivité.TabIndex = 0;
-            this.texteDescriptifActivité.Text = "";
-            this.texteDescriptifActivité.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.texteDescriptifActivite.Location = new System.Drawing.Point(26, 279);
+            this.texteDescriptifActivite.Name = "texteDescriptifActivite";
+            this.texteDescriptifActivite.Size = new System.Drawing.Size(385, 116);
+            this.texteDescriptifActivite.TabIndex = 0;
+            this.texteDescriptifActivite.Text = "";
+            this.texteDescriptifActivite.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // panelListeActivité
             // 
-            this.panelListeActivité.Controls.Add(this.listView1);
+            this.panelListeActivité.Controls.Add(this.boutonEffacerActivite);
             this.panelListeActivité.Controls.Add(this.listBox1);
+            this.panelListeActivité.Controls.Add(this.buttonAjouterActivité);
             this.panelListeActivité.Location = new System.Drawing.Point(13, 90);
             this.panelListeActivité.Name = "panelListeActivité";
             this.panelListeActivité.Size = new System.Drawing.Size(428, 416);
@@ -196,9 +184,9 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(49, 21);
+            this.listBox1.Location = new System.Drawing.Point(29, 15);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(376, 384);
+            this.listBox1.Size = new System.Drawing.Size(371, 324);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -206,7 +194,7 @@
             // 
             this.labelNumeroJour.AutoSize = true;
             this.labelNumeroJour.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumeroJour.Location = new System.Drawing.Point(118, 20);
+            this.labelNumeroJour.Location = new System.Drawing.Point(474, 20);
             this.labelNumeroJour.Name = "labelNumeroJour";
             this.labelNumeroJour.Size = new System.Drawing.Size(86, 31);
             this.labelNumeroJour.TabIndex = 2;
@@ -216,28 +204,80 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(372, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "Jour n°";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // listView1
+            // labelDescriptifActivite
             // 
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.listView1.Location = new System.Drawing.Point(5, 21);
-            this.listView1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(41, 384);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.labelDescriptifActivite.AutoSize = true;
+            this.labelDescriptifActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescriptifActivite.Location = new System.Drawing.Point(22, 238);
+            this.labelDescriptifActivite.Name = "labelDescriptifActivite";
+            this.labelDescriptifActivite.Size = new System.Drawing.Size(181, 20);
+            this.labelDescriptifActivite.TabIndex = 10;
+            this.labelDescriptifActivite.Text = "Descriptif de l\'activité :";
+            // 
+            // listBoxAstronautes
+            // 
+            this.listBoxAstronautes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxAstronautes.FormattingEnabled = true;
+            this.listBoxAstronautes.ItemHeight = 20;
+            this.listBoxAstronautes.Location = new System.Drawing.Point(428, 279);
+            this.listBoxAstronautes.Name = "listBoxAstronautes";
+            this.listBoxAstronautes.Size = new System.Drawing.Size(345, 124);
+            this.listBoxAstronautes.TabIndex = 1;
+            // 
+            // labelAstronautesActivite
+            // 
+            this.labelAstronautesActivite.AutoSize = true;
+            this.labelAstronautesActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAstronautesActivite.Location = new System.Drawing.Point(424, 238);
+            this.labelAstronautesActivite.Name = "labelAstronautesActivite";
+            this.labelAstronautesActivite.Size = new System.Drawing.Size(181, 20);
+            this.labelAstronautesActivite.TabIndex = 11;
+            this.labelAstronautesActivite.Text = "Liste des astronautes :";
+            // 
+            // boutonJourSuivant
+            // 
+            this.boutonJourSuivant.Location = new System.Drawing.Point(1151, 43);
+            this.boutonJourSuivant.Name = "boutonJourSuivant";
+            this.boutonJourSuivant.Size = new System.Drawing.Size(110, 26);
+            this.boutonJourSuivant.TabIndex = 4;
+            this.boutonJourSuivant.Text = "Jour suivant";
+            this.boutonJourSuivant.UseVisualStyleBackColor = true;
+            this.boutonJourSuivant.Click += new System.EventHandler(this.boutonJourSuivant_Click);
+            // 
+            // boutonJourPrecedent
+            // 
+            this.boutonJourPrecedent.Location = new System.Drawing.Point(13, 43);
+            this.boutonJourPrecedent.Name = "boutonJourPrecedent";
+            this.boutonJourPrecedent.Size = new System.Drawing.Size(110, 26);
+            this.boutonJourPrecedent.TabIndex = 5;
+            this.boutonJourPrecedent.Text = "Jour precedent";
+            this.boutonJourPrecedent.UseVisualStyleBackColor = true;
+            this.boutonJourPrecedent.Click += new System.EventHandler(this.boutonJourPrecedent_Click);
+            // 
+            // boutonEffacerActivite
+            // 
+            this.boutonEffacerActivite.Location = new System.Drawing.Point(29, 357);
+            this.boutonEffacerActivite.Name = "boutonEffacerActivite";
+            this.boutonEffacerActivite.Size = new System.Drawing.Size(114, 38);
+            this.boutonEffacerActivite.TabIndex = 8;
+            this.boutonEffacerActivite.Text = "Effacer toutes les activités";
+            this.boutonEffacerActivite.UseVisualStyleBackColor = true;
+            this.boutonEffacerActivite.Click += new System.EventHandler(this.boutonEffacerActivite_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.Controls.Add(this.boutonJourPrecedent);
+            this.Controls.Add(this.boutonJourSuivant);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNumeroJour);
             this.Controls.Add(this.panelListeActivité);
@@ -256,7 +296,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInteractionActivité;
-        private System.Windows.Forms.RichTextBox texteDescriptifActivité;
+        private System.Windows.Forms.RichTextBox texteDescriptifActivite;
         private System.Windows.Forms.Panel panelListeActivité;
         private System.Windows.Forms.Button buttonAjouterActivité;
         private System.Windows.Forms.Button buttonSupprimerActivité;
@@ -270,8 +310,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelNomActivite;
         private System.Windows.Forms.Label labelLieuActivite;
+        private System.Windows.Forms.Label labelAstronautesActivite;
         private System.Windows.Forms.ListBox listBoxAstronautes;
-        private System.Windows.Forms.Label labelListeAstronautes;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label labelDescriptifActivite;
+        private System.Windows.Forms.Button boutonJourSuivant;
+        private System.Windows.Forms.Button boutonJourPrecedent;
+        private System.Windows.Forms.Button boutonEffacerActivite;
     }
 }

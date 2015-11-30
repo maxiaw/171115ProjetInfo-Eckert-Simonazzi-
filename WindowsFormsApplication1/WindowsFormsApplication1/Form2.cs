@@ -52,39 +52,17 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
-            
-     
-            objetJourSelection = listeJour[jourSelection];
+            objetJourSelection = listeJour[jourSelection-1];
             listeActivitéTableau = objetJourSelection.getlisteActivite;
             
             //Remplissage de la listbox
             string contenuListBox;
             DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
-            int i = 0;
            foreach(Activités A in listeActivitéTableau)
            {
 
                contenuListBox = A.getDateDebutMars(dateDebutPlanning) + "  : " + A.GetNomActivité;
                listBox1.Items.Add(contenuListBox);
-
-               listView1.Items.Add("     ");
-               if(A.GettypeActivite == "Sleeping")
-               {
-
-                   listView1.Items[i].BackColor = Color.DarkSeaGreen;
-
-               }
-               else if (A.GettypeActivite == "Exploration")
-               {
-
-                       listView1.Items[i].BackColor = Color.CadetBlue;
-
-               }
-
-               
-
-               i++;
 
            }
 
@@ -130,25 +108,60 @@ namespace WindowsFormsApplication1
 
             // Recuperation du lieu
             Lieu lieuActivite = listeActivitéTableau[activiteSelectionne].GetLieuActivite;
+
             labelLieuActivite.Text = "Lieu : " + lieuActivite.GetnomLieu;
+
+            // Recuperation de la liste d'astronautes
+            List<Astronautes> listeAstronautesActivite = listeActivitéTableau[activiteSelectionne].GetlisteAstronautes;
+            string contenuListBoxAstronautes;
 
             listBoxAstronautes.Items.Clear();
 
-            List<Astronautes> listeAstronautesActivite = listeActivitéTableau[activiteSelectionne].GetlisteAstronautes;
-            string contenuListBoxAstronautes;
-            foreach (Astronautes A in listeAstronautesActivite)
+            foreach (Astronautes A in listeAstronautesActivite) 
             {
 
-                contenuListBoxAstronautes = A.GetprenomAstronaute + "  " + A.GetnomAstronaute + " Age :" + A.GetageAstronaute.ToString();
+                contenuListBoxAstronautes = "" + A.GetprenomAstronaute + " " + A.GetnomAstronaute + "    age : " + A.GetageAstronaute.ToString() ;
                 listBoxAstronautes.Items.Add(contenuListBoxAstronautes);
 
             }
 
+            texteDescriptifActivite.Text = listeActivitéTableau[activiteSelectionne].GettexteDescriptif;
+            
+        }
+
+        private void boutonJourSuivant_Click(object sender, EventArgs e)
+        {
+            if (jourSelection != 500)
+            {
+                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning);
+                Form.ActiveForm.Close();
+                fenetre.Show();
+            }
+        }
+
+        private void boutonJourPrecedent_Click(object sender, EventArgs e)
+        {
+            if(jourSelection != 1)
+            {
+
+                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning);
+                Form.ActiveForm.Close();
+                fenetre.Show();
+            }
 
         }
 
-        private void listBox2_DrawItem(object sender, DrawItemEventArgs e)
+        private void boutonEffacerActivite_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            objetJourSelection.getlisteActivite.Clear();
+        }
+
+        private void buttonAjouterActivité_Click(object sender, EventArgs e)
+        {
+            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection);
+
+            formAjout.ShowDialog();
 
         }
     }
