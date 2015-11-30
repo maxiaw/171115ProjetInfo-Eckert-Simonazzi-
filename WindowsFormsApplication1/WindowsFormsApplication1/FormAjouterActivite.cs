@@ -13,11 +13,13 @@ namespace WindowsFormsApplication1
     {
 
         private Jour objetJour;
+        private List<Astronautes> listeAstronautes;
 
-        public FormAjouterActivite(Jour tempJour)
+        public FormAjouterActivite(Jour tempJour, List<Astronautes> tempListeAstronautes)
         {
             InitializeComponent();
             objetJour = tempJour;
+            listeAstronautes = tempListeAstronautes;
         }
 
 
@@ -97,9 +99,13 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
 
+            string texteAstronautes;
 
-
-
+            foreach (Astronautes A in listeAstronautes)
+            {
+                texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
+                checkedListBoxAstronautes.Items.Add(texteAstronautes);
+            }
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
@@ -109,13 +115,52 @@ namespace WindowsFormsApplication1
 
         private void treeViewTypeActivite_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (treeViewTypeActivite.SelectedNode.Parent != null)
-            {
-                textBox2.Text = treeViewTypeActivite.SelectedNode.Parent.Text + " - " + treeViewTypeActivite.SelectedNode.Text;
-            }
-            else {
 
-                textBox2.Text = treeViewTypeActivite.SelectedNode.Text;
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAstronautesActivite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescriptifActivite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                labelNomLieu.Visible = true;
+                labelLieuCoordonneeX.Visible = true;
+                labelLieuCoordonneeY.Visible = true;
+                textBoxNomLieu.Visible = true;
+                textBoxCoordonnéesX.Visible = true;
+                textBoxCoordonnéesY.Visible = true;
+
+
+            }
+            else
+            {
+                labelNomLieu.Visible = false;
+                labelLieuCoordonneeX.Visible = false;
+                labelLieuCoordonneeY.Visible = false;
+                textBoxNomLieu.Visible = false;
+                textBoxCoordonnéesX.Visible = false;
+                textBoxCoordonnéesY.Visible = false;
+
             }
 
         }

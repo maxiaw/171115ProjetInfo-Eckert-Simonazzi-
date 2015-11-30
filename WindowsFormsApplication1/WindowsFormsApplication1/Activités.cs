@@ -19,7 +19,7 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
-    private Lieu lieuActivite;
+    Lieu lieuActivite;
     private static int nbActivité = 0;
     private string nomActivité;
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
@@ -159,10 +159,7 @@ public class Activités
 	{
 		throw new System.NotImplementedException();
 	}
-    public void RenvoyerLieu()
-    {
-         this.getLieu();
-    }
+
 	public virtual void supprimerLieu()
 	{
 		throw new System.NotImplementedException();

@@ -36,9 +36,9 @@
             this.labelJourActivité = new System.Windows.Forms.Label();
             this.labelTypeActivité = new System.Windows.Forms.Label();
             this.labelNomActivite = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxAstronautes = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxNomLieu = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.boutonEnregistrerActivite = new System.Windows.Forms.Button();
             this.treeViewTypeActivite = new System.Windows.Forms.TreeView();
@@ -46,7 +46,13 @@
             this.comboBoxHeureDebut = new System.Windows.Forms.ComboBox();
             this.comboBoxMinuteDebut = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.labelNomLieu = new System.Windows.Forms.Label();
+            this.comboBoxListeLieu = new System.Windows.Forms.ComboBox();
+            this.labelLieuCoordonneeX = new System.Windows.Forms.Label();
+            this.labelLieuCoordonneeY = new System.Windows.Forms.Label();
+            this.textBoxCoordonnéesX = new System.Windows.Forms.TextBox();
+            this.textBoxCoordonnéesY = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTitre
@@ -63,21 +69,23 @@
             // 
             this.labelAstronautesActivite.AutoSize = true;
             this.labelAstronautesActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAstronautesActivite.Location = new System.Drawing.Point(12, 469);
+            this.labelAstronautesActivite.Location = new System.Drawing.Point(345, 162);
             this.labelAstronautesActivite.Name = "labelAstronautesActivite";
             this.labelAstronautesActivite.Size = new System.Drawing.Size(181, 20);
             this.labelAstronautesActivite.TabIndex = 17;
             this.labelAstronautesActivite.Text = "Liste des astronautes :";
+            this.labelAstronautesActivite.Click += new System.EventHandler(this.labelAstronautesActivite_Click);
             // 
             // labelDescriptifActivite
             // 
             this.labelDescriptifActivite.AutoSize = true;
             this.labelDescriptifActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescriptifActivite.Location = new System.Drawing.Point(12, 391);
+            this.labelDescriptifActivite.Location = new System.Drawing.Point(345, 84);
             this.labelDescriptifActivite.Name = "labelDescriptifActivite";
             this.labelDescriptifActivite.Size = new System.Drawing.Size(181, 20);
             this.labelDescriptifActivite.TabIndex = 16;
             this.labelDescriptifActivite.Text = "Descriptif de l\'activité :";
+            this.labelDescriptifActivite.Click += new System.EventHandler(this.labelDescriptifActivite_Click);
             // 
             // labelLieuActivite
             // 
@@ -129,13 +137,14 @@
             this.labelNomActivite.TabIndex = 18;
             this.labelNomActivite.Text = "Nom :";
             // 
-            // checkedListBox1
+            // checkedListBoxAstronautes
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(209, 477);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(327, 79);
-            this.checkedListBox1.TabIndex = 19;
+            this.checkedListBoxAstronautes.FormattingEnabled = true;
+            this.checkedListBoxAstronautes.Location = new System.Drawing.Point(542, 170);
+            this.checkedListBoxAstronautes.Name = "checkedListBoxAstronautes";
+            this.checkedListBoxAstronautes.Size = new System.Drawing.Size(327, 154);
+            this.checkedListBoxAstronautes.TabIndex = 19;
+            this.checkedListBoxAstronautes.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -144,24 +153,26 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 20;
             // 
-            // textBox5
+            // textBoxNomLieu
             // 
-            this.textBox5.Location = new System.Drawing.Point(69, 353);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 24;
+            this.textBoxNomLieu.Location = new System.Drawing.Point(103, 425);
+            this.textBoxNomLieu.Name = "textBoxNomLieu";
+            this.textBoxNomLieu.Size = new System.Drawing.Size(97, 20);
+            this.textBoxNomLieu.TabIndex = 24;
+            this.textBoxNomLieu.Visible = false;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(209, 379);
+            this.richTextBox1.Location = new System.Drawing.Point(542, 72);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(327, 81);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // boutonEnregistrerActivite
             // 
-            this.boutonEnregistrerActivite.Location = new System.Drawing.Point(425, 572);
+            this.boutonEnregistrerActivite.Location = new System.Drawing.Point(758, 469);
             this.boutonEnregistrerActivite.Name = "boutonEnregistrerActivite";
             this.boutonEnregistrerActivite.Size = new System.Drawing.Size(111, 38);
             this.boutonEnregistrerActivite.TabIndex = 26;
@@ -209,29 +220,96 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "H";
             // 
-            // textBox2
+            // checkBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(315, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 32;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 391);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(144, 17);
+            this.checkBox1.TabIndex = 33;
+            this.checkBox1.Text = "Ajouter un nouveau lieu :";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // labelNomLieu
+            // 
+            this.labelNomLieu.AutoSize = true;
+            this.labelNomLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomLieu.Location = new System.Drawing.Point(12, 425);
+            this.labelNomLieu.Name = "labelNomLieu";
+            this.labelNomLieu.Size = new System.Drawing.Size(85, 20);
+            this.labelNomLieu.TabIndex = 34;
+            this.labelNomLieu.Text = "Nom lieu :";
+            this.labelNomLieu.Visible = false;
+            // 
+            // comboBoxListeLieu
+            // 
+            this.comboBoxListeLieu.FormattingEnabled = true;
+            this.comboBoxListeLieu.Location = new System.Drawing.Point(83, 349);
+            this.comboBoxListeLieu.Name = "comboBoxListeLieu";
+            this.comboBoxListeLieu.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxListeLieu.TabIndex = 35;
+            // 
+            // labelLieuCoordonneeX
+            // 
+            this.labelLieuCoordonneeX.AutoSize = true;
+            this.labelLieuCoordonneeX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLieuCoordonneeX.Location = new System.Drawing.Point(12, 458);
+            this.labelLieuCoordonneeX.Name = "labelLieuCoordonneeX";
+            this.labelLieuCoordonneeX.Size = new System.Drawing.Size(134, 20);
+            this.labelLieuCoordonneeX.TabIndex = 36;
+            this.labelLieuCoordonneeX.Text = "Coordonnées X :";
+            this.labelLieuCoordonneeX.Visible = false;
+            // 
+            // labelLieuCoordonneeY
+            // 
+            this.labelLieuCoordonneeY.AutoSize = true;
+            this.labelLieuCoordonneeY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLieuCoordonneeY.Location = new System.Drawing.Point(12, 485);
+            this.labelLieuCoordonneeY.Name = "labelLieuCoordonneeY";
+            this.labelLieuCoordonneeY.Size = new System.Drawing.Size(133, 20);
+            this.labelLieuCoordonneeY.TabIndex = 37;
+            this.labelLieuCoordonneeY.Text = "Coordonnées Y :";
+            this.labelLieuCoordonneeY.Visible = false;
+            // 
+            // textBoxCoordonnéesX
+            // 
+            this.textBoxCoordonnéesX.Location = new System.Drawing.Point(153, 460);
+            this.textBoxCoordonnéesX.Name = "textBoxCoordonnéesX";
+            this.textBoxCoordonnéesX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCoordonnéesX.TabIndex = 38;
+            this.textBoxCoordonnéesX.Visible = false;
+            // 
+            // textBoxCoordonnéesY
+            // 
+            this.textBoxCoordonnéesY.Location = new System.Drawing.Point(153, 487);
+            this.textBoxCoordonnéesY.Name = "textBoxCoordonnéesY";
+            this.textBoxCoordonnéesY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCoordonnéesY.TabIndex = 39;
+            this.textBoxCoordonnéesY.Visible = false;
             // 
             // FormAjouterActivite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 619);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(881, 526);
+            this.Controls.Add(this.textBoxCoordonnéesY);
+            this.Controls.Add(this.textBoxCoordonnéesX);
+            this.Controls.Add(this.labelLieuCoordonneeY);
+            this.Controls.Add(this.labelLieuCoordonneeX);
+            this.Controls.Add(this.comboBoxListeLieu);
+            this.Controls.Add(this.labelNomLieu);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMinuteDebut);
             this.Controls.Add(this.comboBoxHeureDebut);
             this.Controls.Add(this.treeViewTypeActivite);
             this.Controls.Add(this.boutonEnregistrerActivite);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxNomLieu);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.checkedListBoxAstronautes);
             this.Controls.Add(this.labelNomActivite);
             this.Controls.Add(this.labelAstronautesActivite);
             this.Controls.Add(this.labelDescriptifActivite);
@@ -258,9 +336,9 @@
         private System.Windows.Forms.Label labelJourActivité;
         private System.Windows.Forms.Label labelTypeActivité;
         private System.Windows.Forms.Label labelNomActivite;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxAstronautes;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxNomLieu;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button boutonEnregistrerActivite;
         private System.Windows.Forms.TreeView treeViewTypeActivite;
@@ -268,6 +346,12 @@
         private System.Windows.Forms.ComboBox comboBoxHeureDebut;
         private System.Windows.Forms.ComboBox comboBoxMinuteDebut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label labelNomLieu;
+        private System.Windows.Forms.ComboBox comboBoxListeLieu;
+        private System.Windows.Forms.Label labelLieuCoordonneeX;
+        private System.Windows.Forms.Label labelLieuCoordonneeY;
+        private System.Windows.Forms.TextBox textBoxCoordonnéesX;
+        private System.Windows.Forms.TextBox textBoxCoordonnéesY;
     }
 }

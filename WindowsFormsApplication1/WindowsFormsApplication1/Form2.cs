@@ -15,18 +15,20 @@ namespace WindowsFormsApplication1
         private int jourSelection;
         private Jour objetJourSelection;
         private List<Activités> listeActivitéTableau;
+        private List<Astronautes> listeAstronautes;
         private int activiteSelectionne;
         private Planning planning;
 
 
 
         //Constructeur par défaut
-        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning)
+        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes)
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
             planning = tempPlanning;
+            listeAstronautes = tempListeAstronautes;
             
             
         }
@@ -133,7 +135,7 @@ namespace WindowsFormsApplication1
         {
             if (jourSelection != 500)
             {
-                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning);
+                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes);
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -144,7 +146,7 @@ namespace WindowsFormsApplication1
             if(jourSelection != 1)
             {
 
-                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning);
+                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes);
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -159,7 +161,7 @@ namespace WindowsFormsApplication1
 
         private void buttonAjouterActivité_Click(object sender, EventArgs e)
         {
-            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection);
+            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, listeAstronautes);
 
             formAjout.ShowDialog();
 
