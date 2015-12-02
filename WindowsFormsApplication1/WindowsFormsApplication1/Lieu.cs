@@ -51,6 +51,10 @@ public class Lieu
         get { return listeActivites; }
         set { listeActivites = value; }
 	}
-
+    public override string ToString()
+    {
+        string ch = "";
+        return ch;
+    }
 }
 

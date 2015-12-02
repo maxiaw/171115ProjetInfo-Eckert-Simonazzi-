@@ -9,17 +9,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class formModifierActivite : Form
+    public partial class ModfierUneActivite : Form
     {
+        public ModfierUneActivite()
+        {
+            InitializeComponent();
+        }
         private Jour objetJour;
         private List<Astronautes> listeAstronautes;
         private Activités activiteAModifier;
         private List<Lieu> listeLieux;
 
-
-        public formModifierActivite(Jour objetJourSelection, List<Astronautes> tempListeAstronautes, Activités tempActiviteAModifier, List<Lieu> tempListeDeLieux)
+        public ModfierUneActivite(Jour objetJourSelection, List<Astronautes> tempListeAstronautes, Activités tempActiviteAModifier, List<Lieu> tempListeDeLieux)
         {
-            InitializeComponent();
             objetJour = objetJourSelection;
             activiteAModifier = tempActiviteAModifier;
             listeAstronautes = tempListeAstronautes;
@@ -31,22 +33,21 @@ namespace WindowsFormsApplication1
         {
             textBox1.Text = this.activiteAModifier.GetnomActivite;
             textBox3.Text = this.objetJour.GetidJour.ToString();
-            // Remplire heure debut
+            // Remplir heure debut
 
             for (int i = 0; i < 25; i++)
             {
                 comboBoxHeureDebut.Items.Add(i);
             }
-            //remplire minute debut
+            //remplir minute debut
             for (int i = 0; i < 60; i = i + 10)
             {
                 comboBoxMinuteDebut.Items.Add(i);
             }
             // On remet l'heure initiale qu'avait l'activité qu'on doit modifier
-            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebutMars();
-            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getMinuteDebutMars();
+            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebut.Hour;
+            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getHeureDebut.Minute;
             // On rempli le comboBox de lieu avec la liste de lieu
-            if(this  != null)
             foreach(Lieu L in listeLieux)
             {
                 comboBoxListeLieu.Items.Add(L.GetnomLieu);
@@ -64,21 +65,21 @@ namespace WindowsFormsApplication1
             }
             // on récupère le descriptif initial de l'activité à modifier
 
-            richTextBox1.Text = activiteAModifier.GettexteDescriptif;
+            richTextBox2.Text = activiteAModifier.GettexteDescriptif;
 
             // On remplie le CheckListeBoxAstronaute avec la liste des astronautes
 
             foreach(Astronautes A in listeAstronautes)
             {
-                checkedListBoxAstronautes.Items.Add(A);
+                checkedListBox1.Items.Add(A);
             }
 
             //On récupère la liste des astronoautes initiale de l'activité à modifier
             foreach(Astronautes astro in listeAstronautes)
             {
-                if((astro.GetnomAstronaute==activiteAModifier.GetlisteAstronautes.Find(x=>x.GetnomAstronaute.Contains(astro.GetnomAstronaute)).ToString()))
+                if(astro.GetnomAstronaute==activiteAModifier.GetlisteAstronautes.Find(x=>x.GetnomAstronaute==astro.GetnomAstronaute).ToString())
                 {
-                    checkedListBoxAstronautes.SelectedIndex = int.Parse(astro.GetnomAstronaute);
+                    checkedListBox1.SelectedIndex = int.Parse(astro.GetnomAstronaute);
                 }
             }
 
@@ -115,7 +116,18 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
       
     }
-}
+    }
+

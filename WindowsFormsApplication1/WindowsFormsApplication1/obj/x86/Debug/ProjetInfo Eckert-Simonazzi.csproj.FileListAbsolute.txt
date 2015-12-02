@@ -88,4 +88,12 @@ H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\Win
 D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
 >>>>>>> origin/master
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
+<<<<<<< HEAD
 D:\Nicolas\Mes documents\ENSC\Prog\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
+=======
+<<<<<<< HEAD
+\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ModfierUneActivite.resources
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master

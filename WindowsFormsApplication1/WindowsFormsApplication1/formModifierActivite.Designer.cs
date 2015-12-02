@@ -53,6 +53,7 @@
             this.labelJourActivité = new System.Windows.Forms.Label();
             this.labelTypeActivité = new System.Windows.Forms.Label();
             this.labelTitre = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxCoordonnéesY
@@ -287,11 +288,21 @@
             this.labelTitre.TabIndex = 40;
             this.labelTitre.Text = "Modification d\'une activité";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(327, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "label2";
+            // 
             // formModifierActivite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 513);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxCoordonnéesY);
             this.Controls.Add(this.textBoxCoordonnéesX);
             this.Controls.Add(this.labelLieuCoordonneeY);
@@ -352,5 +363,6 @@
         private System.Windows.Forms.Label labelJourActivité;
         private System.Windows.Forms.Label labelTypeActivité;
         private System.Windows.Forms.Label labelTitre;
+        private System.Windows.Forms.Label label2;
     }
 }
