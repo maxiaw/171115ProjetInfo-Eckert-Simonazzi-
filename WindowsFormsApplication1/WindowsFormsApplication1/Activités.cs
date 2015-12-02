@@ -144,8 +144,13 @@ public class Activités
         set { nbActivité = value; }
     }
 
+    public string GetNomLieuDeActivite
+    {
+        get{return this.lieuActivite.GetnomLieu;}
+        
+    }
 
-
+    
     //FinAccesseurs
 
 	public virtual void RenvoieActiviteParMotCle()
