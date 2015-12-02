@@ -19,11 +19,11 @@ public class Activités
     private string typeActivite;
     private DateTime heureFin;
     private string statutActivite;
-    Lieu lieuActivite;
+    private Lieu lieuActivite;
     private static int nbActivité = 0;
     private string nomActivité;
+
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
-    
     //Constructeur par défaut
     public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
     {
@@ -49,7 +49,6 @@ public class Activités
         set { nomActivité = value; }
     }
 
-   
     public string getDateDebutMars(DateTime tempDateDebutPlanning)
     {
         DateTime dateDebutPlanning = tempDateDebutPlanning;
@@ -148,9 +147,9 @@ public class Activités
         set { nbActivité = value; }
     }
 
-    public string GetNomLieuDeActivite
+    public string GetnomLieuDeActivite
     {
-        get{return lieuActivite.GetnomLieu;}
+        get{return this.lieuActivite.GetnomLieu;}
         
     }
 
@@ -166,7 +165,10 @@ public class Activités
 	{
 		throw new System.NotImplementedException();
 	}
-
+    public void RenvoyerLieu()
+    {
+         this.getLieu();
+    }
 	public virtual void supprimerLieu()
 	{
 		throw new System.NotImplementedException();

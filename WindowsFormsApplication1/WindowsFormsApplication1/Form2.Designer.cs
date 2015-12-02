@@ -61,7 +61,6 @@
             this.panelInteractionActivité.Controls.Add(this.labelLieuActivite);
             this.panelInteractionActivité.Controls.Add(this.labelNomActivite);
             this.panelInteractionActivité.Controls.Add(this.buttonSupprimerActivité);
-            this.panelInteractionActivité.Controls.Add(this.buttonModifierActivité);
             this.panelInteractionActivité.Controls.Add(this.buttonAfficherLieuActivité);
             this.panelInteractionActivité.Controls.Add(this.labelPlageHoraireActivité);
             this.panelInteractionActivité.Controls.Add(this.labelJourActivité);
@@ -134,7 +133,7 @@
             // 
             // buttonModifierActivité
             // 
-            this.buttonModifierActivité.Location = new System.Drawing.Point(666, 68);
+            this.buttonModifierActivité.Location = new System.Drawing.Point(166, 361);
             this.buttonModifierActivité.Name = "buttonModifierActivité";
             this.buttonModifierActivité.Size = new System.Drawing.Size(107, 30);
             this.buttonModifierActivité.TabIndex = 5;
@@ -205,6 +204,7 @@
             this.panelListeActivité.Controls.Add(this.boutonEffacerActivite);
             this.panelListeActivité.Controls.Add(this.listBox1);
             this.panelListeActivité.Controls.Add(this.buttonAjouterActivité);
+            this.panelListeActivité.Controls.Add(this.buttonModifierActivité);
             this.panelListeActivité.Location = new System.Drawing.Point(13, 90);
             this.panelListeActivité.Name = "panelListeActivité";
             this.panelListeActivité.Size = new System.Drawing.Size(428, 416);

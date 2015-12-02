@@ -23,14 +23,14 @@ namespace WindowsFormsApplication1
 
 
         //Constructeur par défaut
-        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes)
+        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes,List<Lieu> tempListeLieu)
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
             planning = tempPlanning;
             listeAstronautes = tempListeAstronautes;
-            
+            listeDeLieux = tempListeLieu;
             
         }
         //Accesseurs//
@@ -55,6 +55,8 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            
+
             objetJourSelection = listeJour[jourSelection-1];
             listeActivitéTableau = objetJourSelection.getlisteActivite;
             
@@ -136,7 +138,7 @@ namespace WindowsFormsApplication1
         {
             if (jourSelection != 500)
             {
-                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes);
+                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes,listeDeLieux);
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -147,7 +149,7 @@ namespace WindowsFormsApplication1
             if(jourSelection != 1)
             {
 
-                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes);
+                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes,listeDeLieux);
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -163,15 +165,15 @@ namespace WindowsFormsApplication1
         private void buttonAjouterActivité_Click(object sender, EventArgs e)
         {
             FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, listeAstronautes);
-
             formAjout.ShowDialog();
+            
 
         }
 
         private void buttonModifierActivité_Click(object sender, EventArgs e)
         {
-            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeDeLieux);
-            formModifier.ShowDialog();
+            formModifierActivite formModificationActivite = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne], listeDeLieux);
+            formModificationActivite.Show();
         } 
     }
 }

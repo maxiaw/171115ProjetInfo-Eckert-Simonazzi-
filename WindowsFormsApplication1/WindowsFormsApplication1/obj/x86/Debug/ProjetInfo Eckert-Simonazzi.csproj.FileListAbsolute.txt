@@ -87,3 +87,4 @@ H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\Win
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 >>>>>>> origin/master
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources
+\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ModfierUneActivite.resources
