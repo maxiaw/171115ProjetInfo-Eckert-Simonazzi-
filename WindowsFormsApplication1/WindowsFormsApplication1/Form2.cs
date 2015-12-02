@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         private List<Astronautes> listeAstronautes;
         private int activiteSelectionne;
         private Planning planning;
+        private List<Lieu> listeDeLieux;
 
 
 
@@ -166,5 +167,11 @@ namespace WindowsFormsApplication1
             formAjout.ShowDialog();
 
         }
+
+        private void buttonModifierActivité_Click(object sender, EventArgs e)
+        {
+            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeDeLieux);
+            formModifier.ShowDialog();
+        } 
     }
 }

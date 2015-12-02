@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.panelInteractionActivité = new System.Windows.Forms.Panel();
+            this.labelAstronautesActivite = new System.Windows.Forms.Label();
+            this.listBoxAstronautes = new System.Windows.Forms.ListBox();
+            this.labelDescriptifActivite = new System.Windows.Forms.Label();
             this.labelLieuActivite = new System.Windows.Forms.Label();
             this.labelNomActivite = new System.Windows.Forms.Label();
-            this.buttonAjouterActivité = new System.Windows.Forms.Button();
             this.buttonSupprimerActivité = new System.Windows.Forms.Button();
             this.buttonModifierActivité = new System.Windows.Forms.Button();
             this.buttonAfficherLieuActivité = new System.Windows.Forms.Button();
@@ -39,16 +41,14 @@
             this.labelJourActivité = new System.Windows.Forms.Label();
             this.labelTypeActivité = new System.Windows.Forms.Label();
             this.texteDescriptifActivite = new System.Windows.Forms.RichTextBox();
+            this.buttonAjouterActivité = new System.Windows.Forms.Button();
             this.panelListeActivité = new System.Windows.Forms.Panel();
+            this.boutonEffacerActivite = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelNumeroJour = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelDescriptifActivite = new System.Windows.Forms.Label();
-            this.listBoxAstronautes = new System.Windows.Forms.ListBox();
-            this.labelAstronautesActivite = new System.Windows.Forms.Label();
             this.boutonJourSuivant = new System.Windows.Forms.Button();
             this.boutonJourPrecedent = new System.Windows.Forms.Button();
-            this.boutonEffacerActivite = new System.Windows.Forms.Button();
             this.panelInteractionActivité.SuspendLayout();
             this.panelListeActivité.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,36 @@
             this.panelInteractionActivité.Size = new System.Drawing.Size(795, 416);
             this.panelInteractionActivité.TabIndex = 0;
             // 
+            // labelAstronautesActivite
+            // 
+            this.labelAstronautesActivite.AutoSize = true;
+            this.labelAstronautesActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAstronautesActivite.Location = new System.Drawing.Point(424, 238);
+            this.labelAstronautesActivite.Name = "labelAstronautesActivite";
+            this.labelAstronautesActivite.Size = new System.Drawing.Size(181, 20);
+            this.labelAstronautesActivite.TabIndex = 11;
+            this.labelAstronautesActivite.Text = "Liste des astronautes :";
+            // 
+            // listBoxAstronautes
+            // 
+            this.listBoxAstronautes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxAstronautes.FormattingEnabled = true;
+            this.listBoxAstronautes.ItemHeight = 20;
+            this.listBoxAstronautes.Location = new System.Drawing.Point(428, 279);
+            this.listBoxAstronautes.Name = "listBoxAstronautes";
+            this.listBoxAstronautes.Size = new System.Drawing.Size(345, 124);
+            this.listBoxAstronautes.TabIndex = 1;
+            // 
+            // labelDescriptifActivite
+            // 
+            this.labelDescriptifActivite.AutoSize = true;
+            this.labelDescriptifActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescriptifActivite.Location = new System.Drawing.Point(22, 238);
+            this.labelDescriptifActivite.Name = "labelDescriptifActivite";
+            this.labelDescriptifActivite.Size = new System.Drawing.Size(181, 20);
+            this.labelDescriptifActivite.TabIndex = 10;
+            this.labelDescriptifActivite.Text = "Descriptif de l\'activité :";
+            // 
             // labelLieuActivite
             // 
             this.labelLieuActivite.AutoSize = true;
@@ -93,16 +123,6 @@
             this.labelNomActivite.TabIndex = 8;
             this.labelNomActivite.Text = "label2";
             // 
-            // buttonAjouterActivité
-            // 
-            this.buttonAjouterActivité.Location = new System.Drawing.Point(293, 361);
-            this.buttonAjouterActivité.Name = "buttonAjouterActivité";
-            this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
-            this.buttonAjouterActivité.TabIndex = 7;
-            this.buttonAjouterActivité.Text = "Ajouter une activité";
-            this.buttonAjouterActivité.UseVisualStyleBackColor = true;
-            this.buttonAjouterActivité.Click += new System.EventHandler(this.buttonAjouterActivité_Click);
-            // 
             // buttonSupprimerActivité
             // 
             this.buttonSupprimerActivité.Location = new System.Drawing.Point(666, 113);
@@ -120,6 +140,7 @@
             this.buttonModifierActivité.TabIndex = 5;
             this.buttonModifierActivité.Text = "Modifier Activité";
             this.buttonModifierActivité.UseVisualStyleBackColor = true;
+            this.buttonModifierActivité.Click += new System.EventHandler(this.buttonModifierActivité_Click);
             // 
             // buttonAfficherLieuActivité
             // 
@@ -169,6 +190,16 @@
             this.texteDescriptifActivite.Text = "";
             this.texteDescriptifActivite.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            // buttonAjouterActivité
+            // 
+            this.buttonAjouterActivité.Location = new System.Drawing.Point(293, 361);
+            this.buttonAjouterActivité.Name = "buttonAjouterActivité";
+            this.buttonAjouterActivité.Size = new System.Drawing.Size(107, 30);
+            this.buttonAjouterActivité.TabIndex = 7;
+            this.buttonAjouterActivité.Text = "Ajouter une activité";
+            this.buttonAjouterActivité.UseVisualStyleBackColor = true;
+            this.buttonAjouterActivité.Click += new System.EventHandler(this.buttonAjouterActivité_Click);
+            // 
             // panelListeActivité
             // 
             this.panelListeActivité.Controls.Add(this.boutonEffacerActivite);
@@ -178,6 +209,16 @@
             this.panelListeActivité.Name = "panelListeActivité";
             this.panelListeActivité.Size = new System.Drawing.Size(428, 416);
             this.panelListeActivité.TabIndex = 1;
+            // 
+            // boutonEffacerActivite
+            // 
+            this.boutonEffacerActivite.Location = new System.Drawing.Point(29, 357);
+            this.boutonEffacerActivite.Name = "boutonEffacerActivite";
+            this.boutonEffacerActivite.Size = new System.Drawing.Size(114, 38);
+            this.boutonEffacerActivite.TabIndex = 8;
+            this.boutonEffacerActivite.Text = "Effacer toutes les activités";
+            this.boutonEffacerActivite.UseVisualStyleBackColor = true;
+            this.boutonEffacerActivite.Click += new System.EventHandler(this.boutonEffacerActivite_Click);
             // 
             // listBox1
             // 
@@ -211,36 +252,6 @@
             this.label1.Text = "Jour n°";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // labelDescriptifActivite
-            // 
-            this.labelDescriptifActivite.AutoSize = true;
-            this.labelDescriptifActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescriptifActivite.Location = new System.Drawing.Point(22, 238);
-            this.labelDescriptifActivite.Name = "labelDescriptifActivite";
-            this.labelDescriptifActivite.Size = new System.Drawing.Size(181, 20);
-            this.labelDescriptifActivite.TabIndex = 10;
-            this.labelDescriptifActivite.Text = "Descriptif de l\'activité :";
-            // 
-            // listBoxAstronautes
-            // 
-            this.listBoxAstronautes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxAstronautes.FormattingEnabled = true;
-            this.listBoxAstronautes.ItemHeight = 20;
-            this.listBoxAstronautes.Location = new System.Drawing.Point(428, 279);
-            this.listBoxAstronautes.Name = "listBoxAstronautes";
-            this.listBoxAstronautes.Size = new System.Drawing.Size(345, 124);
-            this.listBoxAstronautes.TabIndex = 1;
-            // 
-            // labelAstronautesActivite
-            // 
-            this.labelAstronautesActivite.AutoSize = true;
-            this.labelAstronautesActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAstronautesActivite.Location = new System.Drawing.Point(424, 238);
-            this.labelAstronautesActivite.Name = "labelAstronautesActivite";
-            this.labelAstronautesActivite.Size = new System.Drawing.Size(181, 20);
-            this.labelAstronautesActivite.TabIndex = 11;
-            this.labelAstronautesActivite.Text = "Liste des astronautes :";
-            // 
             // boutonJourSuivant
             // 
             this.boutonJourSuivant.Location = new System.Drawing.Point(1151, 43);
@@ -261,21 +272,11 @@
             this.boutonJourPrecedent.UseVisualStyleBackColor = true;
             this.boutonJourPrecedent.Click += new System.EventHandler(this.boutonJourPrecedent_Click);
             // 
-            // boutonEffacerActivite
-            // 
-            this.boutonEffacerActivite.Location = new System.Drawing.Point(29, 357);
-            this.boutonEffacerActivite.Name = "boutonEffacerActivite";
-            this.boutonEffacerActivite.Size = new System.Drawing.Size(114, 38);
-            this.boutonEffacerActivite.TabIndex = 8;
-            this.boutonEffacerActivite.Text = "Effacer toutes les activités";
-            this.boutonEffacerActivite.UseVisualStyleBackColor = true;
-            this.boutonEffacerActivite.Click += new System.EventHandler(this.boutonEffacerActivite_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.ClientSize = new System.Drawing.Size(1276, 532);
             this.Controls.Add(this.boutonJourPrecedent);
             this.Controls.Add(this.boutonJourSuivant);
             this.Controls.Add(this.label1);

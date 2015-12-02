@@ -23,6 +23,7 @@ public class Activités
     private static int nbActivité = 0;
     private string nomActivité;
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
+    
     //Constructeur par défaut
     public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
     {
@@ -48,6 +49,7 @@ public class Activités
         set { nomActivité = value; }
     }
 
+   
     public string getDateDebutMars(DateTime tempDateDebutPlanning)
     {
         DateTime dateDebutPlanning = tempDateDebutPlanning;
@@ -148,7 +150,7 @@ public class Activités
 
     public string GetNomLieuDeActivite
     {
-        get{return this.lieuActivite.GetnomLieu;}
+        get{return lieuActivite.GetnomLieu;}
         
     }
 

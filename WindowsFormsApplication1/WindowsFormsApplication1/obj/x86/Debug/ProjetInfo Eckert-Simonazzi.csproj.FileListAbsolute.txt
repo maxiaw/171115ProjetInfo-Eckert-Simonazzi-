@@ -75,7 +75,6 @@ H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsF
 H:\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
 <<<<<<< HEAD
 \\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.FormAjouterActivite.resources
-=======
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
@@ -87,3 +86,4 @@ H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\Win
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 H:\ENSC\Programmation\ProjetInfo\30-11-15\ProjetInfo-Eckert-Simonazzi-master\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ProjetInfo Eckert-Simonazzi.csproj.GenerateResource.Cache
 >>>>>>> origin/master
+\\psf\Home\Desktop\ProjetInfo-Eckert-Simonazzi\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.formModifierActivite.resources

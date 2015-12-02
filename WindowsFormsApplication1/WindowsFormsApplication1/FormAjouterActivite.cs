@@ -99,8 +99,7 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
 
-<<<<<<< HEAD
-=======
+
             string texteAstronautes;
 
             foreach (Astronautes A in listeAstronautes)
@@ -108,7 +107,6 @@ namespace WindowsFormsApplication1
                 texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
                 checkedListBoxAstronautes.Items.Add(texteAstronautes);
             }
->>>>>>> origin/master
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
