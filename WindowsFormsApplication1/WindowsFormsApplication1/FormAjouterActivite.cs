@@ -97,9 +97,6 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
 
-
-
-
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
