@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
 
         public formModifierActivite(Jour objetJourSelection, List<Astronautes> tempListeAstronautes, Activités tempActiviteAModifier, List<Lieu> tempListeDeLieux)
         {
+            InitializeComponent();
             objetJour = objetJourSelection;
             activiteAModifier = tempActiviteAModifier;
             listeAstronautes = tempListeAstronautes;
@@ -41,8 +42,8 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
             // On remet l'heure initiale qu'avait l'activité qu'on doit modifier
-            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebut.Hour;
-            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getHeureDebut.Minute;
+            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebutMars();
+            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getMinuteDebutMars();
             // On rempli le comboBox de lieu avec la liste de lieu
             foreach(Lieu L in listeLieux)
             {

@@ -18,13 +18,9 @@ namespace WindowsFormsApplication1
         private List<Astronautes> listeAstronautes;
         private int activiteSelectionne;
         private Planning planning;
-<<<<<<< HEAD
         private List<Lieu> listeLieu;
-=======
-        private List<Lieu> listeDeLieux;
 
 
->>>>>>> origin/master
 
         //Constructeur par défaut
         public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu)
@@ -56,23 +52,29 @@ namespace WindowsFormsApplication1
             set { listeActivitéTableau = value; }
         }
         //FinAccesseurs//
-      
+
+        //Remplissage de la listbox
+        public void remplissageListBox()
+        {
+            string contenuListBox;
+            foreach (Activités A in listeActivitéTableau)
+            {
+
+                contenuListBox = A.getHoraireDebutMarsTexte() + "  : " + A.GetNomActivité;
+                listBox1.Items.Add(contenuListBox);
+
+            }
+        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             objetJourSelection = listeJour[jourSelection-1];
             listeActivitéTableau = objetJourSelection.getlisteActivite;
-            
-            //Remplissage de la listbox
-            string contenuListBox;
+
+            remplissageListBox();
+
             DateTime dateDebutPlanning = new DateTime(2015, 11, 15, 0, 0, 0);
-           foreach(Activités A in listeActivitéTableau)
-           {
-
-               contenuListBox = A.getDateDebutMars(dateDebutPlanning) + "  : " + A.GetNomActivité;
-               listBox1.Items.Add(contenuListBox);
-
-           }
+           
 
             labelNumeroJour.Text = jourSelection.ToString();
 
@@ -110,8 +112,8 @@ namespace WindowsFormsApplication1
             labelJourActivité.Text = "Jour : "  + jourSelection.ToString();
 
             DateTime dateDebutPlanning = planning.GetDateDebut;
-            string texteHoraire = listeActivitéTableau[activiteSelectionne].getDateDebutMars(dateDebutPlanning);
-            texteHoraire = texteHoraire + " à "+ listeActivitéTableau[activiteSelectionne].getDateFinMars(dateDebutPlanning);
+            string texteHoraire = listeActivitéTableau[activiteSelectionne].getHoraireDebutMarsTexte();
+            texteHoraire = texteHoraire + " à " + listeActivitéTableau[activiteSelectionne].getHoraireFinMarsTexte();
             labelPlageHoraireActivité.Text = "Plage horaire : " + texteHoraire;
 
             // Recuperation du lieu
@@ -167,21 +169,33 @@ namespace WindowsFormsApplication1
 
         private void buttonAjouterActivité_Click(object sender, EventArgs e)
         {
-            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, jourSelection, listeAstronautes, listeLieu, planning);
+            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, objetJourSelection, listeAstronautes, listeLieu, planning);
 
             formAjout.ShowDialog();
+
+            listBox1.Items.Clear();
+
+            remplissageListBox();
 
         }
 
         private void buttonModifierActivité_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
 
-        }
-=======
-            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeDeLieux);
+            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeLieu);
             formModifier.ShowDialog();
+        }
+
+        private void buttonSupprimerActivité_Click(object sender, EventArgs e)
+        {
+            activiteSelectionne = listBox1.SelectedIndex;
+            objetJourSelection.supprimerActivite(activiteSelectionne);
+
+            listBox1.Items.Clear();
+
+            remplissageListBox();
+         
         } 
->>>>>>> origin/master
+
     }
 }

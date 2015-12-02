@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 public class Jour
 {
     private int idJour;
@@ -60,12 +61,6 @@ public class Jour
 
 	}
 
-
-
-	
-
-
-
     public int GetidJour
     {
         get { return idJour; }
@@ -85,13 +80,22 @@ public class Jour
     }
     //FinAccesseurs//
 
+
+    // Classe de comparaison des activités
+    public class ActiviteComparer : IComparer<Activités>
+    {
+        public int Compare(Activités x, Activités y)
+        {
+
+            return x.getHoraireDebut.CompareTo(y.getHoraireDebut);
+
+        }
+    }
 	
-
-
-
-	public virtual void ajouterActivite()
+	public void ajouterActivite(Activités nouvelleActivité)
 	{
-		throw new System.NotImplementedException();
+        listeActivite.Add(nouvelleActivité);
+        listeActivite.Sort(new ActiviteComparer());
 	}
 
 	public virtual void modifierActivite()
@@ -99,9 +103,9 @@ public class Jour
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void supprimerActivite()
+	public virtual void supprimerActivite(int index)
 	{
-		throw new System.NotImplementedException();
+        listeActivite.RemoveAt(index);
 	}
 
 	public virtual void modifierCompteRendu()

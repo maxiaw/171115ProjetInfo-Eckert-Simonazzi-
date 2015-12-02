@@ -14,10 +14,10 @@ public class Activités
 {
 
     private int idActivité;
-    private DateTime heureDebut;
+    private int horaireDebut; //Debut de l'activité en nombre de minute de 0 * 1480
     private string texteDescriptif;
     private string typeActivite;
-    private DateTime heureFin;
+    private int horaireFin; //Fin de l'activité en nombre de minute de 0 * 1480
     private string statutActivite;
     Lieu lieuActivite;
     private static int nbActivité = 0;
@@ -25,13 +25,13 @@ public class Activités
     private List<Astronautes> listeAstronautes = new List<Astronautes>();
     
     //Constructeur par défaut
-    public Activités(string nom, string type, DateTime hDebut, DateTime hFin, Lieu tempLieuActivite, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
+    public Activités(string nom, string type, int hDebut, int hFin, Lieu tempLieuActivite, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
     {
         nbActivité++;
         nomActivité = nom;
         idActivité = nbActivité;
-        heureDebut = hDebut;
-        heureFin = hFin;
+        horaireDebut = hDebut;
+        horaireFin = hFin;
         typeActivite = type;
         lieuActivite = tempLieuActivite;
         listeAstronautes = tempListeAstronautes;
@@ -50,58 +50,109 @@ public class Activités
     }
 
    
-    public string getDateDebutMars(DateTime tempDateDebutPlanning)
+    public string getHoraireDebutMarsTexte()
     {
-        DateTime dateDebutPlanning = tempDateDebutPlanning;
 
-        TimeSpan ecart = heureDebut - dateDebutPlanning;
+        string heure;
+        if (getHeureDebutMars() == 0)
+        {
+            heure = "00";
+        }
+        else
+        {
+            heure = getHeureDebutMars().ToString();
+        }
 
-        int intervalleTempsDebutActivite = ecart.Days * 60 * 24 + ecart.Hours * 60 + ecart.Minutes + ecart.Days * 40;
+        string minute;
+        if (getMinuteDebutMars() == 0)
+        {
+            minute = "00";
+        }
+        else
+        {
+            minute = getMinuteDebutMars().ToString();
+        }
 
-        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - (ecart.Days * 60 * 24);
+        string heureTexte = heure + "h" + minute;
 
-        int horaireDebutHeure = (int)Math.Truncate(doubleIntervalleTempsDebutActivite / 60);
-        int horaireDebutMinute = (int)doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
+        return heureTexte;
+        
+    }
 
-        string conversionDebut = horaireDebutHeure.ToString() + "h"+ horaireDebutMinute.ToString();
+    public int getHeureDebutMars()
+    {
+        double heureDouble = horaireDebut / 60;
+        int heure = (int)Math.Truncate(heureDouble);
 
-        return conversionDebut;
+        return heure;
 
     }
 
-    public string getDateFinMars(DateTime tempDateDebutPlanning)
+    public int getMinuteDebutMars()
     {
-        DateTime dateDebutPlanning = tempDateDebutPlanning;
+        int minute = horaireDebut % 60;
 
-
-        TimeSpan ecart = heureFin - dateDebutPlanning;
-
-
-        int intervalleTempsDebutActivite = ecart.Days * 60 * 24 + ecart.Hours * 60 + ecart.Minutes + ecart.Days * 40;
-
-        double doubleIntervalleTempsDebutActivite = intervalleTempsDebutActivite - (ecart.Days * 60 * 24);
-
-        int horaireDebutHeure = (int)Math.Truncate(doubleIntervalleTempsDebutActivite / 60);
-        int horaireDebutMinute = (int)doubleIntervalleTempsDebutActivite - horaireDebutHeure * 60;
-
-        string conversionDebut = horaireDebutHeure.ToString() + "h" + horaireDebutMinute.ToString();
-
-        return conversionDebut;
+        return minute;
 
     }
 
+    public string getHoraireFinMarsTexte()
+    {
+
+        string heure;
+        if (getHeureFinMars() == 0)
+        {
+            heure = "00";
+        }
+        else
+        {
+            heure = getHeureFinMars().ToString();
+        }
 
 
-	public DateTime getHeureDebut
+        string minute;
+        if (getMinuteFinMars() == 0)
+        { 
+            minute = "00";
+        }
+        else
+        {
+            minute = getMinuteFinMars().ToString();
+        }
+
+        string heureTexte = heure + "h" + minute;
+
+        return heureTexte;
+
+    }
+
+    public int getHeureFinMars()
+    {
+        double heureDouble = horaireFin / 60;
+        int heure = (int)Math.Truncate(heureDouble);
+
+        return heure;
+
+    }
+
+    public int getMinuteFinMars()
+    {
+        int minute = horaireFin % 60;
+
+        return minute;
+    }
+
+
+	public int getHoraireDebut
 	{
-		get { return heureDebut; }
-		set { heureDebut = value; }
+		get { return horaireDebut; }
+        set { horaireDebut = value; }
 	}
 
-	public DateTime GetheureFin
+	public int GetHoraireFin
 	{
-		get{return heureFin;}
-		set{heureFin=value;}
+		get{return horaireFin;}
+        set { horaireFin = value; }
 	}
 
 	public string GettexteDescriptif
@@ -152,8 +203,9 @@ public class Activités
         
     }
 
-    
+        
     //FinAccesseurs
+
 
 	public virtual void RenvoieActiviteParMotCle()
 	{

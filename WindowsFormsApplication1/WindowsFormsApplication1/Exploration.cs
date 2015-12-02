@@ -15,7 +15,7 @@ public class Exploration : Activités
 
 
     //Constructeur par défaut
-    public Exploration(string tempTypeExploration, string nom, DateTime hDebut, DateTime hFin, Lieu tempNomLieu, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
+    public Exploration(string tempTypeExploration, string nom, int hDebut, int hFin, Lieu tempNomLieu, List<Astronautes> tempListeAstronautes, string tempTexteDescriptif)
         : base(nom, "Exploration", hDebut, hFin, tempNomLieu, tempListeAstronautes, tempTexteDescriptif)
     {
         typeExploration = tempTypeExploration;

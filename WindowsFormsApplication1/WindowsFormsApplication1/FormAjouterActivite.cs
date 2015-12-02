@@ -15,14 +15,14 @@ namespace WindowsFormsApplication1
         private Jour objetJour;
         private List<Astronautes> listeAstronautes;
         private List<Lieu> listeLieu;
-        private int jourSelection;
+        private Jour jourActuel;
         private Planning planning;
 
-        public FormAjouterActivite(Jour tempJour, int tempJourSelection, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
+        public FormAjouterActivite(Jour tempJour, Jour tempJourActuel, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
         {
             InitializeComponent();
             objetJour = tempJour;
-            jourSelection = tempJourSelection;
+            jourActuel = tempJourActuel;
             listeAstronautes = tempListeAstronautes;
             listeLieu = tempListeLieu;
             planning = tempPlanning;
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
         private void FormAjouterActivite_Load(object sender, EventArgs e)
         {
 
-            labelJourActivité.Text = "Jour : " + jourSelection.ToString();
+            labelJourActivité.Text = "Jour : " + jourActuel.GetidJour.ToString();
 
 
             //Remplissage de tree view type activite
@@ -109,6 +109,17 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
 
+            for (int i = 0; i < 25; i++)
+            {
+                comboBoxHeureFin.Items.Add(i);
+            }
+
+            for (int i = 0; i < 60; i = i + 10)
+            {
+                comboBoxMinuteFin.Items.Add(i);
+            }
+
+
 
             string texteAstronautes;
 
@@ -118,7 +129,7 @@ namespace WindowsFormsApplication1
                 texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
                 checkedListBoxAstronautes.Items.Add(texteAstronautes);
             }
-<<<<<<< HEAD
+
 
 
             string texteLieu;
@@ -131,25 +142,43 @@ namespace WindowsFormsApplication1
             }
 
 
-=======
->>>>>>> origin/master
+
         }
+
+        
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
         {
-
+            //recuperation nom activite
             string nomActivite = textBoxNomActivite.Text;
+
+            //recuperation type activite
             string typeActivite = treeViewTypeActivite.SelectedNode.Parent.Text + " - " +  treeViewTypeActivite.SelectedNode.Text;
 
+            //recuperation horaire debut et horaire fin
+            int horaireDebutActivite = int.Parse(comboBoxHeureDebut.Text) * 60 + int.Parse(comboBoxMinuteDebut.Text) ;
+            int horaireFinActivite = int.Parse(comboBoxHeureFin.Text) * 60 + int.Parse(comboBoxMinuteFin.Text) ;
 
-            DateTime dateDebut = planning.GetDateDebut;
+            //recuperation lieu
+            Lieu lieuActivite = listeLieu[comboBoxListeLieu.SelectedIndex];
+            List<Astronautes> listeAstronautesSelection = new List<Astronautes>();
 
+            //recuperation de la liste d'astronautes selectionnee
+            for (int i = 0; i <= (checkedListBoxAstronautes.Items.Count-1); i++)
+            {
+                    if (checkedListBoxAstronautes.GetItemChecked(i))
+                    {
+                         listeAstronautesSelection.Add(listeAstronautes[i]);
+                    }
+            }
 
+            string texteDescriptif = richTextBox1.Text;
 
-            //Activités nouvelleActivite = new Activités(nomActivite, typeActivite,  );
+            Activités nouvelleActivite = new Activités(nomActivite, typeActivite, horaireDebutActivite, horaireFinActivite, lieuActivite, listeAstronautesSelection, texteDescriptif);
 
+            jourActuel.ajouterActivite(nouvelleActivite);
 
-            //this.Dispose();
+            this.Dispose();
         }
 
         private void treeViewTypeActivite_AfterSelect(object sender, TreeViewEventArgs e)
@@ -262,6 +291,34 @@ namespace WindowsFormsApplication1
         private void comboBoxListeLieu_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxHeureFin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Si jamais on selectionne l'horaire 24h40, on enleve le 50 dans la liste des minutes
+            if (comboBoxHeureFin.SelectedItem.ToString() == "24")
+            {
+                comboBoxMinuteFin.Items.Clear();
+
+                comboBoxMinuteFin.Text = "";
+
+
+                for (int i = 0; i < 50; i = i + 10)
+                {
+                    comboBoxMinuteFin.Items.Add(i);
+                }
+
+            }
+            else
+            {
+                comboBoxMinuteFin.Items.Clear();
+
+                for (int i = 0; i < 60; i = i + 10)
+                {
+                    comboBoxMinuteFin.Items.Add(i);
+                }
+
+            }
         }
 
 

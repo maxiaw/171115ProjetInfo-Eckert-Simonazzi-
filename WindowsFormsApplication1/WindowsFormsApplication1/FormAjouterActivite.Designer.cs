@@ -53,9 +53,9 @@
             this.textBoxCoordonnéesX = new System.Windows.Forms.TextBox();
             this.textBoxCoordonnéesY = new System.Windows.Forms.TextBox();
             this.labelDuree = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxHeureFin = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinuteFin = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelTitre
@@ -301,13 +301,14 @@
             this.labelDuree.TabIndex = 40;
             this.labelDuree.Text = "Horaire fin :";
             // 
-            // comboBox1
+            // comboBoxHeureFin
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 332);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(71, 21);
-            this.comboBox1.TabIndex = 41;
+            this.comboBoxHeureFin.FormattingEnabled = true;
+            this.comboBoxHeureFin.Location = new System.Drawing.Point(127, 332);
+            this.comboBoxHeureFin.Name = "comboBoxHeureFin";
+            this.comboBoxHeureFin.Size = new System.Drawing.Size(71, 21);
+            this.comboBoxHeureFin.TabIndex = 41;
+            this.comboBoxHeureFin.SelectedIndexChanged += new System.EventHandler(this.comboBoxHeureFin_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -318,13 +319,13 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "H";
             // 
-            // comboBox2
+            // comboBoxMinuteFin
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(220, 331);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(72, 21);
-            this.comboBox2.TabIndex = 42;
+            this.comboBoxMinuteFin.FormattingEnabled = true;
+            this.comboBoxMinuteFin.Location = new System.Drawing.Point(220, 331);
+            this.comboBoxMinuteFin.Name = "comboBoxMinuteFin";
+            this.comboBoxMinuteFin.Size = new System.Drawing.Size(72, 21);
+            this.comboBoxMinuteFin.TabIndex = 42;
             // 
             // FormAjouterActivite
             // 
@@ -332,8 +333,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 526);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxMinuteFin);
+            this.Controls.Add(this.comboBoxHeureFin);
             this.Controls.Add(this.labelDuree);
             this.Controls.Add(this.textBoxCoordonnéesY);
             this.Controls.Add(this.textBoxCoordonnéesX);
@@ -394,8 +395,8 @@
         private System.Windows.Forms.TextBox textBoxCoordonnéesX;
         private System.Windows.Forms.TextBox textBoxCoordonnéesY;
         private System.Windows.Forms.Label labelDuree;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxHeureFin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxMinuteFin;
     }
 }

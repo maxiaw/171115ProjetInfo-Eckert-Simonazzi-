@@ -67,7 +67,7 @@
             this.panelInteractionActivité.Controls.Add(this.labelJourActivité);
             this.panelInteractionActivité.Controls.Add(this.labelTypeActivité);
             this.panelInteractionActivité.Controls.Add(this.texteDescriptifActivite);
-            this.panelInteractionActivité.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.panelInteractionActivité.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelInteractionActivité.Location = new System.Drawing.Point(466, 90);
             this.panelInteractionActivité.Name = "panelInteractionActivité";
             this.panelInteractionActivité.Size = new System.Drawing.Size(795, 416);
@@ -131,6 +131,7 @@
             this.buttonSupprimerActivité.TabIndex = 6;
             this.buttonSupprimerActivité.Text = "Supprimer activité";
             this.buttonSupprimerActivité.UseVisualStyleBackColor = true;
+            this.buttonSupprimerActivité.Click += new System.EventHandler(this.buttonSupprimerActivité_Click);
             // 
             // buttonModifierActivité
             // 
