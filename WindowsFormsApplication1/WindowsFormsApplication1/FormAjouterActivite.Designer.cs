@@ -52,6 +52,10 @@
             this.labelLieuCoordonneeY = new System.Windows.Forms.Label();
             this.textBoxCoordonnéesX = new System.Windows.Forms.TextBox();
             this.textBoxCoordonnéesY = new System.Windows.Forms.TextBox();
+            this.labelDuree = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelTitre
@@ -90,7 +94,7 @@
             // 
             this.labelLieuActivite.AutoSize = true;
             this.labelLieuActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLieuActivite.Location = new System.Drawing.Point(23, 341);
+            this.labelLieuActivite.Location = new System.Drawing.Point(23, 379);
             this.labelLieuActivite.Name = "labelLieuActivite";
             this.labelLieuActivite.Size = new System.Drawing.Size(51, 20);
             this.labelLieuActivite.TabIndex = 15;
@@ -103,9 +107,9 @@
             this.labelPlageHoraireActivité.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPlageHoraireActivité.Location = new System.Drawing.Point(23, 291);
             this.labelPlageHoraireActivité.Name = "labelPlageHoraireActivité";
-            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(84, 20);
+            this.labelPlageHoraireActivité.Size = new System.Drawing.Size(130, 20);
             this.labelPlageHoraireActivité.TabIndex = 14;
-            this.labelPlageHoraireActivité.Text = "Horaires :";
+            this.labelPlageHoraireActivité.Text = "Horaires debut :";
             this.labelPlageHoraireActivité.Click += new System.EventHandler(this.labelPlageHoraireActivité_Click);
             // 
             // labelJourActivité
@@ -157,7 +161,7 @@
             // 
             // textBoxNomLieu
             // 
-            this.textBoxNomLieu.Location = new System.Drawing.Point(114, 407);
+            this.textBoxNomLieu.Location = new System.Drawing.Point(114, 445);
             this.textBoxNomLieu.Name = "textBoxNomLieu";
             this.textBoxNomLieu.Size = new System.Drawing.Size(97, 20);
             this.textBoxNomLieu.TabIndex = 24;
@@ -193,7 +197,7 @@
             // comboBoxHeureDebut
             // 
             this.comboBoxHeureDebut.FormattingEnabled = true;
-            this.comboBoxHeureDebut.Location = new System.Drawing.Point(109, 291);
+            this.comboBoxHeureDebut.Location = new System.Drawing.Point(159, 293);
             this.comboBoxHeureDebut.Name = "comboBoxHeureDebut";
             this.comboBoxHeureDebut.Size = new System.Drawing.Size(71, 21);
             this.comboBoxHeureDebut.TabIndex = 29;
@@ -202,7 +206,7 @@
             // comboBoxMinuteDebut
             // 
             this.comboBoxMinuteDebut.FormattingEnabled = true;
-            this.comboBoxMinuteDebut.Location = new System.Drawing.Point(220, 291);
+            this.comboBoxMinuteDebut.Location = new System.Drawing.Point(257, 293);
             this.comboBoxMinuteDebut.Name = "comboBoxMinuteDebut";
             this.comboBoxMinuteDebut.Size = new System.Drawing.Size(72, 21);
             this.comboBoxMinuteDebut.TabIndex = 30;
@@ -211,7 +215,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(189, 294);
+            this.label1.Location = new System.Drawing.Point(236, 296);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 31;
@@ -221,7 +225,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(27, 373);
+            this.checkBox1.Location = new System.Drawing.Point(27, 411);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(144, 17);
             this.checkBox1.TabIndex = 33;
@@ -233,7 +237,7 @@
             // 
             this.labelNomLieu.AutoSize = true;
             this.labelNomLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomLieu.Location = new System.Drawing.Point(23, 407);
+            this.labelNomLieu.Location = new System.Drawing.Point(23, 445);
             this.labelNomLieu.Name = "labelNomLieu";
             this.labelNomLieu.Size = new System.Drawing.Size(85, 20);
             this.labelNomLieu.TabIndex = 34;
@@ -243,7 +247,7 @@
             // comboBoxListeLieu
             // 
             this.comboBoxListeLieu.FormattingEnabled = true;
-            this.comboBoxListeLieu.Location = new System.Drawing.Point(94, 340);
+            this.comboBoxListeLieu.Location = new System.Drawing.Point(94, 378);
             this.comboBoxListeLieu.Name = "comboBoxListeLieu";
             this.comboBoxListeLieu.Size = new System.Drawing.Size(198, 21);
             this.comboBoxListeLieu.TabIndex = 35;
@@ -253,7 +257,7 @@
             // 
             this.labelLieuCoordonneeX.AutoSize = true;
             this.labelLieuCoordonneeX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLieuCoordonneeX.Location = new System.Drawing.Point(23, 440);
+            this.labelLieuCoordonneeX.Location = new System.Drawing.Point(23, 478);
             this.labelLieuCoordonneeX.Name = "labelLieuCoordonneeX";
             this.labelLieuCoordonneeX.Size = new System.Drawing.Size(134, 20);
             this.labelLieuCoordonneeX.TabIndex = 36;
@@ -264,7 +268,7 @@
             // 
             this.labelLieuCoordonneeY.AutoSize = true;
             this.labelLieuCoordonneeY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLieuCoordonneeY.Location = new System.Drawing.Point(23, 467);
+            this.labelLieuCoordonneeY.Location = new System.Drawing.Point(23, 505);
             this.labelLieuCoordonneeY.Name = "labelLieuCoordonneeY";
             this.labelLieuCoordonneeY.Size = new System.Drawing.Size(133, 20);
             this.labelLieuCoordonneeY.TabIndex = 37;
@@ -273,7 +277,7 @@
             // 
             // textBoxCoordonnéesX
             // 
-            this.textBoxCoordonnéesX.Location = new System.Drawing.Point(164, 442);
+            this.textBoxCoordonnéesX.Location = new System.Drawing.Point(164, 480);
             this.textBoxCoordonnéesX.Name = "textBoxCoordonnéesX";
             this.textBoxCoordonnéesX.Size = new System.Drawing.Size(100, 20);
             this.textBoxCoordonnéesX.TabIndex = 38;
@@ -281,17 +285,56 @@
             // 
             // textBoxCoordonnéesY
             // 
-            this.textBoxCoordonnéesY.Location = new System.Drawing.Point(164, 469);
+            this.textBoxCoordonnéesY.Location = new System.Drawing.Point(164, 507);
             this.textBoxCoordonnéesY.Name = "textBoxCoordonnéesY";
             this.textBoxCoordonnéesY.Size = new System.Drawing.Size(100, 20);
             this.textBoxCoordonnéesY.TabIndex = 39;
             this.textBoxCoordonnéesY.Visible = false;
+            // 
+            // labelDuree
+            // 
+            this.labelDuree.AutoSize = true;
+            this.labelDuree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDuree.Location = new System.Drawing.Point(23, 332);
+            this.labelDuree.Name = "labelDuree";
+            this.labelDuree.Size = new System.Drawing.Size(98, 20);
+            this.labelDuree.TabIndex = 40;
+            this.labelDuree.Text = "Horaire fin :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(127, 332);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(71, 21);
+            this.comboBox1.TabIndex = 41;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(199, 334);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 13);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "H";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(220, 331);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(72, 21);
+            this.comboBox2.TabIndex = 42;
             // 
             // FormAjouterActivite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 526);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.labelDuree);
             this.Controls.Add(this.textBoxCoordonnéesY);
             this.Controls.Add(this.textBoxCoordonnéesX);
             this.Controls.Add(this.labelLieuCoordonneeY);
@@ -350,5 +393,9 @@
         private System.Windows.Forms.Label labelLieuCoordonneeY;
         private System.Windows.Forms.TextBox textBoxCoordonnéesX;
         private System.Windows.Forms.TextBox textBoxCoordonnéesY;
+        private System.Windows.Forms.Label labelDuree;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

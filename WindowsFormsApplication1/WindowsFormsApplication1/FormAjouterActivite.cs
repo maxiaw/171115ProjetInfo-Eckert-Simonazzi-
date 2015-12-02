@@ -109,8 +109,7 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
 
-<<<<<<< HEAD
-=======
+
             string texteAstronautes;
 
             //Remplissage checkbox astronautes
@@ -119,7 +118,7 @@ namespace WindowsFormsApplication1
                 texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
                 checkedListBoxAstronautes.Items.Add(texteAstronautes);
             }
-<<<<<<< HEAD
+
 
             string texteLieu;
 
@@ -130,9 +129,7 @@ namespace WindowsFormsApplication1
                 comboBoxListeLieu.Items.Add(texteLieu);
             }
 
-=======
->>>>>>> origin/master
->>>>>>> origin/master
+
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
