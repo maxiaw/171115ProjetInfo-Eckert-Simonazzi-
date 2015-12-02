@@ -53,9 +53,7 @@ public class Activités
     {
         DateTime dateDebutPlanning = tempDateDebutPlanning;
 
-
         TimeSpan ecart = heureDebut - dateDebutPlanning;
-
 
         int intervalleTempsDebutActivite = ecart.Days * 60 * 24 + ecart.Hours * 60 + ecart.Minutes + ecart.Days * 40;
 

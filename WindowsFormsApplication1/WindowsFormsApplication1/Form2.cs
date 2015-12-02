@@ -18,19 +18,32 @@ namespace WindowsFormsApplication1
         private List<Astronautes> listeAstronautes;
         private int activiteSelectionne;
         private Planning planning;
+<<<<<<< HEAD
+        private List<Lieu> listeLieu;
+=======
         private List<Lieu> listeDeLieux;
 
 
+>>>>>>> origin/master
 
         //Constructeur par défaut
+<<<<<<< HEAD
         public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes,List<Lieu> tempListeLieu)
+=======
+        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu)
+>>>>>>> origin/master
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
             planning = tempPlanning;
             listeAstronautes = tempListeAstronautes;
+<<<<<<< HEAD
             listeDeLieux = tempListeLieu;
+=======
+            listeLieu = tempListeLieu;
+            
+>>>>>>> origin/master
             
         }
         //Accesseurs//
@@ -138,7 +151,11 @@ namespace WindowsFormsApplication1
         {
             if (jourSelection != 500)
             {
+<<<<<<< HEAD
                 Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes,listeDeLieux);
+=======
+                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes, listeLieu);
+>>>>>>> origin/master
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -149,7 +166,11 @@ namespace WindowsFormsApplication1
             if(jourSelection != 1)
             {
 
+<<<<<<< HEAD
                 Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes,listeDeLieux);
+=======
+                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes, listeLieu);
+>>>>>>> origin/master
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -164,7 +185,12 @@ namespace WindowsFormsApplication1
 
         private void buttonAjouterActivité_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, listeAstronautes);
+=======
+            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, jourSelection, listeAstronautes, listeLieu, planning);
+
+>>>>>>> origin/master
             formAjout.ShowDialog();
             
 
@@ -172,8 +198,18 @@ namespace WindowsFormsApplication1
 
         private void buttonModifierActivité_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             formModifierActivite formModificationActivite = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne], listeDeLieux);
             formModificationActivite.Show();
+=======
+<<<<<<< HEAD
+
+        }
+=======
+            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeDeLieux);
+            formModifier.ShowDialog();
+>>>>>>> origin/master
         } 
+>>>>>>> origin/master
     }
 }

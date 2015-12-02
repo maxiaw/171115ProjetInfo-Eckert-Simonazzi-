@@ -111,7 +111,13 @@ namespace WindowsFormsApplication1
             Lieu stationMars = new Lieu("base principale", 0, 0);
             Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
 
+<<<<<<< HEAD
+            listeDeLieux.Add(stationMars);
+            listeDeLieux.Add(lieuExploration1);
+
+=======
             
+>>>>>>> origin/master
             List<Astronautes> listeAstronautesParDefaut1 = new List<Astronautes>();
             List<Astronautes> listeAstronautesParDefaut2 = new List<Astronautes>();
 
@@ -136,6 +142,36 @@ namespace WindowsFormsApplication1
 
 
 
+<<<<<<< HEAD
+             // Activité 1
+             List<Activités> listeActivitéParDefaut=new List<Activités>();
+             DateTime horaireDebut = new DateTime(2015,11,19,08,00,00);
+             DateTime horaireFin = new DateTime (2015,11,19,09,00,00);
+             Activités activité1 = new Activités("Dormir", "Sleeping", horaireDebut, horaireFin, stationMars, listeAstronautesParDefaut1, "Sieste matinale pour l'équipe 1");
+             listeActivitéParDefaut.Add(activité1);
+             // Activité 2 
+             DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
+             DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
+             Activités activité2 = new Activités("Repas midi", "Eating", horaireDebut2, horaireFin2, stationMars, listeAstronautesParDefaut2, "Repas de l'équipe 2");
+             listeActivitéParDefaut.Add(activité2);
+             // Activité 3
+             DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
+             DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
+             Activités activité3 = new Activités("Travail privé", "Private", horaireDebut3, horaireFin3, stationMars, listeAstronautesParDefaut2, "Temps alloué pour réaliser des tâches personnelles");
+             listeActivitéParDefaut.Add(activité3);
+             // Activité 4
+             DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
+             DateTime horaireFin4 = new DateTime(2015, 11, 19, 14, 00, 00);
+             Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", horaireDebut4, horaireFin4, stationMars, listeAstronautesParDefaut1, "Nettoyage des sanitaires");
+             listeActivitéParDefaut.Add(activité4);
+             // Exploration
+             DateTime horaireDebut5 = new DateTime(2015, 11, 19, 14, 00, 00);
+             DateTime horaireFin5 = new DateTime(2015, 11, 19, 18, 00, 00);
+             Activités exploration = new Exploration("Exploration du cratere 0", "Vehicle", horaireDebut5, horaireFin5, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+
+             listeActivitéParDefaut.Add(exploration);
+
+=======
             // Activité 1
             List<Activités> listeActivitéParDefaut = new List<Activités>();
             DateTime horaireDebut = new DateTime(2015, 11, 19, 08, 00, 00);
@@ -163,6 +199,7 @@ namespace WindowsFormsApplication1
             Activités exploration = new Exploration("Exploration du cratere 0", "Vehicle", horaireDebut5, horaireFin5, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
 
             listeActivitéParDefaut.Add(exploration);
+>>>>>>> origin/master
 
 
 
@@ -618,128 +655,212 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 1, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 1, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 2, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 2, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 3, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 3, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour4_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 4, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 4, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 5, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 5, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour6_Click_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 6, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 6, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour7_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 7, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 7, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour8_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 8, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 8, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour9_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 9, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 9, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour10_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 10, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 10, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour11_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 11, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 11, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour12_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 12, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 12, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour13_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 13, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 13, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour14_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 14, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 14, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         //Il s'agit bien de boutonJour15, mais la référence sur le nom ne s'est pas faite
         private void button7_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 15, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 15, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour16_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 16, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 16, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour17_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 17, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 17, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour18_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 18, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 18, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour19_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 19, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 19, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour20_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 20, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 20, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
 
         private void boutonJour21_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Form2 fenetre = new Form2(listeJourForm1, jourPivot + 21, planning, listeDesAstronautes,listeDeLieux);
+=======
+            Form2 fenetre = new Form2(listeJourForm1, jourPivot + 21, planning, listeDesAstronautes, listeDeLieux);
+>>>>>>> origin/master
             fenetre.Show();
         }
         public void enregistrerProjet() // Permet d'enregistrer tous les attributs de toutes les classes de tout le projet
@@ -938,11 +1059,19 @@ namespace WindowsFormsApplication1
                         string NomActivite = nodeRes.SelectSingleNode("nomActivité").InnerText;
                         string nomDuLieu = (nodeRes.SelectSingleNode("lieuActivite").InnerText);
 
+<<<<<<< HEAD
+                        //Activités monActivite = new Activités(NomActivite,typeActivity,hDebut,hFin,lieu);
+
+                        // charge les Astronautes de activite
+                        // charge les Astronaute de activite
+
+=======
 
                        // Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, lieu);
 
                         // charge les Astronautes de activite
                         // charge les Astronaute de activite
+>>>>>>> origin/master
                         XmlNodeList nodeAstronautes = xmldoc.GetElementsByTagName("Cosmonautes");
                         foreach (XmlNode nodeCosmonaute in nodeAstronautes)
                         {
@@ -974,7 +1103,14 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
             ////////FinJour///////
 
             //////////Lieu//////////
@@ -1000,6 +1136,17 @@ namespace WindowsFormsApplication1
                 }
 
 
+<<<<<<< HEAD
+            }
+            //////////////////
+            //////////////////
+            return true;
+        }
+
+
+
+
+=======
                 //////////////////
                 //////////////////
                 return true;
@@ -1008,6 +1155,7 @@ namespace WindowsFormsApplication1
 
 
 
+>>>>>>> origin/master
 
         }*/
     }

@@ -14,12 +14,18 @@ namespace WindowsFormsApplication1
 
         private Jour objetJour;
         private List<Astronautes> listeAstronautes;
+        private List<Lieu> listeLieu;
+        private int jourSelection;
+        private Planning planning;
 
-        public FormAjouterActivite(Jour tempJour, List<Astronautes> tempListeAstronautes)
+        public FormAjouterActivite(Jour tempJour, int tempJourSelection, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
         {
             InitializeComponent();
             objetJour = tempJour;
+            jourSelection = tempJourSelection;
             listeAstronautes = tempListeAstronautes;
+            listeLieu = tempListeLieu;
+            planning = tempPlanning;
         }
 
 
@@ -27,6 +33,10 @@ namespace WindowsFormsApplication1
        
         private void FormAjouterActivite_Load(object sender, EventArgs e)
         {
+
+            labelJourActivité.Text = "Jour : " + jourSelection.ToString();
+
+
             //Remplissage de tree view type activite
             
             TreeNode treeNodeLiving = new TreeNode("Living");
@@ -89,7 +99,7 @@ namespace WindowsFormsApplication1
 
             //Remplissage comboBox horaire
 
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < 25; i++)
             {
                 comboBoxHeureDebut.Items.Add(i);
             }
@@ -102,16 +112,44 @@ namespace WindowsFormsApplication1
 
             string texteAstronautes;
 
+            //Remplissage checkbox astronautes
             foreach (Astronautes A in listeAstronautes)
             {
                 texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
                 checkedListBoxAstronautes.Items.Add(texteAstronautes);
             }
+<<<<<<< HEAD
+
+
+            string texteLieu;
+
+            //Remplissage combox lieu
+            foreach (Lieu L in listeLieu)
+            {
+                texteLieu = L.GetnomLieu;
+                comboBoxListeLieu.Items.Add(texteLieu);
+            }
+
+
+=======
+>>>>>>> origin/master
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+
+            string nomActivite = textBoxNomActivite.Text;
+            string typeActivite = treeViewTypeActivite.SelectedNode.Parent.Text + " - " +  treeViewTypeActivite.SelectedNode.Text;
+
+
+            DateTime dateDebut = planning.GetDateDebut;
+
+
+
+            //Activités nouvelleActivite = new Activités(nomActivite, typeActivite,  );
+
+
+            //this.Dispose();
         }
 
         private void treeViewTypeActivite_AfterSelect(object sender, TreeViewEventArgs e)
@@ -163,6 +201,66 @@ namespace WindowsFormsApplication1
                 textBoxCoordonnéesY.Visible = false;
 
             }
+
+        }
+
+        private void labelJourActivité_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPlageHoraireActivité_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxMinuteDebut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxHeureDebut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Si jamais on selectionne l'horaire 24h40, on enleve le 50 dans la liste des minutes
+            if (comboBoxHeureDebut.SelectedItem.ToString() == "24")
+            {
+                comboBoxMinuteDebut.Items.Clear();
+ 
+                comboBoxMinuteDebut.Text = ""; 
+                    
+
+                for (int i = 0; i < 50; i = i + 10)
+                {
+                    comboBoxMinuteDebut.Items.Add(i);
+                }
+
+            }
+            else
+            {
+                comboBoxMinuteDebut.Items.Clear();
+
+                for (int i = 0; i < 60; i = i + 10)
+                {
+                    comboBoxMinuteDebut.Items.Add(i);
+                }
+
+            }
+
+
+        }
+
+        private void labelLieuActivite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxListeLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
