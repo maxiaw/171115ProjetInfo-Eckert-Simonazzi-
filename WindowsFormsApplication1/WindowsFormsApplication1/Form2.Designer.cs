@@ -276,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.ClientSize = new System.Drawing.Size(1276, 532);
             this.Controls.Add(this.boutonJourPrecedent);
             this.Controls.Add(this.boutonJourSuivant);
             this.Controls.Add(this.label1);

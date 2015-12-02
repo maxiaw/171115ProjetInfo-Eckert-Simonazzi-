@@ -10,9 +10,9 @@ using System.Xml;
 // TEST DE GITHUB du 20/11/15 a 11:51
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form 
+    public partial class Form1 : Form
     {
-        private List<Jour> listeJourForm1=new List<Jour>();
+        private List<Jour> listeJourForm1 = new List<Jour>();
         private List<Activités> listeDesActivites = new List<Activités>();
         private List<Astronautes> listeDesAstronautes = new List<Astronautes>();
         private List<Lieu> listeDeLieux = new List<Lieu>();
@@ -47,8 +47,8 @@ namespace WindowsFormsApplication1
 
         public int GetjourPivot
         {
-           get{return jourPivot;}
-           set { jourPivot = value; }
+            get { return jourPivot; }
+            set { jourPivot = value; }
         }
 
         public int GethauteurPanel
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
 
         public int GethauteurBouton
         {
-            get { return hauteurBouton;}
+            get { return hauteurBouton; }
             set { hauteurBouton = value; }
         }
 
@@ -70,39 +70,39 @@ namespace WindowsFormsApplication1
         }
         public int GetpositionLigne1
         {
-           get{return positionLigne1;}
-            set{positionLigne1=value;}
+            get { return positionLigne1; }
+            set { positionLigne1 = value; }
         }
-         public int GetpositionLigne2
+        public int GetpositionLigne2
         {
-           get{return positionLigne2;}
-            set{positionLigne2=value;}
+            get { return positionLigne2; }
+            set { positionLigne2 = value; }
         }
-         public int GetpositionLigne3
+        public int GetpositionLigne3
         {
-           get{return positionLigne3;}
-            set{positionLigne3=value;}
+            get { return positionLigne3; }
+            set { positionLigne3 = value; }
         }
         public int GetnbJourAffichage
         {
-            get{return nbJourAffichage;}
-            set{nbJourAffichage=value;}
+            get { return nbJourAffichage; }
+            set { nbJourAffichage = value; }
         }
 
         public int GetjourActuel
         {
-            get{return jourActuel;}
-            set{jourActuel=value;}
+            get { return jourActuel; }
+            set { jourActuel = value; }
         }
 
         public List<Button> GetlisteBoutons
         {
-            get{return ListeBoutons;}
-            set{ListeBoutons=value;}
+            get { return ListeBoutons; }
+            set { ListeBoutons = value; }
         }
         //FinAccesseurs//
 
-        
+
 
         //Au chargement de la page, on initialise le planning qui contient la liste de jour et propose un premier affichage par défaut.
         private void Form1_Load_1(object sender, EventArgs e)
@@ -111,16 +111,20 @@ namespace WindowsFormsApplication1
             Lieu stationMars = new Lieu("base principale", 0, 0);
             Lieu lieuExploration1 = new Lieu("cratere 1 ", 50, 50);
 
+<<<<<<< HEAD
             listeDeLieux.Add(stationMars);
             listeDeLieux.Add(lieuExploration1);
 
+=======
+            
+>>>>>>> origin/master
             List<Astronautes> listeAstronautesParDefaut1 = new List<Astronautes>();
             List<Astronautes> listeAstronautesParDefaut2 = new List<Astronautes>();
 
             Astronautes a1 = new Astronautes("Johnson", "John", 30);
             Astronautes a2 = new Astronautes("Billyson", "Billy Junior", 30);
             Astronautes a3 = new Astronautes("Pokora", "Matt", 30);
-            Astronautes a4 = new Astronautes("Josianeson","Josiane",28);
+            Astronautes a4 = new Astronautes("Josianeson", "Josiane", 28);
             Astronautes a5 = new Astronautes("Poliakoff", "Paula", 35);
 
             listeDesAstronautes.Add(a1);
@@ -138,6 +142,7 @@ namespace WindowsFormsApplication1
 
 
 
+<<<<<<< HEAD
              // Activité 1
              List<Activités> listeActivitéParDefaut=new List<Activités>();
              DateTime horaireDebut = new DateTime(2015,11,19,08,00,00);
@@ -166,6 +171,35 @@ namespace WindowsFormsApplication1
 
              listeActivitéParDefaut.Add(exploration);
 
+=======
+            // Activité 1
+            List<Activités> listeActivitéParDefaut = new List<Activités>();
+            DateTime horaireDebut = new DateTime(2015, 11, 19, 08, 00, 00);
+            DateTime horaireFin = new DateTime(2015, 11, 19, 09, 00, 00);
+            Activités activité1 = new Activités("Dormir", "Sleeping", horaireDebut, horaireFin, stationMars, listeAstronautesParDefaut1, "Sieste matinale pour l'équipe 1");
+            listeActivitéParDefaut.Add(activité1);
+            // Activité 2 
+            DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
+            DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
+            Activités activité2 = new Activités("Repas midi", "Eating", horaireDebut2, horaireFin2, stationMars, listeAstronautesParDefaut2, "Repas de l'équipe 2");
+            listeActivitéParDefaut.Add(activité2);
+            // Activité 3
+            DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
+            DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
+            Activités activité3 = new Activités("Travail privé", "Private", horaireDebut3, horaireFin3, stationMars, listeAstronautesParDefaut2, "Temps alloué pour réaliser des tâches personnelles");
+            listeActivitéParDefaut.Add(activité3);
+            // Activité 4
+            DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
+            DateTime horaireFin4 = new DateTime(2015, 11, 19, 14, 00, 00);
+            Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", horaireDebut4, horaireFin4, stationMars, listeAstronautesParDefaut1, "Nettoyage des sanitaires");
+            listeActivitéParDefaut.Add(activité4);
+            // Exploration
+            DateTime horaireDebut5 = new DateTime(2015, 11, 19, 14, 00, 00);
+            DateTime horaireFin5 = new DateTime(2015, 11, 19, 18, 00, 00);
+            Activités exploration = new Exploration("Exploration du cratere 0", "Vehicle", horaireDebut5, horaireFin5, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
+
+            listeActivitéParDefaut.Add(exploration);
+>>>>>>> origin/master
 
 
 
@@ -180,7 +214,7 @@ namespace WindowsFormsApplication1
 
 
             //Initialisation du planning
-            DateTime dateDebut = new DateTime (2015, 11, 15, 0,0,0);
+            DateTime dateDebut = new DateTime(2015, 11, 15, 0, 0, 0);
             planning = new Planning("Planning de Mars", listeJourForm1, dateDebut);
 
             jourPivot = 0;
@@ -189,7 +223,7 @@ namespace WindowsFormsApplication1
 
 
             //Affiche les jours colorés selon leur temporalité
-            
+
             ListeBoutons.Add(boutonJour1);
             ListeBoutons.Add(boutonJour2);
             ListeBoutons.Add(boutonJour3);
@@ -217,7 +251,7 @@ namespace WindowsFormsApplication1
             affichage7Jours.PerformClick();
 
         }
-        
+
         public void coloriseBouton()
         {
             foreach (Button b in ListeBoutons)
@@ -240,7 +274,7 @@ namespace WindowsFormsApplication1
 
         }
 
- 
+
         public void affichageNiveau2(int tmpIdJour)
         {
             //Form2 Niveau2=new Form2 ();
@@ -250,21 +284,21 @@ namespace WindowsFormsApplication1
 
         /* Récupère le numéros des jours à partir du paramètre numJour et les affiche dans les boutons. 
         Elle prend en compte le nombre de jour à afficher par page.*/
-        public void afficherJour(int  numJour)
+        public void afficherJour(int numJour)
         {
-            
-                boutonJour1.Text = planning.getJourParId(numJour).GetidJour.ToString();
-                boutonJour2.Text = planning.getJourParId(numJour+1).GetidJour.ToString();
-                boutonJour3.Text = planning.getJourParId(numJour+2).GetidJour.ToString();
-                boutonJour4.Text = planning.getJourParId(numJour+3).GetidJour.ToString();
-                boutonJour5.Text = planning.getJourParId(numJour+4).GetidJour.ToString();
-                boutonJour6.Text = planning.getJourParId(numJour+5).GetidJour.ToString();
-                boutonJour7.Text = planning.getJourParId(numJour+6).GetidJour.ToString();
-            
-            if (nbJourAffichage >7)
+
+            boutonJour1.Text = planning.getJourParId(numJour).GetidJour.ToString();
+            boutonJour2.Text = planning.getJourParId(numJour + 1).GetidJour.ToString();
+            boutonJour3.Text = planning.getJourParId(numJour + 2).GetidJour.ToString();
+            boutonJour4.Text = planning.getJourParId(numJour + 3).GetidJour.ToString();
+            boutonJour5.Text = planning.getJourParId(numJour + 4).GetidJour.ToString();
+            boutonJour6.Text = planning.getJourParId(numJour + 5).GetidJour.ToString();
+            boutonJour7.Text = planning.getJourParId(numJour + 6).GetidJour.ToString();
+
+            if (nbJourAffichage > 7)
             {
 
-                boutonJour8.Text = planning.getJourParId(numJour+7).GetidJour.ToString();
+                boutonJour8.Text = planning.getJourParId(numJour + 7).GetidJour.ToString();
                 boutonJour9.Text = planning.getJourParId(numJour + 8).GetidJour.ToString();
                 boutonJour10.Text = planning.getJourParId(numJour + 9).GetidJour.ToString();
                 boutonJour11.Text = planning.getJourParId(numJour + 10).GetidJour.ToString();
@@ -287,7 +321,7 @@ namespace WindowsFormsApplication1
 
             coloriseBouton();
 
-            if (jourPivot >(499 - 21))
+            if (jourPivot > (499 - 21))
             {
 
                 affichage21Jours.Enabled = false;
@@ -295,10 +329,10 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                affichage21Jours.Enabled = true; 
+                affichage21Jours.Enabled = true;
             }
-            
-            
+
+
             if (jourPivot > (499 - 14))
             {
 
@@ -314,22 +348,22 @@ namespace WindowsFormsApplication1
 
         }
 
-      
 
-     
 
-      
+
+
+
 
         private void suivant_Click(object sender, EventArgs e)
         {
             if (jourPivot != 499 - nbJourAffichage)
             {
-                if (jourPivot < 490 && nbJourAffichage ==7)
+                if (jourPivot < 490 && nbJourAffichage == 7)
                 {
                     jourPivot = jourPivot + nbJourAffichage;
                     afficherJour(jourPivot);
                 }
-                else if(jourPivot >= 490 && nbJourAffichage ==7)
+                else if (jourPivot >= 490 && nbJourAffichage == 7)
                 {
                     jourPivot = jourPivot + (500 - jourPivot - nbJourAffichage);
                     afficherJour(jourPivot);
@@ -367,41 +401,42 @@ namespace WindowsFormsApplication1
         //Bouton précedent
         private void Precedent_Click(object sender, EventArgs e)
         {
-            if(nbJourAffichage==7)
+            if (nbJourAffichage == 7)
             {
                 if (jourPivot >= 7)
                 {
                     jourPivot -= 7;
                     afficherJour(jourPivot);
-                }else
+                }
+                else
                 {
                     jourPivot = jourPivot - jourPivot;
                 }
             }
-            else if(nbJourAffichage==14)
+            else if (nbJourAffichage == 14)
             {
-                if (jourPivot >=14 )
+                if (jourPivot >= 14)
                 {
                     jourPivot -= 14;
                     afficherJour(jourPivot);
 
                 }
-                else if(jourPivot<14)
+                else if (jourPivot < 14)
                 {
                     jourPivot = jourPivot - jourPivot;
                     afficherJour(jourPivot);
 
                 }
             }
-            else if (nbJourAffichage==21)
+            else if (nbJourAffichage == 21)
             {
-                if(jourPivot >= 21)
+                if (jourPivot >= 21)
                 {
                     jourPivot -= 21;
                     afficherJour(jourPivot);
 
                 }
-                else if(jourPivot < 21)
+                else if (jourPivot < 21)
                 {
                     jourPivot = jourPivot - jourPivot;
                     afficherJour(jourPivot);
@@ -409,7 +444,7 @@ namespace WindowsFormsApplication1
                 }
 
             }
-         
+
 
         }
 
@@ -481,14 +516,14 @@ namespace WindowsFormsApplication1
 
         }
 
-      
+
 
         private void button1_Click_2(object sender, EventArgs e)
         {
 
             hauteurPanel = panel1.Height;
 
-            hauteurBouton = hauteurPanel / 4 ;
+            hauteurBouton = hauteurPanel / 4;
             intervalleBouton = hauteurBouton / 4;
 
             positionLigne1 = intervalleBouton;
@@ -571,7 +606,7 @@ namespace WindowsFormsApplication1
 
             hauteurPanel = panel1.Height;
 
-            hauteurBouton = (2 * hauteurPanel) / 3 ;
+            hauteurBouton = (2 * hauteurPanel) / 3;
             intervalleBouton = hauteurBouton / 4;
 
             positionLigne1 = intervalleBouton;
@@ -840,7 +875,7 @@ namespace WindowsFormsApplication1
             ////////////\Planning///////////
 
             ////////////Jour////////
-           
+
             XmlNode Jour = xmlDoc.CreateElement("SerializationJour");
             rootNode.AppendChild(Jour);
 
@@ -865,7 +900,7 @@ namespace WindowsFormsApplication1
             XmlNode Lieu = xmlDoc.CreateElement("Lieu");
             rootNode.AppendChild(Lieu);
 
-            foreach(Lieu L in listeDeLieux)
+            foreach (Lieu L in listeDeLieux)
             {
                 XmlNode NomLieu = xmlDoc.CreateElement("Nom");
                 NomLieu.InnerText = L.GetnomLieu;
@@ -919,10 +954,10 @@ namespace WindowsFormsApplication1
                 string nomDuPlanning = node.SelectSingleNode("nom").InnerText;
                 DateTime DateDeDebut = DateTime.Parse(node.SelectSingleNode("Date de debut").InnerText);
                 int idDuPlanning = int.Parse(node.SelectSingleNode("ID").InnerText);
-                Planning Planning= new Planning(nomDuPlanning,listeJourForm1,DateDeDebut);
+                Planning Planning = new Planning(nomDuPlanning, listeJourForm1, DateDeDebut);
             }
             // Charge les activites
-           
+
             XmlNodeList nodeListeActivites = xmldoc.GetElementsByTagName("SerializationActivites");
             foreach (XmlNode nodeAct in nodeListeActivites)
             {
@@ -939,15 +974,22 @@ namespace WindowsFormsApplication1
                         string statutDeActivite = nodeRes.SelectSingleNode("statutActivite").InnerText;
                         string NomActivite = nodeRes.SelectSingleNode("nomActivité").InnerText;
                         string nomDuLieu = (nodeRes.SelectSingleNode("lieuActivite").InnerText);
-                       
 
+<<<<<<< HEAD
                         //Activités monActivite = new Activités(NomActivite,typeActivity,hDebut,hFin,lieu);
 
                         // charge les Astronautes de activite
                         // charge les Astronaute de activite
 
+=======
+
+                        Activités monActivite = new Activités(NomActivite, typeActivity, hDebut, hFin, lieu);
+
+                        // charge les Astronautes de activite
+                        // charge les Astronaute de activite
+>>>>>>> origin/master
                         XmlNodeList nodeAstronautes = xmldoc.GetElementsByTagName("Cosmonautes");
-                        foreach(XmlNode nodeCosmonaute in nodeAstronautes)
+                        foreach (XmlNode nodeCosmonaute in nodeAstronautes)
                         {
                             int idCosmonaute = int.Parse(nodeCosmonaute.SelectSingleNode("ID").InnerText);
                             string nomCosmonaute = nodeCosmonaute.SelectSingleNode("Nom").InnerText;
@@ -977,7 +1019,10 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
             ////////FinJour///////
 
             //////////Lieu//////////
@@ -1003,6 +1048,7 @@ namespace WindowsFormsApplication1
                 }
 
 
+<<<<<<< HEAD
             }
             //////////////////
             //////////////////
@@ -1012,6 +1058,18 @@ namespace WindowsFormsApplication1
 
 
 
+=======
+                //////////////////
+                //////////////////
+                return true;
+            }
 
+
+
+
+>>>>>>> origin/master
+
+        }
     }
 }
+

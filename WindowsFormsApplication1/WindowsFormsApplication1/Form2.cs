@@ -18,7 +18,13 @@ namespace WindowsFormsApplication1
         private List<Astronautes> listeAstronautes;
         private int activiteSelectionne;
         private Planning planning;
+<<<<<<< HEAD
         private List<Lieu> listeLieu;
+=======
+        private List<Lieu> listeDeLieux;
+
+
+>>>>>>> origin/master
 
         //Constructeur par défaut
         public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu)
@@ -169,7 +175,13 @@ namespace WindowsFormsApplication1
 
         private void buttonModifierActivité_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
         }
+=======
+            formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeDeLieux);
+            formModifier.ShowDialog();
+        } 
+>>>>>>> origin/master
     }
 }

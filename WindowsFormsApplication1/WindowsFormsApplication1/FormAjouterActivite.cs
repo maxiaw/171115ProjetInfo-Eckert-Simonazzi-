@@ -118,6 +118,7 @@ namespace WindowsFormsApplication1
                 texteAstronautes = A.GetprenomAstronaute + " " + A.GetnomAstronaute;
                 checkedListBoxAstronautes.Items.Add(texteAstronautes);
             }
+<<<<<<< HEAD
 
 
             string texteLieu;
@@ -130,6 +131,8 @@ namespace WindowsFormsApplication1
             }
 
 
+=======
+>>>>>>> origin/master
         }
 
         private void boutonEnregistrerActivite_Click(object sender, EventArgs e)
