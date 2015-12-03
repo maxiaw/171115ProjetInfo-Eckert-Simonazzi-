@@ -12,16 +12,14 @@ namespace WindowsFormsApplication1
     public partial class FormAjouterActivite : Form
     {
 
-        private Jour objetJour;
         private List<Astronautes> listeAstronautes;
         private List<Lieu> listeLieu;
         private Jour jourActuel;
         private Planning planning;
 
-        public FormAjouterActivite(Jour tempJour, Jour tempJourActuel, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
+        public FormAjouterActivite(Jour tempJourActuel, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu, Planning tempPlanning)
         {
             InitializeComponent();
-            objetJour = tempJour;
             jourActuel = tempJourActuel;
             listeAstronautes = tempListeAstronautes;
             listeLieu = tempListeLieu;

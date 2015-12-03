@@ -23,23 +23,17 @@ namespace WindowsFormsApplication1
 
 
         //Constructeur par défaut
-<<<<<<< HEAD
-        public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes,List<Lieu> tempListeLieu)
-=======
+
         public Form2(List<Jour> tempListeJour, int tempJourSelection, Planning tempPlanning, List<Astronautes> tempListeAstronautes, List<Lieu> tempListeLieu)
->>>>>>> origin/master
+
         {
             listeJour = tempListeJour;
             jourSelection = tempJourSelection;
             InitializeComponent();
             planning = tempPlanning;
             listeAstronautes = tempListeAstronautes;
-<<<<<<< HEAD
-            listeDeLieux = tempListeLieu;
-=======
             listeLieu = tempListeLieu;
             
->>>>>>> origin/master
             
         }
         //Accesseurs//
@@ -153,11 +147,9 @@ namespace WindowsFormsApplication1
         {
             if (jourSelection != 500)
             {
-<<<<<<< HEAD
-                Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes,listeDeLieux);
-=======
+
                 Form2 fenetre = new Form2(listeJour, jourSelection + 1, planning, listeAstronautes, listeLieu);
->>>>>>> origin/master
+
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -168,11 +160,9 @@ namespace WindowsFormsApplication1
             if(jourSelection != 1)
             {
 
-<<<<<<< HEAD
-                Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes,listeDeLieux);
-=======
+
                 Form2 fenetre = new Form2(listeJour, jourSelection - 1, planning, listeAstronautes, listeLieu);
->>>>>>> origin/master
+
                 Form.ActiveForm.Close();
                 fenetre.Show();
             }
@@ -187,16 +177,9 @@ namespace WindowsFormsApplication1
 
         private void buttonAjouterActivité_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, objetJourSelection, listeAstronautes, listeLieu, planning);
-=======
-<<<<<<< HEAD
-            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, listeAstronautes);
-=======
-            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, jourSelection, listeAstronautes, listeLieu, planning);
->>>>>>> origin/master
 
->>>>>>> origin/master
+            FormAjouterActivite formAjout = new FormAjouterActivite(objetJourSelection, listeAstronautes, listeLieu, planning);
+
             formAjout.ShowDialog();
             
 
@@ -208,18 +191,10 @@ namespace WindowsFormsApplication1
 
         private void buttonModifierActivité_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            formModifierActivite formModificationActivite = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne], listeDeLieux);
-            formModificationActivite.Show();
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
 
             formModifierActivite formModifier = new formModifierActivite(objetJourSelection, listeAstronautes, listeActivitéTableau[activiteSelectionne],listeLieu);
             formModifier.ShowDialog();
-<<<<<<< HEAD
+
         }
 
         private void buttonSupprimerActivité_Click(object sender, EventArgs e)
@@ -231,9 +206,6 @@ namespace WindowsFormsApplication1
 
             remplissageListBox();
          
-=======
->>>>>>> origin/master
->>>>>>> origin/master
         } 
 
     }

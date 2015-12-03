@@ -45,8 +45,8 @@ namespace WindowsFormsApplication1
                 comboBoxMinuteDebut.Items.Add(i);
             }
             // On remet l'heure initiale qu'avait l'activité qu'on doit modifier
-            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebut.Hour;
-            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getHeureDebut.Minute;
+            comboBoxHeureDebut.SelectedIndex = activiteAModifier.getHeureDebutMars();
+            comboBoxMinuteDebut.SelectedIndex = activiteAModifier.getMinuteDebutMars();
             // On rempli le comboBox de lieu avec la liste de lieu
             foreach(Lieu L in listeLieux)
             {

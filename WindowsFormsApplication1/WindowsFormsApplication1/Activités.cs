@@ -49,12 +49,9 @@ public class Activités
         set { nomActivité = value; }
     }
 
-<<<<<<< HEAD
+
    
     public string getHoraireDebutMarsTexte()
-=======
-    public string getDateDebutMars(DateTime tempDateDebutPlanning)
->>>>>>> origin/master
     {
 
         string heure;

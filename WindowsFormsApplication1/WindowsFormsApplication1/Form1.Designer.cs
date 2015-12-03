@@ -56,6 +56,8 @@
             this.affichage21Jours = new System.Windows.Forms.Button();
             this.affichage7Jours = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRecherche = new System.Windows.Forms.TextBox();
+            this.buttonRecherche = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -371,9 +373,28 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // textBoxRecherche
+            // 
+            this.textBoxRecherche.Location = new System.Drawing.Point(833, 19);
+            this.textBoxRecherche.Name = "textBoxRecherche";
+            this.textBoxRecherche.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRecherche.TabIndex = 7;
+            // 
+            // buttonRecherche
+            // 
+            this.buttonRecherche.Location = new System.Drawing.Point(953, 17);
+            this.buttonRecherche.Name = "buttonRecherche";
+            this.buttonRecherche.Size = new System.Drawing.Size(75, 23);
+            this.buttonRecherche.TabIndex = 8;
+            this.buttonRecherche.Text = "Rechercher";
+            this.buttonRecherche.UseVisualStyleBackColor = true;
+            this.buttonRecherche.Click += new System.EventHandler(this.buttonRecherche_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1284, 532);
+            this.Controls.Add(this.buttonRecherche);
+            this.Controls.Add(this.textBoxRecherche);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.affichage7Jours);
             this.Controls.Add(this.affichage21Jours);
@@ -419,6 +440,8 @@
         private System.Windows.Forms.Button affichage21Jours;
         private System.Windows.Forms.Button affichage7Jours;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxRecherche;
+        private System.Windows.Forms.Button buttonRecherche;
 
 
     }
