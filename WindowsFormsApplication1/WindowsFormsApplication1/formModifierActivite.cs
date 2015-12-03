@@ -54,13 +54,18 @@ namespace WindowsFormsApplication1
             }
             // On remet le lieu initial qu'avait l'activité à modifier
             
+          // On remet le lieu initial qu'avait l'activité à modifier
+            
+            int indexLieu =0;
             foreach(Lieu l in listeLieux)
             {
                 if (l.GetnomLieu == activiteAModifier.GetnomLieuDeActivite)
                 {
                     comboBoxListeLieu.SelectedIndex = int.Parse(l.GetnomLieu);
+                    comboBoxListeLieu.SelectedIndex = indexLieu;
                 }
 
+                indexLieu++;
             }
             // on récupère le descriptif initial de l'activité à modifier
 
@@ -68,18 +73,34 @@ namespace WindowsFormsApplication1
 
             // On remplie le CheckListeBoxAstronaute avec la liste des astronautes
 
-            foreach(Astronautes A in listeAstronautes)
+          
+            foreach (Astronautes A in listeAstronautes)
             {
-                checkedListBoxAstronautes.Items.Add(A);
+                checkedListBoxAstronautes.Items.Add(A.GetnomAstronaute);
             }
 
-            //On récupère la liste des astronoautes initiale de l'activité à modifier
-            foreach(Astronautes astro in listeAstronautes)
+            List<Astronautes> listeAstronautesActivités = new List<Astronautes>();
+
+            foreach (Astronautes A in activiteAModifier.GetlisteAstronautes)
             {
-                if((astro.GetnomAstronaute==activiteAModifier.GetlisteAstronautes.)
-                {
-                    checkedListBoxAstronautes.SelectedIndex = int.Parse(astro.GetnomAstronaute);
-                }
+                listeAstronautesActivités.Add(A);
+            }
+
+            int index = 0;
+            //On récupère la liste des astronoautes initiale de l'activité à modifier
+            foreach (Astronautes astro in listeAstronautes)
+            {
+
+                    foreach (Astronautes astro2 in listeAstronautesActivités)
+
+                        if ((astro.GetnomAstronaute == astro2.GetnomAstronaute))
+                        {
+                            checkedListBoxAstronautes.SelectedIndex = int.Parse(astro.GetnomAstronaute);
+                            checkedListBoxAstronautes.SetItemCheckState(index, CheckState.Checked);
+                        }
+
+
+                index++;
             }
 
 
