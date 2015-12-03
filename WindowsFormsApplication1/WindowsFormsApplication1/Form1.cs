@@ -142,48 +142,63 @@ namespace WindowsFormsApplication1
             
           
             // Activité 1
-            List<Activités> listeActivitéParDefaut = new List<Activités>();
+            List<Activités> listeActiviteParDefaut = new List<Activités>();
            // DateTime horaireDebut = new DateTime(2015, 11, 19, 08, 00, 00);
             //DateTime horaireFin = new DateTime(2015, 11, 19, 09, 00, 00);
             Activités activité1 = new Activités("Dormir", "Sleeping", 0, 600, stationMars, listeAstronautesParDefaut1, "Sieste matinale pour l'équipe 1");
-            listeActivitéParDefaut.Add(activité1);
+            listeActiviteParDefaut.Add(activité1);
             // Activité 2 
             //DateTime horaireDebut2 = new DateTime(2015, 11, 19, 09, 00, 00);
             //DateTime horaireFin2 = new DateTime(2015, 11, 19, 11, 00, 00);
             Activités activité2 = new Activités("Repas midi", "Eating", 600, 800, stationMars, listeAstronautesParDefaut2, "Repas de l'équipe 2");
-            listeActivitéParDefaut.Add(activité2);
+            listeActiviteParDefaut.Add(activité2);
             // Activité 3
             //DateTime horaireDebut3 = new DateTime(2015, 11, 19, 11, 00, 00);
             //DateTime horaireFin3 = new DateTime(2015, 11, 19, 13, 00, 00);
             Activités activité3 = new Activités("Travail privé", "Private", 800, 1000, stationMars, listeAstronautesParDefaut2, "Temps alloué pour réaliser des tâches personnelles");
-            listeActivitéParDefaut.Add(activité3);
+            listeActiviteParDefaut.Add(activité3);
             // Activité 4
             //DateTime horaireDebut4 = new DateTime(2015, 11, 19, 13, 00, 00);
             //DateTime horaireFin4 = new DateTime(2015, 11, 19, 14, 00, 00);
-            Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", 1000, 1000, stationMars, listeAstronautesParDefaut1, "Nettoyage des sanitaires");
-            listeActivitéParDefaut.Add(activité4);
+            Activités activité4 = new Activités("Récurer les chiotes", "Cleaning", 1000, 1200, stationMars, listeAstronautesParDefaut1, "Nettoyage des sanitaires");
+            listeActiviteParDefaut.Add(activité4);
             // Exploration
             DateTime horaireDebut5 = new DateTime(2015, 11, 19, 14, 00, 00);
             DateTime horaireFin5 = new DateTime(2015, 11, 19, 18, 00, 00);
             Activités exploration = new Exploration("Exploration du cratere 0", "Vehicle", 1200, 1480, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
 
-            listeActivitéParDefaut.Add(exploration);
+            listeActiviteParDefaut.Add(exploration);
 
+            Activités Test = new Activités("Toto", "Cleaning", 1000, 1200, lieuExploration1, listeAstronautesParDefaut2, "Exploration du cratere numero 0");
 
+            List<Activités> listeActiviteRecherche = new List<Activités>();
+
+            listeActiviteRecherche.Add(Test);
 
             //Cette boucle implémente 500 jours pour la liste de jour
             for (int i = 0; i <= 499; i++)
             {
 
-                Jour j = new Jour(listeActivitéParDefaut);
-                listeJourForm1.Add(j);
+
+                if(i==50){
+                    Jour j = new Jour(listeActiviteRecherche);
+                    listeJourForm1.Add(j);
+                }else{
+
+                    Jour j = new Jour(listeActiviteParDefaut);
+                    listeJourForm1.Add(j);
+                
+                }
 
             }
 
 
             //Initialisation du planning
             DateTime dateDebut = new DateTime(2015, 11, 15, 0, 0, 0);
-            planning = new Planning("Planning de Mars", listeJourForm1, dateDebut);
+
+            List<Jour> listeJourPlanning = new List<Jour>();
+            listeJourPlanning = listeJourForm1;
+            planning = new Planning("Planning de Mars", listeJourPlanning, dateDebut);
 
             jourPivot = 0;
 
@@ -324,6 +339,8 @@ namespace WindowsFormsApplication1
             int nombreDeJour = 0;
             bool termePresentDansJour = false;
 
+            listeJourForm1.Clear();
+
             foreach (Jour J in listeJourForm1)
             {
 
@@ -338,17 +355,21 @@ namespace WindowsFormsApplication1
 
                 if (termePresentDansJour == true)
                 {
-                    listeJourRecherche.Add(J);
+                    listeJourForm1.Add(J);
                     termePresentDansJour = false;
                     nombreDeJour++;
-
                 }
-
             }
-
             if (nombreDeJour > 0)
             {
                 modeRecherche = true;
+                afficherJour(0);
+            }
+            else
+            {
+                listeJourForm1 = planning.GetListeJour;
+                MessageBox.Show("Votre recherche n'a donné aucun resultat", "Resultat recherche", MessageBoxButtons.OK);
+                afficherJour(0);
             }
         }
 

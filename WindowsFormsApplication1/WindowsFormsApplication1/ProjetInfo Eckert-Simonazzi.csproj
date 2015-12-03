@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiviteComparer.cs" />
-    <Compile Include="Activités.cs" />
+    <Compile Include="Activites.cs" />
     <Compile Include="Astronautes.cs" />
     <Compile Include="Carte.cs" />
     <Compile Include="Exploration.cs" />

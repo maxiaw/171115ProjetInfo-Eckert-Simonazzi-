@@ -74,13 +74,13 @@ namespace WindowsFormsApplication1
             }
 
             //On récupère la liste des astronoautes initiale de l'activité à modifier
-            foreach(Astronautes astro in listeAstronautes)
+            /*foreach(Astronautes astro in listeAstronautes)
             {
-                if((astro.GetnomAstronaute==activiteAModifier.GetlisteAstronautes.)
+                if(astro.GetnomAstronaute==activiteAModifier.GetlisteAstronautes.)
                 {
                     checkedListBoxAstronautes.SelectedIndex = int.Parse(astro.GetnomAstronaute);
                 }
-            }
+            }*/
 
 
         }
