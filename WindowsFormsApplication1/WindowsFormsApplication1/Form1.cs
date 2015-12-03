@@ -289,7 +289,7 @@ namespace WindowsFormsApplication1
 
             coloriseBouton();
 
-            if (jourPivot > (499 - 21))
+            if (jourPivot > (listeJourForm1.Count -1 - 21))
             {
 
                 affichage21Jours.Enabled = false;
@@ -301,7 +301,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            if (jourPivot > (499 - 14))
+            if (jourPivot > (listeJourForm1.Count - 1 - 14))
             {
 
                 affichage14Jours.Enabled = false;
